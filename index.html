@@ -1,5 +1,3 @@
-by
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +7,7 @@ by
 
 <title>WEBL Bare Knuckle Rankings</title>
 
-
+<style>
 
 *{
 margin:0;
@@ -43,21 +41,14 @@ text-align:center;
 .header h1{
 font-family:Georgia,serif;
 font-size:64px;
-font-weight:bold;
-letter-spacing:4px;
 color:#dcb44a;
-text-shadow:
-2px 2px 0 #000,
-0 0 8px rgba(255,215,0,.2);
 }
 
 .header h2{
 margin-top:10px;
 font-size:21px;
 letter-spacing:5px;
-font-weight:400;
-color:#f4f4f4;
-text-transform:uppercase;
+color:white;
 }
 
 .divider{
@@ -77,106 +68,44 @@ background:#10284b;
 
 th{
 padding:15px 10px;
-font-size:14px;
-letter-spacing:1px;
-text-transform:uppercase;
 color:#dcb44a;
 border-bottom:2px solid #d4af37;
+}
+
+td{
+padding:14px 10px;
+border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 tbody tr:nth-child(even){
 background:#0b1b33;
 }
 
-tbody tr:hover{
-background:#13294a;
-}
-
-td{
-padding:14px 10px;
-font-size:15px;
-border-bottom:1px solid rgba(255,255,255,.08);
-}
-
 .rank{
-width:55px;
 text-align:center;
+color:#dcb44a;
 font-size:20px;
 font-weight:bold;
-color:#dcb44a;
 }
 
 .gym{
-font-weight:bold;
 font-size:17px;
+font-weight:bold;
 }
 
 .manager{
 display:block;
-font-size:13px;
 color:#bfc7d4;
-font-weight:normal;
-margin-top:2px;
+font-size:13px;
 }
 
 .country{
 text-align:center;
 }
 
-.titles{
+.titles,.plus,.win{
+font-weight:bold;
 color:#ffd34d;
-font-weight:bold;
-}
-
-.plus{
-color:#49df70;
-font-weight:bold;
-}
-
-.win{
-color:#66ef7c;
-font-weight:bold;
-}
-
-.money{
-white-space:nowrap;
-}
-
-.epf{
-font-weight:bold;
-}
-
-@media(max-width:900px){
-
-body{
-padding:8px;
-}
-
-.board{
-border-width:3px;
-}
-
-.header h1{
-font-size:42px;
-}
-
-.header h2{
-font-size:15px;
-letter-spacing:2px;
-}
-
-table{
-font-size:12px;
-}
-
-th,td{
-padding:8px 5px;
-}
-
-.manager{
-display:none;
-}
-
 }
 
 </style>
@@ -190,7 +119,6 @@ display:none;
 <div class="header">
 
 <h1>WEBL BARE KNUCKLE</h1>
-
 <h2>OFFICIAL ALL-TIME GYM RANKINGS</h2>
 
 </div>
@@ -200,127 +128,68 @@ display:none;
 <table>
 
 <thead>
-<tr>
-<td class="rank">1</td>
-<td class="gym">Lochside 🐉<span class="manager">The Scottish Gym</span></td>
-<td class="country">United Kingdom</td>
-<td class="titles">2565</td>
-<td>14960-3388-7457</td>
-<td class="plus">+10864</td>
-<td class="win">69.64%</td>
-<td class="money">$11.10B</td>
-<td class="epf">$99.97</td>
-</tr>
 
 <tr>
-<td class="rank">2</td>
-<td class="gym">Rockin Rods Ring Rebels<span class="manager">Amalgamated</span></td>
-<td class="country">Australia</td>
-<td class="titles">1415</td>
-<td>10108-7397-3732</td>
-<td class="plus">+2768</td>
-<td class="win">57.68%</td>
-<td class="money">$8.35B</td>
-<td class="epf">$60.95</td>
-</tr>
-
-<tr>
-<td class="rank">3</td>
-<td class="gym">Powerlille<span class="manager">/CCCP/</span></td>
-<td class="country">Russia</td>
-<td class="titles">1178</td>
-<td>2988-1323-1799</td>
-<td class="plus">+1665</td>
-<td class="win">64.00%</td>
-<td class="money">$3.39B</td>
-<td class="epf">$459.51</td>
-</tr>
-
-<tr>
-<td class="rank">4</td>
-<td class="gym">2 Twisted Pugilistic Logistics<span class="manager">(SeS)</span></td>
-<td class="country">USA</td>
-<td class="titles">500</td>
-<td>6043-3391-2152</td>
-<td class="plus">+2652</td>
-<td class="win">63.71%</td>
-<td class="money">$2.98B</td>
-<td class="epf">$60.96</td>
-</tr>
-
-<tr>
-<td class="rank">5</td>
-<td class="gym">Vrykolakas<span class="manager">(A Badminton Club)</span></td>
-<td class="country">Georgia</td>
-<td class="titles">423</td>
-<td>2101-307-396</td>
-<td class="plus">+1794</td>
-<td class="win">62.52%</td>
-<td class="money">$1.31B</td>
-<td class="epf">$68.97</td>
-</tr>
-
-<tr>
-<td class="rank">6</td>
-<td class="gym">Carolina Cannery</td>
-<td class="country">USA</td>
-<td class="titles"></td>
-<td></td>
-<td class="plus"></td>
-<td class="win"></td>
-<td class="money"></td>
-<td class="epf"></td>
-</tr>
-
-<tr>
-<td class="rank">7</td>
-<td class="gym">Old School Boxing</td>
-<td class="country"></td>
-<td class="titles"></td>
-<td></td>
-<td class="plus"></td>
-<td class="win"></td>
-<td class="money"></td>
-<td class="epf"></td>
-</tr>
-
-<tr>
-<td class="rank">8</td>
-<td class="gym">The Northmen</td>
-<td class="country"></td>
-<td class="titles"></td>
-<td></td>
-<td class="plus"></td>
-<td class="win"></td>
-<td class="money"></td>
-<td class="epf"></td>
-</tr>
-
-<tr>
-<td class="rank">9</td>
-<td class="gym">Peggleworth</td>
-<td class="country"></td>
-<td class="titles"></td>
-<td></td>
-<td class="plus"></td>
-<td class="win"></td>
-<td class="money"></td>
-<td class="epf"></td>
-</tr>
-<tr>
-
 <th>#</th>
-<th>Gym / Manager</th>
+<th>Gym</th>
+<th>Manager</th>
 <th>Country</th>
 <th>Titles</th>
-<th>Record (W-L-D)</th>
+<th>Record</th>
 <th>+/-</th>
 <th>Win %</th>
 <th>Earnings</th>
 <th>EPF</th>
-
 </tr>
 
 </thead>
 
 <tbody>
+
+<tr>
+<td class="rank">1</td>
+<td class="gym">Lochside 🐉 The Scottish Gym</td>
+<td class="manager">Lochside Management</td>
+<td class="country">United Kingdom</td>
+<td class="titles">2565</td>
+<td>14960-3388-7457</td>
+<td class="plus">+10864</td>
+<td class="win">69.64%</td>
+<td>$11.10B</td>
+<td>$99.97</td>
+</tr>
+
+<tr>
+<td class="rank">2</td>
+<td class="gym">Rockin Rods Ring Rebels</td>
+<td class="manager">Amalgamated</td>
+<td class="country">Australia</td>
+<td class="titles">1415</td>
+<td>10108-7397-3732</td>
+<td class="plus">+2768</td>
+<td class="win">57.68%</td>
+<td>$8.35B</td>
+<td>$60.95</td>
+</tr>
+
+<tr>
+<td class="rank">3</td>
+<td class="gym">Powerlille</td>
+<td class="manager">/CCCP/</td>
+<td class="country">Russia</td>
+<td class="titles">1178</td>
+<td>2988-1323-1799</td>
+<td class="plus">+1665</td>
+<td class="win">64.00%</td>
+<td>$3.39B</td>
+<td>$459.51</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</body>
+</html>
