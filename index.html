@@ -26,35 +26,35 @@ padding:20px;
 width:100%;
 max-width:1280px;
 margin:auto;
-background:linear-gradient(180deg,#0d203f 0%,#081426 100%);
+background:linear-gradient(180deg,#0d203f,#081426);
 border:4px solid #d4af37;
 border-radius:18px;
-box-shadow:0 0 35px rgba(0,0,0,.7);
 overflow:hidden;
+box-shadow:0 0 35px rgba(0,0,0,.7);
 }
 
 .header{
-padding:30px 20px 22px;
+padding:30px;
 text-align:center;
 }
 
 .header h1{
 font-family:Georgia,serif;
-font-size:64px;
+font-size:55px;
 color:#dcb44a;
+letter-spacing:4px;
 }
 
 .header h2{
 margin-top:10px;
-font-size:21px;
-letter-spacing:5px;
-color:white;
+font-size:20px;
+letter-spacing:4px;
 }
 
 .divider{
 height:2px;
 background:#d4af37;
-margin:20px 40px;
+margin:0 40px 20px;
 }
 
 table{
@@ -67,14 +67,15 @@ background:#10284b;
 }
 
 th{
-padding:15px 10px;
+padding:14px 8px;
 color:#dcb44a;
-border-bottom:2px solid #d4af37;
+text-transform:uppercase;
+font-size:13px;
 }
 
 td{
-padding:14px 10px;
-border-bottom:1px solid rgba(255,255,255,.08);
+padding:12px 8px;
+border-bottom:1px solid rgba(255,255,255,.1);
 }
 
 tbody tr:nth-child(even){
@@ -82,30 +83,43 @@ background:#0b1b33;
 }
 
 .rank{
-text-align:center;
-color:#dcb44a;
-font-size:20px;
 font-weight:bold;
+font-size:20px;
+color:#dcb44a;
+text-align:center;
 }
 
 .gym{
-font-size:17px;
 font-weight:bold;
+font-size:16px;
 }
 
 .manager{
-display:block;
-color:#bfc7d4;
 font-size:13px;
+color:#bfc7d4;
 }
 
 .country{
 text-align:center;
 }
 
-.titles,.plus,.win{
-font-weight:bold;
+.titles{
 color:#ffd34d;
+font-weight:bold;
+}
+
+.plus{
+color:#49df70;
+font-weight:bold;
+}
+
+.win{
+color:#66ef7c;
+font-weight:bold;
+}
+
+.money{
+white-space:nowrap;
 }
 
 </style>
@@ -119,11 +133,13 @@ color:#ffd34d;
 <div class="header">
 
 <h1>WEBL BARE KNUCKLE</h1>
+
 <h2>OFFICIAL ALL-TIME GYM RANKINGS</h2>
 
 </div>
 
 <div class="divider"></div>
+
 
 <table>
 
@@ -135,7 +151,7 @@ color:#ffd34d;
 <th>Manager</th>
 <th>Country</th>
 <th>Titles</th>
-<th>Record</th>
+<th>Record (W-L-D)</th>
 <th>+/-</th>
 <th>Win %</th>
 <th>Earnings</th>
@@ -144,20 +160,22 @@ color:#ffd34d;
 
 </thead>
 
+
 <tbody>
 
 <tr>
 <td class="rank">1</td>
 <td class="gym">Lochside 🐉 The Scottish Gym</td>
-<td class="manager">Lochside Management</td>
+<td class="manager">Lochside</td>
 <td class="country">United Kingdom</td>
 <td class="titles">2565</td>
 <td>14960-3388-7457</td>
 <td class="plus">+10864</td>
 <td class="win">69.64%</td>
-<td>$11.10B</td>
+<td class="money">$11.10B</td>
 <td>$99.97</td>
 </tr>
+
 
 <tr>
 <td class="rank">2</td>
@@ -168,9 +186,10 @@ color:#ffd34d;
 <td>10108-7397-3732</td>
 <td class="plus">+2768</td>
 <td class="win">57.68%</td>
-<td>$8.35B</td>
+<td class="money">$8.35B</td>
 <td>$60.95</td>
 </tr>
+
 
 <tr>
 <td class="rank">3</td>
@@ -181,9 +200,68 @@ color:#ffd34d;
 <td>2988-1323-1799</td>
 <td class="plus">+1665</td>
 <td class="win">64.00%</td>
-<td>$3.39B</td>
+<td class="money">$3.39B</td>
 <td>$459.51</td>
 </tr>
+
+
+<tr>
+<td class="rank">4</td>
+<td class="gym">2 Twisted Pugilistic Logistics</td>
+<td class="manager">(SeS)</td>
+<td class="country">USA</td>
+<td class="titles">500</td>
+<td>6043-3391-2152</td>
+<td class="plus">+2652</td>
+<td class="win">63.71%</td>
+<td class="money">$2.98B</td>
+<td>$60.96</td>
+</tr>
+
+
+<tr>
+<td class="rank">5</td>
+<td class="gym">Vrykolakas</td>
+<td class="manager">(A Badminton Club)</td>
+<td class="country">Georgia</td>
+<td class="titles">423</td>
+<td>2101-307-396</td>
+<td class="plus">+1794</td>
+<td class="win">62.52%</td>
+<td class="money">$1.31B</td>
+<td>$68.97</td>
+</tr>
+
+
+<tr>
+<td class="rank">6</td>
+<td class="gym">Carolina Cannery</td>
+<td></td>
+<td class="country">USA</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+
+<tr>
+<td class="rank">7</td>
+<td class="gym">Old School Boxing</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+
+<tr>
+<td class="rank">8</td>
+<td class="gym">The Northmen</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
+
+<tr>
+<td class="rank">9</td>
+<td class="gym">Peggleworth</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+
 
 </tbody>
 
