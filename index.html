@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEBL Bare Knuckle Rankings</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #061327;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    padding: 10px;
+    line-height: 1.25;
+}
+
+.board {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto 18px;
+    background: linear-gradient(180deg, #0d203f 0%, #081426 100%);
+    border: 3px solid #d4af37;
+    border-radius: 14px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    overflow-x: auto;
+}
+
+.header {
+    padding: 20px 12px 14px;
+    text-align: center;
+}
+
+.header h1 {
+    font-family: Georgia, serif;
+    font-size: 44px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #dcb44a;
+    text-shadow: 2px 2px 0 #000, 0 0 8px rgba(255,215,0,0.2);
+}
+
+.header h2 {
+    margin-top: 6px;
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    color: #f4f4f4;
+    text-transform: uppercase;
+}
+
+.divider {
+    height: 2px;
+    background: #d4af37;
+    margin: 12px 25px;
+}
+
+.sub-header {
+    text-align: center;
+    font-size: 17px;
+    color: #dcb44a;
+    padding: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1100px;
+}
+
+thead {
+    background: #10284b;
+}
+
+th {
+    padding: 10px 5px;
+    font-size: 10.5px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: #dcb44a;
+    border-bottom: 2px solid #d4af37;
+    text-align: left;
+    white-space: nowrap;
+}
+
+tbody tr:nth-child(even) {
+    background: #0b1b33;
+}
+
+tbody tr:hover {
+    background: #13294a;
+}
+
+td {
+    padding: 7px 5px;
+    font-size: 11.5px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    word-break: break-word;
+}
+
+.rank {
+    width: 38px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #dcb44a;
+}
+
+.titles {
+    color: #ffd34d;
+    font-weight: bold;
+    text-align: center;
+}
+
+.money {
+    white-space: nowrap;
+}
+
+.age {
+    text-align: center;
+}
+
+.gym {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.plus {
+    color: #4cd964;
+    text-align: center;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.win {
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+}
