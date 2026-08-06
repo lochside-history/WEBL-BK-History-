@@ -14,8 +14,8 @@
         }
 
         html, body {
-            overflow-x: hidden;
             width: 100%;
+            overflow-x: hidden;
         }
 
         body {
@@ -28,12 +28,15 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 100%;
             width: 100%;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
+        }
+
+        .flag {
+            font-size: 18px;
+            margin-right: 6px;
+            vertical-align: middle;
         }
 
         /* Header */
@@ -44,7 +47,7 @@
         }
 
         .brand h1 {
-            font-size: 32px;
+            font-size: 28px;
             color: #d4af37;
             font-weight: 800;
             letter-spacing: 1px;
@@ -52,60 +55,63 @@
         }
 
         .brand h2 {
-            font-size: 18px;
+            font-size: 16px;
             color: #fff;
             margin: 4px 0;
         }
 
         .brand p {
             color: #b8a050;
-            font-size: 12px;
-            line-height: 1.5;
+            font-size: 11px;
+            line-height: 1.4;
             margin-top: 6px;
         }
 
         .quick-links {
             text-align: center;
-            padding: 8px;
+            padding: 10px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
         }
 
         .quick-links a {
-            display: inline-block;
-            margin: 4px;
-            padding: 8px 14px;
+            padding: 7px 12px;
             background: rgba(212,175,55,0.15);
             border: 1px solid rgba(212,175,55,0.3);
             border-radius: 4px;
             color: #d4af37;
             text-decoration: none;
             font-weight: 500;
-            font-size: 13px;
+            font-size: 12px;
         }
 
-        /* Stats */
+        /* Stats Grid */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin: 12px 0;
         }
 
         .stat-card {
             background: rgba(12,20,40,0.85);
             border: 1px solid rgba(212,175,55,0.2);
             border-radius: 6px;
-            padding: 14px 10px;
+            padding: 12px 8px;
             text-align: center;
         }
 
         .stat-card .label {
-            font-size: 11px;
+            font-size: 10px;
             color: #aaa;
             text-transform: uppercase;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         .stat-card .value {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             color: #d4af37;
             word-break: break-word;
@@ -114,12 +120,13 @@
         .stat-card:nth-child(3) .value { color: #a855f7; }
         .stat-card:nth-child(4) .value { color: #f59e0b; }
 
-        /* Regions Table */
+        /* Regions - NO HORIZONTAL SCROLL */
         .regions-section {
             background: rgba(12,20,40,0.85);
             border: 1px solid rgba(212,175,55,0.2);
             border-radius: 6px;
             padding: 12px;
+            margin: 12px 0;
         }
 
         .section-header {
@@ -132,7 +139,7 @@
         }
 
         .section-header h3 {
-            font-size: 18px;
+            font-size: 17px;
             color: #d4af37;
         }
 
@@ -142,48 +149,53 @@
             border: 1px solid rgba(255,255,255,0.15);
             border-radius: 4px;
             width: 100%;
-            max-width: 200px;
-            font-size: 13px;
+            font-size: 12px;
         }
 
-        .table-wrap {
-            width: 100%;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
+        /* Stack table rows on mobile */
         table {
             width: 100%;
             border-collapse: collapse;
         }
 
-        th, td {
-            padding: 8px 5px;
-            font-size: 11px;
-            text-align: left;
+        thead { display: none; }
+
+        tr {
+            display: block;
+            margin-bottom: 10px;
             border-bottom: 1px solid rgba(255,255,255,0.08);
-            white-space: nowrap;
+            padding: 8px 0;
         }
 
-        th {
-            color: #d4af37;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 10px;
-            border-bottom: 1px solid rgba(212,175,55,0.25);
+        td {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 6px;
+            font-size: 12px;
+            border: none;
         }
 
-        tr.active td {
-            background: rgba(212,175,55,0.12);
-            color: #d4af37;
+        td::before {
+            content: attr(data-label);
+            color: #aaa;
             font-weight: 500;
+            text-transform: uppercase;
+            font-size: 11px;
         }
+
+        tr.active {
+            background: rgba(212,175,55,0.1);
+            border-radius: 4px;
+            padding: 8px;
+        }
+
+        tr.active td { color: #d4af37; font-weight: 500; }
 
         .btn {
             display: block;
-            width: fit-content;
-            margin: 14px auto 0;
-            padding: 10px 20px;
+            width: 100%;
+            margin: 10px 0 0;
+            padding: 10px;
             background: linear-gradient(135deg, #2563eb, #3a7bd5);
             border: none;
             border-radius: 4px;
@@ -198,20 +210,20 @@
             padding: 14px 8px;
             border-top: 1px solid rgba(212,175,55,0.25);
             text-align: center;
-            font-size: 12px;
+            font-size: 11px;
             color: #999;
-            line-height: 1.5;
+            line-height: 1.4;
+            margin-top: 12px;
         }
 
-        /* Tablet/Desktop */
+        /* Desktop layout */
         @media (min-width: 768px) {
-            .container {
-                grid-template-columns: 200px 1fr 280px;
-            }
-            .page-header { grid-column: 1 / -1; }
-            .quick-links { grid-column: 1 / -1; }
             .stats-grid { grid-template-columns: repeat(4, 1fr); }
-            th, td { font-size: 13px; padding: 10px 8px; }
+            thead { display: table-header-group; }
+            tr { display: table-row; margin-bottom: 0; padding: 0; }
+            td { display: table-cell; padding: 10px 8px; font-size: 13px; }
+            td::before { display: none; }
+            .btn { width: fit-content; margin: 14px auto 0; }
         }
     </style>
 </head>
@@ -221,7 +233,7 @@
             <div class="brand">
                 <h1>WEBL LOCHSIDE</h1>
                 <h2>THE SCOTTISH GYM</h2>
-                <p>🏴󠁧󠁢󠁳󠁣󠁴󠁿 FROM SCOTLAND FOR THE WORLD &nbsp;|&nbsp; HONOUR IN THE RING • PRIDE IN OUR HERITAGE &nbsp;|&nbsp; BUILT ON HISTORY • FOCUSED ON VICTORY</p>
+                <p>🏴󠁧󠁢󠁳󠁣󠁴󠁿 FROM SCOTLAND FOR THE WORLD • HONOUR IN THE RING • PRIDE IN OUR HERITAGE • BUILT ON HISTORY • FOCUSED ON VICTORY</p>
             </div>
         </header>
 
@@ -231,122 +243,126 @@
             <a href="#">📜 HISTORY</a>
         </div>
 
-        <main class="main-content" style="grid-column: 1 / -1;">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="label">TOTAL CAREER EARNINGS</div>
-                    <div class="value">$12,004,915,230</div>
-                    <div class="label">EARNINGS</div>
-                </div>
-                <div class="stat-card">
-                    <div class="label">TOTAL TITLES WON</div>
-                    <div class="value">2,392</div>
-                    <div class="label">TITLES</div>
-                </div>
-                <div class="stat-card">
-                    <div class="label">AVERAGE ELO</div>
-                    <div class="value">1,720</div>
-                    <div class="label">ELO RATING</div>
-                </div>
-                <div class="stat-card">
-                    <div class="label">AVERAGE POWER</div>
-                    <div class="value">5,329</div>
-                    <div class="label">POWER</div>
-                </div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="label">Total Earnings</div>
+                <div class="value">$12,004,915,230</div>
+                <div class="label">EARNINGS</div>
             </div>
-
-            <div class="regions-section">
-                <div class="section-header">
-                    <h3>REGIONS</h3>
-                    <input type="text" class="search-box" placeholder="Search regions...">
-                </div>
-                <div class="table-wrap">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>REGION</th>
-                                <th>EARNINGS</th>
-                                <th>RECORD</th>
-                                <th>TITLES</th>
-                                <th>ELO</th>
-                                <th>POWER</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="active">
-                                <td>1</td>
-                                <td>Rare Roaches</td>
-                                <td>$12,004,915,230</td>
-                                <td>14925-9970-7419</td>
-                                <td>2,202</td>
-                                <td>1,720</td>
-                                <td>5,329</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Community</td>
-                                <td>$11,081,865,466</td>
-                                <td>1009-4009-247</td>
-                                <td>28</td>
-                                <td>1,223</td>
-                                <td>1,190</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>British Commonwealth</td>
-                                <td>$2,035,676,994</td>
-                                <td>3910-3000-308</td>
-                                <td>227</td>
-                                <td>1,427</td>
-                                <td>2,896</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Unsanctioned</td>
-                                <td>$832,978,782</td>
-                                <td>2727-791-100</td>
-                                <td>265</td>
-                                <td>1,387</td>
-                                <td>5,798</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Invitational</td>
-                                <td>$645,938,706</td>
-                                <td>79-74-2</td>
-                                <td>3</td>
-                                <td>1,177</td>
-                                <td>1,093</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Welsh Revival</td>
-                                <td>$429,576,674</td>
-                                <td>1853-818-229</td>
-                                <td>21</td>
-                                <td>1,283</td>
-                                <td>3,516</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>United Kingdom</td>
-                                <td>$400,353,822</td>
-                                <td>2451-1287-160</td>
-                                <td>43</td>
-                                <td>1,513</td>
-                                <td>4,957</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <a href="#" class="btn">VIEW ALL REGIONS</a>
-                <a href="fighters.html" class="btn">VIEW TOP 30 FIGHTERS</a>
+            <div class="stat-card">
+                <div class="label">Total Titles</div>
+                <div class="value">2,392</div>
+                <div class="label">TITLES</div>
             </div>
-        </main>
+            <div class="stat-card">
+                <div class="label">Average Elo</div>
+                <div class="value">1,720</div>
+                <div class="label">ELO</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Average Power</div>
+                <div class="value">5,329</div>
+                <div class="label">POWER</div>
+            </div>
+        </div>
 
-        <footer class="page-footer" style="grid-column: 1 / -1;">
-            🏴󠁧󠁢󠁳󠁣󠁴󠁿 FROM SCOTLAND FOR THE WORLD &nbsp;|&nbsp; HONOUR IN THE RING • PRIDE IN OUR HERITAGE &nbsp;|&nbsp; BUILT ON HISTORY • FOCUSED ON VICTORY
+        <div class="regions-section">
+            <div class="section-header">
+                <h3>REGIONS</h3>
+                <input type="text" class="search-box" placeholder="Search regions...">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Flag</th>
+                        <th>Region</th>
+                        <th>Earnings</th>
+                        <th>Record</th>
+                        <th>Titles</th>
+                        <th>Elo</th>
+                        <th>Power</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="active">
+                        <td data-label="#">1</td>
+                        <td data-label="Flag"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span></td>
+                        <td data-label="Region">Rare Roaches</td>
+                        <td data-label="Earnings">$12,004,915,230</td>
+                        <td data-label="Record">14925-9970-7419</td>
+                        <td data-label="Titles">2,202</td>
+                        <td data-label="Elo">1,720</td>
+                        <td data-label="Power">5,329</td>
+                    </tr>
+                    <tr>
+                        <td data-label="#">2</td>
+                        <td data-label="Flag"><span class="flag">🌍</span></td>
+                        <td data-label="Region">Community</td>
+                        <td data-label="Earnings">$11,081,865,466</td>
+                        <td data-label="Record">1009-4009-247</td>
+                        <td data-label="Titles">28</td>
+                        <td data-label="Elo">1,223</td>
+                        <td data-label="Power">1,190</td>
+                    </tr>
+                    <tr>
+                        <td data-label="#">3</td>
+                        <td data-label="Flag"><span class="flag">🇬🇧</span></td>
+                        <td data-label="Region">British Commonwealth</td>
+                        <td data-label="Earnings">$2,035,676,994</td>
+                        <td data-label="Record">3910-3000-308</td>
+                        <td data-label="Titles">227</td>
+                        <td data-label="Elo">1,427</td>
+                        <td data-label="Power">2,896</td>
+                    </tr>
+                    <tr>
+                        <td data-label="#">4</td>
+                        <td data-label="Flag"><span class="flag">⚠️</span></td>
+                        <td data-label="Region">Unsanctioned</td>
+                        <td data-label="Earnings">$832,978,782</td>
+                        <td data-label="Record">2727-791-100</td>
+                        <td data-label="Titles">265</td>
+                        <td data-label="Elo">1,387</td>
+                        <td data-label="Power">5,798</td>
+                    </tr>
+                    <tr>
+                        <td data-label="#">5</td>
+                        <td data-label="Flag"><span class="flag">🎟️</span></td>
+                        <td data-label="Region">Invitational</td>
+                        <td data-label="Earnings">$645,938,706</td>
+                        <td data-label="Record">79-74-2</td>
+                        <td data-label="Titles">3</td>
+                        <td data-label="Elo">1,177</td>
+                        <td data-label="Power">1,093</td>
+                    </tr>
+                    <tr>
+                        <td data-label="#">6</td>
+                        <td data-label="Flag"><span class="flag">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span></td>
+                        <td data-label="Region">Welsh Revival</td>
+                        <td data-label="Earnings">$429,576,674</td>
+                        <td data-label="Record">1853-818-229</td>
+                        <td data-label="Titles">21</td>
+                        <td data-label="Elo">1,283</td>
+                        <td data-label="Power">3,516</td>
+                    </tr>
+                    <tr>
+                        <td data-label="#">7</td>
+                        <td data-label="Flag"><span class="flag">🇬🇧</span></td>
+                        <td data-label="Region">United Kingdom</td>
+                        <td data-label="Earnings">$400,353,822</td>
+                        <td data-label="Record">2451-1287-160</td>
+                        <td data-label="Titles">43</td>
+                        <td data-label="Elo">1,513</td>
+                        <td data-label="Power">4,957</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#" class="btn">VIEW ALL REGIONS</a>
+            <a href="fighters.html" class="btn">VIEW TOP 30 FIGHTERS</a>
+        </div>
+
+        <footer class="page-footer">
+            🏴󠁧󠁢󠁳󠁣󠁴󠁿 FROM SCOTLAND FOR THE WORLD • HONOUR IN THE RING • PRIDE IN OUR HERITAGE • BUILT ON HISTORY • FOCUSED ON VICTORY
         </footer>
     </div>
 </body>
