@@ -55,6 +55,19 @@
             margin: 0 auto;
         }
 
+        .nav-link {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .nav-link:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
         .header {
             text-align: center;
             margin-bottom: 16px;
@@ -144,6 +157,13 @@
             font-weight: 600;
         }
 
+        .page-footer {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(212,175,55,0.25);
+            text-align: center;
+        }
+
         #table-desc {
             display: none;
         }
@@ -159,6 +179,9 @@
     <a class="skip-link" href="#fighters-table">Skip to table</a>
 
     <div class="board">
+        <!-- Top Navigation -->
+        <a href="index.html" class="nav-link">← Back to Home</a>
+
         <header class="header" role="banner">
             <h1>WEBL BARE KNUCKLE</h1>
             <h2>TOP 30 FIGHTERS OF ALL TIME</h2>
@@ -485,6 +508,11 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="page-footer">
+            <a href="index.html" class="nav-link">← Back to Home Page</a>
         </div>
     </div>
 </body>
