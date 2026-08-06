@@ -54,3 +54,42 @@ border:1px solid #555;
     background:#0b3b75;
     border:1px solid #0b3b75;
 }
+/* FULL WIDTH MOBILE */
+*{
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+
+.board{
+    width:100%;
+    max-width:100%;
+    margin:0;
+    padding:8px;
+}
+
+.table-wrap{
+    width:100%;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:auto;
+}
+
+th,td{
+    padding:8px 6px;
+}
+
+th:last-child,
+td:last-child{
+    width:30%;
+    white-space:nowrap;
+}
