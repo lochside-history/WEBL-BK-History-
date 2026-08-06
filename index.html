@@ -117,10 +117,7 @@
             word-break: break-word;
         }
 
-        .stat-card:nth-child(3) .value { color: #a855f7; }
-        .stat-card:nth-child(4) .value { color: #f59e0b; }
-
-        /* Regions - NO HORIZONTAL SCROLL */
+        /* Regions Section */
         .regions-section {
             background: rgba(12,20,40,0.85);
             border: 1px solid rgba(212,175,55,0.2);
@@ -152,7 +149,7 @@
             font-size: 12px;
         }
 
-        /* Stack table rows on mobile */
+        /* Mobile stacked table */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -190,6 +187,9 @@
         }
 
         tr.active td { color: #d4af37; font-weight: 500; }
+
+        .legacy-rank { color: #ffd700; font-weight: 700; }
+        .win-rate { color: #22c55e; font-weight: 500; }
 
         .btn {
             display: block;
@@ -251,18 +251,18 @@
             </div>
             <div class="stat-card">
                 <div class="label">Total Titles</div>
-                <div class="value">2,392</div>
+                <div class="value">2,566</div>
                 <div class="label">TITLES</div>
             </div>
             <div class="stat-card">
-                <div class="label">Average Elo</div>
-                <div class="value">1,720</div>
-                <div class="label">ELO</div>
+                <div class="label">Win Rate</div>
+                <div class="value">71%</div>
+                <div class="label">WIN %</div>
             </div>
             <div class="stat-card">
-                <div class="label">Average Power</div>
-                <div class="value">5,329</div>
-                <div class="label">POWER</div>
+                <div class="label">Fight Record</div>
+                <div class="value">14959-3987-7440</div>
+                <div class="label">RECORD</div>
             </div>
         </div>
 
@@ -277,83 +277,75 @@
                         <th>#</th>
                         <th>Flag</th>
                         <th>Region</th>
-                        <th>Earnings</th>
-                        <th>Record</th>
                         <th>Titles</th>
-                        <th>Elo</th>
-                        <th>Power</th>
+                        <th>Win %</th>
+                        <th>Earnings</th>
+                        <th>Lochside Legacy Rank</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="active">
                         <td data-label="#">1</td>
                         <td data-label="Flag"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span></td>
-                        <td data-label="Region">Rare Roaches</td>
-                        <td data-label="Earnings">$12,004,915,230</td>
-                        <td data-label="Record">14925-9970-7419</td>
-                        <td data-label="Titles">2,202</td>
-                        <td data-label="Elo">1,720</td>
-                        <td data-label="Power">5,329</td>
+                        <td data-label="Region">Bare Knuckle</td>
+                        <td data-label="Titles">2,566</td>
+                        <td data-label="Win %" class="win-rate">71%</td>
+                        <td data-label="Earnings">$12,115,318,816</td>
+                        <td data-label="Legacy Rank" class="legacy-rank">#1 LEGEND</td>
                     </tr>
                     <tr>
                         <td data-label="#">2</td>
                         <td data-label="Flag"><span class="flag">🌍</span></td>
                         <td data-label="Region">Community</td>
-                        <td data-label="Earnings">$11,081,865,466</td>
-                        <td data-label="Record">1009-4009-247</td>
                         <td data-label="Titles">28</td>
-                        <td data-label="Elo">1,223</td>
-                        <td data-label="Power">1,190</td>
+                        <td data-label="Win %" class="win-rate">56%</td>
+                        <td data-label="Earnings">$11,081,865,466</td>
+                        <td data-label="Legacy Rank" class="legacy-rank">#9 ESTABLISHED</td>
                     </tr>
                     <tr>
                         <td data-label="#">3</td>
                         <td data-label="Flag"><span class="flag">🇬🇧</span></td>
                         <td data-label="Region">British Commonwealth</td>
-                        <td data-label="Earnings">$2,035,676,994</td>
-                        <td data-label="Record">3910-3000-308</td>
                         <td data-label="Titles">227</td>
-                        <td data-label="Elo">1,427</td>
-                        <td data-label="Power">2,896</td>
+                        <td data-label="Win %" class="win-rate">64%</td>
+                        <td data-label="Earnings">$2,035,676,994</td>
+                        <td data-label="Legacy Rank" class="legacy-rank">#4 ELITE</td>
                     </tr>
                     <tr>
                         <td data-label="#">4</td>
                         <td data-label="Flag"><span class="flag">⚠️</span></td>
                         <td data-label="Region">Unsanctioned</td>
-                        <td data-label="Earnings">$832,978,782</td>
-                        <td data-label="Record">2727-791-100</td>
                         <td data-label="Titles">265</td>
-                        <td data-label="Elo">1,387</td>
-                        <td data-label="Power">5,798</td>
+                        <td data-label="Win %" class="win-rate">77%</td>
+                        <td data-label="Earnings">$832,978,782</td>
+                        <td data-label="Legacy Rank" class="legacy-rank">#3 DANGEROUS</td>
                     </tr>
                     <tr>
                         <td data-label="#">5</td>
                         <td data-label="Flag"><span class="flag">🎟️</span></td>
                         <td data-label="Region">Invitational</td>
-                        <td data-label="Earnings">$645,938,706</td>
-                        <td data-label="Record">79-74-2</td>
                         <td data-label="Titles">3</td>
-                        <td data-label="Elo">1,177</td>
-                        <td data-label="Power">1,093</td>
+                        <td data-label="Win %" class="win-rate">52%</td>
+                        <td data-label="Earnings">$645,938,706</td>
+                        <td data-label="Legacy Rank" class="legacy-rank">#20 EMERGING</td>
                     </tr>
                     <tr>
                         <td data-label="#">6</td>
                         <td data-label="Flag"><span class="flag">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span></td>
                         <td data-label="Region">Welsh Revival</td>
-                        <td data-label="Earnings">$429,576,674</td>
-                        <td data-label="Record">1853-818-229</td>
                         <td data-label="Titles">21</td>
-                        <td data-label="Elo">1,283</td>
-                        <td data-label="Power">3,516</td>
+                        <td data-label="Win %" class="win-rate">69%</td>
+                        <td data-label="Earnings">$429,576,674</td>
+                        <td data-label="Legacy Rank" class="legacy-rank">#12 COMPETITIVE</td>
                     </tr>
                     <tr>
                         <td data-label="#">7</td>
                         <td data-label="Flag"><span class="flag">🇬🇧</span></td>
                         <td data-label="Region">United Kingdom</td>
-                        <td data-label="Earnings">$400,353,822</td>
-                        <td data-label="Record">2451-1287-160</td>
                         <td data-label="Titles">43</td>
-                        <td data-label="Elo">1,513</td>
-                        <td data-label="Power">4,957</td>
+                        <td data-label="Win %" class="win-rate">65%</td>
+                        <td data-label="Earnings">$400,353,822</td>
+                        <td data-label="Legacy Rank" class="legacy-rank">#8 RESPECTED</td>
                     </tr>
                 </tbody>
             </table>
