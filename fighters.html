@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Top 30 fighters of all time in WEBL Bare Knuckle — rankings, records, titles, earnings and gyms.">
     <title>WEBL Top 30 Fighters</title>
-    <link rel="stylesheet" href="style.css">
     <style>
         * {
             margin: 0;
@@ -16,8 +14,8 @@
         }
 
         html, body {
-            overflow-x: hidden;
             width: 100%;
+            overflow-x: hidden;
         }
 
         body {
@@ -26,7 +24,19 @@
                 linear-gradient(rgba(8,15,30,0.9), rgba(8,15,30,0.95)),
                 radial-gradient(circle at top right, rgba(200,160,40,0.08), transparent 60%);
             min-height: 100vh;
-            padding: 16px 8px;
+            padding: 12px 8px;
+        }
+
+        .container {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .flag {
+            font-size: 18px;
+            margin-right: 6px;
+            vertical-align: middle;
         }
 
         .skip-link {
@@ -47,12 +57,6 @@
             color: #fff;
             border-radius: 4px;
             z-index: 100;
-        }
-
-        .board {
-            max-width: 1280px;
-            width: 100%;
-            margin: 0 auto;
         }
 
         .nav-link {
@@ -76,15 +80,15 @@
         }
 
         .header h1 {
-            font-size: 36px;
+            font-size: 28px;
             color: #d4af37;
             font-weight: 800;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             margin-bottom: 4px;
         }
 
         .header h2 {
-            font-size: 22px;
+            font-size: 18px;
             color: #fff;
             font-weight: 600;
         }
@@ -92,53 +96,54 @@
         .divider {
             height: 2px;
             background: linear-gradient(90deg, transparent, #d4af37, transparent);
-            margin: 20px 0;
+            margin: 16px 0;
             opacity: 0.6;
         }
 
         .table-wrap {
-            width: 100%;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
             background: rgba(12,20,40,0.85);
             border: 1px solid rgba(212,175,55,0.2);
             border-radius: 6px;
-            padding: 16px;
+            padding: 12px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 900px;
         }
 
         caption {
-            caption-side: top;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 17px;
             color: #d4af37;
             margin-bottom: 12px;
             text-align: center;
         }
 
-        th, td {
-            padding: 10px 8px;
+        /* Mobile stacked view */
+        thead { display: none; }
+
+        tr {
+            display: block;
+            margin-bottom: 12px;
             border-bottom: 1px solid rgba(255,255,255,0.08);
-            text-align: left;
-            font-size: 13px;
-            vertical-align: middle;
+            padding: 8px 0;
         }
 
-        th {
-            color: #d4af37;
-            font-weight: 600;
-            text-transform: uppercase;
+        td {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 6px;
             font-size: 12px;
-            border-bottom: 1px solid rgba(212,175,55,0.25);
+            border: none;
         }
 
-        tr:hover td {
-            background: rgba(212,175,55,0.08);
+        td::before {
+            content: attr(data-label);
+            color: #aaa;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 11px;
         }
 
         .gym-lochside {
@@ -164,35 +169,46 @@
             text-align: center;
         }
 
-        #table-desc {
-            display: none;
-        }
+        /* Desktop view */
+        @media (min-width: 768px) {
+            thead { display: table-header-group; }
+            tr { display: table-row; margin-bottom: 0; padding: 0; }
+            td { display: table-cell; padding: 10px 8px; font-size: 13px; }
+            td::before { display: none; }
 
-        @media (max-width: 768px) {
-            .header h1 { font-size: 28px; }
-            .header h2 { font-size: 18px; }
-            th, td { padding: 8px 6px; font-size: 12px; }
+            th {
+                padding: 10px 8px;
+                border-bottom: 1px solid rgba(212,175,55,0.25);
+                text-align: left;
+                font-size: 12px;
+                font-weight: 600;
+                color: #d4af37;
+                text-transform: uppercase;
+            }
+
+            tr:hover td {
+                background: rgba(212,175,55,0.08);
+            }
         }
     </style>
 </head>
 <body>
     <a class="skip-link" href="#fighters-table">Skip to table</a>
 
-    <div class="board">
+    <div class="container">
         <!-- Top Navigation -->
         <a href="index.html" class="nav-link">← Back to Home</a>
 
-        <header class="header" role="banner">
+        <header class="header">
             <h1>WEBL BARE KNUCKLE</h1>
             <h2>TOP 30 FIGHTERS OF ALL TIME</h2>
         </header>
 
-        <div class="divider" role="separator" aria-hidden="true"></div>
+        <div class="divider" aria-hidden="true"></div>
 
         <div class="table-wrap">
-            <table id="fighters-table" aria-describedby="table-desc">
+            <table id="fighters-table">
                 <caption>WEBL Top 30 Fighters — Rankings and Stats</caption>
-                <p id="table-desc">Rank, fighter name, location, titles won, total earnings, career record, rating/status, and manager/gym.</p>
                 <thead>
                     <tr>
                         <th scope="col">Rank</th>
@@ -207,313 +223,221 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>Zarnitza II <small>regional_champion</small></td>
-                        <td>Russia</td>
-                        <td class="titles">116</td>
-                        <td class="earnings">$148,267,022</td>
-                        <td>24-10-114 (13/7)</td>
-                        <td>16 (18)</td>
-                        <td>Powerlille /CCCP/</td>
+                        <td data-label="Rank">1</td>
+                        <td data-label="Fighter">Zarnitza II</td>
+                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
+                        <td data-label="Titles" class="titles">116</td>
+                        <td data-label="Earnings" class="earnings">$148,267,022</td>
+                        <td data-label="Record">24-10-114 (13/7)</td>
+                        <td data-label="Rating">16 (18)</td>
+                        <td data-label="Gym">Powerlille /CCCP/</td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td>Beyonce BK Wilder <small>regional_champion</small></td>
-                        <td>United Kingdom</td>
-                        <td class="titles">107</td>
-                        <td class="earnings">$207,336,198</td>
-                        <td>89-9-45 (60/5)</td>
-                        <td>18 (18)</td>
-                        <td class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+                        <td data-label="Rank">2</td>
+                        <td data-label="Fighter">Beyonce BK Wilder</td>
+                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> UK</td>
+                        <td data-label="Titles" class="titles">107</td>
+                        <td data-label="Earnings" class="earnings">$207,336,198</td>
+                        <td data-label="Record">89-9-45 (60/5)</td>
+                        <td data-label="Rating">18 (18)</td>
+                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td>BK `Spartacus` <small>regional_champion</small></td>
-                        <td>United Kingdom</td>
-                        <td class="titles">89</td>
-                        <td class="earnings">$125,646,582</td>
-                        <td>106-21-19 (83/10)</td>
-                        <td>16 (18)</td>
-                        <td class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+                        <td data-label="Rank">3</td>
+                        <td data-label="Fighter">BK `Spartacus`</td>
+                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> UK</td>
+                        <td data-label="Titles" class="titles">89</td>
+                        <td data-label="Earnings" class="earnings">$125,646,582</td>
+                        <td data-label="Record">106-21-19 (83/10)</td>
+                        <td data-label="Rating">16 (18)</td>
+                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
                     </tr>
                     <tr>
-                        <td>4</td>
-                        <td>BK `Tom Cribb` <small>regional_champion</small></td>
-                        <td>United Kingdom</td>
-                        <td class="titles">83</td>
-                        <td class="earnings">$134,857,534</td>
-                        <td>51-2-52 (27/2)</td>
-                        <td>18 (18)</td>
-                        <td class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+                        <td data-label="Rank">4</td>
+                        <td data-label="Fighter">BK `Tom Cribb`</td>
+                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> UK</td>
+                        <td data-label="Titles" class="titles">83</td>
+                        <td data-label="Earnings" class="earnings">$134,857,534</td>
+                        <td data-label="Record">51-2-52 (27/2)</td>
+                        <td data-label="Rating">18 (18)</td>
+                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
                     </tr>
                     <tr>
-                        <td>5</td>
-                        <td>Yuri "Point Snatcher" Gorbikov <small>regional_champion</small></td>
-                        <td>United Kingdom</td>
-                        <td class="titles">83</td>
-                        <td class="earnings">$119,763,832</td>
-                        <td>52-7-58 (43/6)</td>
-                        <td>15 (18)</td>
-                        <td>Pain, Power and Glory</td>
+                        <td data-label="Rank">5</td>
+                        <td data-label="Fighter">Yuri "Point Snatcher" Gorbikov</td>
+                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> UK</td>
+                        <td data-label="Titles" class="titles">83</td>
+                        <td data-label="Earnings" class="earnings">$119,763,832</td>
+                        <td data-label="Record">52-7-58 (43/6)</td>
+                        <td data-label="Rating">15 (18)</td>
+                        <td data-label="Gym">Pain, Power and Glory</td>
                     </tr>
                     <tr>
-                        <td>6</td>
-                        <td>Vasiliy Zabolotniy <small>regional_champion</small></td>
-                        <td>Russia</td>
-                        <td class="titles">74</td>
-                        <td class="earnings">$103,608,306</td>
-                        <td>30-8-71 (12/6)</td>
-                        <td>14 (18)</td>
-                        <td>Powerlille /CCCP/</td>
+                        <td data-label="Rank">6</td>
+                        <td data-label="Fighter">Vasiliy Zabolotniy</td>
+                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
+                        <td data-label="Titles" class="titles">74</td>
+                        <td data-label="Earnings" class="earnings">$103,608,306</td>
+                        <td data-label="Record">30-8-71 (12/6)</td>
+                        <td data-label="Rating">14 (18)</td>
+                        <td data-label="Gym">Powerlille /CCCP/</td>
                     </tr>
                     <tr>
-                        <td>7</td>
-                        <td>John MacAckin <small>regional_champion</small></td>
-                        <td>Russia</td>
-                        <td class="titles">71</td>
-                        <td class="earnings">$155,922,238</td>
-                        <td>69-7-20 (60/6)</td>
-                        <td>16 (18)</td>
-                        <td>Powerlille /CCCP/</td>
+                        <td data-label="Rank">7</td>
+                        <td data-label="Fighter">John MacAckin</td>
+                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
+                        <td data-label="Titles" class="titles">71</td>
+                        <td data-label="Earnings" class="earnings">$155,922,238</td>
+                        <td data-label="Record">69-7-20 (60/6)</td>
+                        <td data-label="Rating">16 (18)</td>
+                        <td data-label="Gym">Powerlille /CCCP/</td>
                     </tr>
                     <tr>
-                        <td>8</td>
-                        <td>Farukh El Jabar <small>regional_champion</small></td>
-                        <td>Russia</td>
-                        <td class="titles">70</td>
-                        <td class="earnings">$126,392,836</td>
-                        <td>51-1-34 (35/0)</td>
-                        <td>18 (18)</td>
-                        <td>Powerlille /CCCP/</td>
+                        <td data-label="Rank">8</td>
+                        <td data-label="Fighter">Farukh El Jabar</td>
+                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
+                        <td data-label="Titles" class="titles">70</td>
+                        <td data-label="Earnings" class="earnings">$126,392,836</td>
+                        <td data-label="Record">51-1-34 (35/0)</td>
+                        <td data-label="Rating">18 (18)</td>
+                        <td data-label="Gym">Powerlille /CCCP/</td>
                     </tr>
                     <tr>
-                        <td>9</td>
-                        <td>So Very Stupid Eimall <small>regional_champion</small></td>
-                        <td>Australia</td>
-                        <td class="titles">70</td>
-                        <td class="earnings">$107,090,666</td>
-                        <td>75-2-14 (71/1)</td>
-                        <td>18 (18)</td>
-                        <td>Rockin Rods Ring Rebels \\\\.SoS./////</td>
+                        <td data-label="Rank">9</td>
+                        <td data-label="Fighter">So Very Stupid Eimall</td>
+                        <td data-label="Location"><span class="flag">🇦🇺</span> Australia</td>
+                        <td data-label="Titles" class="titles">70</td>
+                        <td data-label="Earnings" class="earnings">$107,090,666</td>
+                        <td data-label="Record">75-2-14 (71/1)</td>
+                        <td data-label="Rating">18 (18)</td>
+                        <td data-label="Gym">Rockin Rods Ring Rebels</td>
                     </tr>
                     <tr>
-                        <td>10</td>
-                        <td>Tuolla Edisni <small>regional_champion</small></td>
-                        <td>Australia</td>
-                        <td class="titles">69</td>
-                        <td class="earnings">$189,496,450</td>
-                        <td>95-14-0 (95/14)</td>
-                        <td>18 (18)</td>
-                        <td>2Rockin Rods Ring Rebels \\\\\SoS/////</td>
+                        <td data-label="Rank">10</td>
+                        <td data-label="Fighter">Tuolla Edisni</td>
+                        <td data-label="Location"><span class="flag">🇦🇺</span> Australia</td>
+                        <td data-label="Titles" class="titles">69</td>
+                        <td data-label="Earnings" class="earnings">$189,496,450</td>
+                        <td data-label="Record">95-14-0 (95/14)</td>
+                        <td data-label="Rating">18 (18)</td>
+                        <td data-label="Gym">Rockin Rods Ring Rebels</td>
                     </tr>
                     <tr>
-                        <td>11</td>
-                        <td>Anthony `I Lost My Mojo` Ogogo <small>regional_champion</small></td>
-                        <td>United Kingdom</td>
-                        <td class="titles">67</td>
-                        <td class="earnings">$145,809,406</td>
-                        <td>68-6-17 (60/4)</td>
-                        <td>18 (18)</td>
-                        <td class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+                        <td data-label="Rank">11</td>
+                        <td data-label="Fighter">Anthony `I Lost My Mojo` Ogogo</td>
+                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> UK</td>
+                        <td data-label="Titles" class="titles">67</td>
+                        <td data-label="Earnings" class="earnings">$145,809,406</td>
+                        <td data-label="Record">68-6-17 (60/4)</td>
+                        <td data-label="Rating">18 (18)</td>
+                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
                     </tr>
                     <tr>
-                        <td>12</td>
-                        <td>Willey Three Willey <small>regional_champion</small></td>
-                        <td>Australia</td>
-                        <td class="titles">63</td>
-                        <td class="earnings">$167,282,830</td>
-                        <td>84-9-1 (84/9)</td>
-                        <td>18 (18)</td>
-                        <td>2Rockin Rods Ring Rebels \\\\\SoS/////</td>
+                        <td data-label="Rank">12</td>
+                        <td data-label="Fighter">Willey Three Willey</td>
+                        <td data-label="Location"><span class="flag">🇦🇺</span> Australia</td>
+                        <td data-label="Titles" class="titles">63</td>
+                        <td data-label="Earnings" class="earnings">$167,282,830</td>
+                        <td data-label="Record">84-9-1 (84/9)</td>
+                        <td data-label="Rating">18 (18)</td>
+                        <td data-label="Gym">Rockin Rods Ring Rebels</td>
                     </tr>
                     <tr>
-                        <td>13</td>
-                        <td>BK New Wave 13 <small>regional_champion</small></td>
-                        <td>United Kingdom</td>
-                        <td class="titles">63</td>
-                        <td class="earnings">$135,091,692</td>
-                        <td>83-15-1 (72/15)</td>
-                        <td>14 (18)</td>
-                        <td>Pain, Power and Glory</td>
+                        <td data-label="Rank">13</td>
+                        <td data-label="Fighter">BK New Wave 13</td>
+                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> UK</td>
+                        <td data-label="Titles" class="titles">63</td>
+                        <td data-label="Earnings" class="earnings">$135,091,692</td>
+                        <td data-label="Record">83-15-1 (72/15)</td>
+                        <td data-label="Rating">14 (18)</td>
+                        <td data-label="Gym">Pain, Power and Glory</td>
                     </tr>
                     <tr>
-                        <td>14</td>
-                        <td>Lenny `BK Guv'nor` McLean <small>regional_champion</small></td>
-                        <td>United Kingdom</td>
-                        <td class="titles">59</td>
-                        <td class="earnings">$151,510,294</td>
-                        <td>83-11-6 (37/4)</td>
-                        <td>18 (18)</td>
-                        <td class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+                        <td data-label="Rank">14</td>
+                        <td data-label="Fighter">Lenny `BK Guv'nor` McLean</td>
+                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> UK</td>
+                        <td data-label="Titles" class="titles">59</td>
+                        <td data-label="Earnings" class="earnings">$151,510,294</td>
+                        <td data-label="Record">83-11-6 (37/4)</td>
+                        <td data-label="Rating">18 (18)</td>
+                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
                     </tr>
                     <tr>
-                        <td>15</td>
-                        <td>Bare Knuckles `Lock Out` Week 1129 <small>regional_champion</small></td>
-                        <td>Russia</td>
-                        <td class="titles">59</td>
-                        <td class="earnings">$90,415,676</td>
-                        <td>31-1-40 (25/0)</td>
-                        <td>17 (18)</td>
-                        <td>Powerlille /CCCP/</td>
+                        <td data-label="Rank">15</td>
+                        <td data-label="Fighter">Bare Knuckles `Lock Out` Week 1129</td>
+                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
+                        <td data-label="Titles" class="titles">59</td>
+                        <td data-label="Earnings" class="earnings">$90,415,676</td>
+                        <td data-label="Record">31-1-40 (25/0)</td>
+                        <td data-label="Rating">17 (18)</td>
+                        <td data-label="Gym">Powerlille /CCCP/</td>
                     </tr>
                     <tr>
-                        <td>16</td>
-                        <td>Pugnit Ubit Muerto 3 <small>regional_champion</small></td>
-                        <td>United Kingdom</td>
-                        <td class="titles">58</td>
-                        <td class="earnings">$87,501,270</td>
-                        <td>24-3-55 (11/1)</td>
-                        <td>18 (18)</td>
-                        <td class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+                        <td data-label="Rank">16</td>
+                        <td data-label="Fighter">Pugnit Ubit Muerto 3</td>
+                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> UK</td>
+                        <td data-label="Titles" class="titles">58</td>
+                        <td data-label="Earnings" class="earnings">$87,501,270</td>
+                        <td data-label="Record">24-3-55 (11/1)</td>
+                        <td data-label="Rating">18 (18)</td>
+                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
                     </tr>
                     <tr>
-                        <td>17</td>
-                        <td>Arthur BK Brown <small>regional_champion</small></td>
-                        <td>United Kingdom</td>
-                        <td class="titles">55</td>
-                        <td class="earnings">$96,588,352</td>
-                        <td>53-7-23 (23/2)</td>
-                        <td>18 (18)</td>
-                        <td class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+                        <td data-label="Rank">17</td>
+                        <td data-label="Fighter">Arthur BK Brown</td>
+                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> UK</td>
+                        <td data-label="Titles" class="titles">55</td>
+                        <td data-label="Earnings" class="earnings">$96,588,352</td>
+                        <td data-label="Record">53-7-23 (23/2)</td>
+                        <td data-label="Rating">18 (18)</td>
+                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
                     </tr>
                     <tr>
-                        <td>18</td>
-                        <td>Sam Street <small>regional_champion</small></td>
-                        <td>United Kingdom</td>
-                        <td class="titles">52</td>
-                        <td class="earnings">$102,616,670</td>
-                        <td>50-3-16 (37/1)</td>
-                        <td>18 (18)</td>
-                        <td class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+                        <td data-label="Rank">18</td>
+                        <td data-label="Fighter">Sam Street</td>
+                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> UK</td>
+                        <td data-label="Titles" class="titles">52</td>
+                        <td data-label="Earnings" class="earnings">$102,616,670</td>
+                        <td data-label="Record">50-3-16 (37/1)</td>
+                        <td data-label="Rating">18 (18)</td>
+                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
                     </tr>
                     <tr>
-                        <td>19</td>
-                        <td>Vincent Van Poere <small>regional_champion</small></td>
-                        <td>Pennsylvania</td>
-                        <td class="titles">46</td>
-                        <td class="earnings">$197,693,210</td>
-                        <td>102-28-0 (102/28)</td>
-                        <td>17 (18)</td>
-                        <td>Hot Dude Boxing Club (Lef Jab)</td>
+                        <td data-label="Rank">19</td>
+                        <td data-label="Fighter">Vincent Van Poere</td>
+                        <td data-label="Location"><span class="flag">🇺🇸</span> USA</td>
+                        <td data-label="Titles" class="titles">46</td>
+                        <td data-label="Earnings" class="earnings">$197,693,210</td>
+                        <td data-label="Record">102-28-0 (102/28)</td>
+                        <td data-label="Rating">17 (18)</td>
+                        <td data-label="Gym">Hot Dude Boxing Club</td>
                     </tr>
                     <tr>
-                        <td>20</td>
-                        <td>Steven MacAckin <small>regional_champion</small></td>
-                        <td>Russia</td>
-                        <td class="titles">45</td>
-                        <td class="earnings">$80,748,378</td>
-                        <td>34-5-25 (21/3)</td>
-                        <td>17 (18)</td>
-                        <td>Powerlille /CCCP/</td>
+                        <td data-label="Rank">20</td>
+                        <td data-label="Fighter">Steven MacAckin</td>
+                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
+                        <td data-label="Titles" class="titles">45</td>
+                        <td data-label="Earnings" class="earnings">$80,748,378</td>
+                        <td data-label="Record">34-5-25 (21/3)</td>
+                        <td data-label="Rating">17 (18)</td>
+                        <td data-label="Gym">Powerlille /CCCP/</td>
                     </tr>
                     <tr>
-                        <td>21</td>
-                        <td>Domnall Craig Cinaed Duncan <small>regional_champion</small></td>
-                        <td>New Zealand</td>
-                        <td class="titles">45</td>
-                        <td class="earnings">$71,180,498</td>
-                        <td>26-3-39 (10/2)</td>
-                        <td>17 (18)</td>
-                        <td>⭐ Old School Boxing</td>
+                        <td data-label="Rank">21</td>
+                        <td data-label="Fighter">Domnall Craig Cinaed Duncan</td>
+                        <td data-label="Location"><span class="flag">🇳🇿</span> New Zealand</td>
+                        <td data-label="Titles" class="titles">45</td>
+                        <td data-label="Earnings" class="earnings">$71,180,498</td>
+                        <td data-label="Record">26-3-39 (10/2)</td>
+                        <td data-label="Rating">17 (18)</td>
+                        <td data-label="Gym">⭐ Old School Boxing</td>
                     </tr>
                     <tr>
-                        <td>22</td>
-                        <td>Cubinez <small>regional_champion</small></td>
-                        <td>Russia</td>
-                        <td class="titles">44</td>
-                        <td class="earnings">$83,203,534</td>
-                        <td>41-0-16 (31/0)</td>
-                        <td>18 (18)</td>
-                        <td>Powerlille /CCCP/</td>
-                    </tr>
-                    <tr>
-                        <td>23</td>
-                        <td>BK New Wave 6 <small>regional_champion</small></td>
-                        <td>United Kingdom</td>
-                        <td class="titles">43</td>
-                        <td class="earnings">$88,898,064</td>
-                        <td>61-21-6 (51/19)</td>
-                        <td>9 (18)</td>
-                        <td>Pain, Power and Glory</td>
-                    </tr>
-                    <tr>
-                        <td>24</td>
-                        <td>The Willey <small>regional_champion</small></td>
-                        <td>Australia</td>
-                        <td class="titles">43</td>
-                        <td class="earnings">$47,182,078</td>
-                        <td>41-3-33 (26/1)</td>
-                        <td>18 (18)</td>
-                        <td>Rockin Rods Ring Rebels \\\\.SoS./////</td>
-                    </tr>
-                    <tr>
-                        <td>25</td>
-                        <td>BK `Jon Doe` Region Filling Bum <small>regional_champion</small></td>
-                        <td>United Kingdom</td>
-                        <td class="titles">42</td>
-                        <td class="earnings">$97,060,272</td>
-                        <td>52-2-6 (46/2)</td>
-                        <td>18 (18)</td>
-                        <td class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
-                    </tr>
-                    <tr>
-                        <td>26</td>
-                        <td>`Lockside` BK 3 <small>regional_champion</small></td>
-                        <td>United Kingdom</td>
-                        <td class="titles">41</td>
-                        <td class="earnings">$80,742,144</td>
-                        <td>43-13-25 (26/9)</td>
-                        <td>16 (18)</td>
-                        <td class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
-                    </tr>
-                    <tr>
-                        <td>27</td>
-                        <td>Ashes To BK Ashes <small>regional_champion</small></td>
-                        <td>United Kingdom</td>
-                        <td class="titles">41</td>
-                        <td class="earnings">$76,769,612</td>
-                        <td>48-6-16 (28/0)</td>
-                        <td>18 (18)</td>
-                        <td class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
-                    </tr>
-                    <tr>
-                        <td>28</td>
-                        <td>Vomitron <small>regional_champion</small></td>
-                        <td>Australia</td>
-                        <td class="titles">41</td>
-                        <td class="earnings">$70,985,056</td>
-                        <td>37-9-30 (29/3)</td>
-                        <td>15 (18)</td>
-                        <td>2Rockin Rods Ring Rebels \\\\\SoS/////</td>
-                    </tr>
-                    <tr>
-                        <td>29</td>
-                        <td>New Kind of Efficiency <small>regional_champion</small></td>
-                        <td>Tennessee</td>
-                        <td class="titles">41</td>
-                        <td class="earnings">$7,595,956</td>
-                        <td>17-5-43 (15/4)</td>
-                        <td>12 (13)</td>
-                        <td>Dr. Funk (SoS)</td>
-                    </tr>
-                    <tr>
-                        <td>30</td>
-                        <td>XXHenry ArmstrongXX <small>regional_champion</small></td>
-                        <td>United Kingdom</td>
-                        <td class="titles">40</td>
-                        <td class="earnings">$118,591,306</td>
-                        <td>64-9-16 (54/6)</td>
-                        <td>17 (18)</td>
-                        <td class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Bottom Navigation -->
-        <div class="page-footer">
-            <a href="index.html" class="nav-link">← Back to Home Page</a>
-        </div>
-    </div>
-</body>
-</html>
+                        <td data-label="Rank">22</td>
+                        <td data-label="Fighter">Cubinez</td>
+                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
+                        <td data-label="Titles" class="titles">44</td>
+                        <td data-label="Earnings" class="earnings">$83,203,534</td>
+                        <td data-label="Record">41-0-16 (31/0)</td>
+                        <td data-label="Rating">18 (18)</td>
+                        <td data-label="Gym">Powerlille /CCCP/</td
