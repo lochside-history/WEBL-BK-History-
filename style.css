@@ -41,3 +41,16 @@ color:#ddd;
 background:#2d2d2d;
 border:1px solid #555;
 }
+.gym{
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:6px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.lochside{
+    color:#ffd700;
+    background:#0b3b75;
+    border:1px solid #0b3b75;
+}
