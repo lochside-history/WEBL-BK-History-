@@ -1,360 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="WEBL Lochside – The Scottish Gym. Verified all-time bare knuckle rankings, top 50 fighters, gym stats and history.">
-    <meta name="keywords" content="WEBL, Lochside, bare knuckle, top fighters, gym rankings, Scotland, bare knuckle history, verified records">
-    <meta name="author" content="Lochside History Team">
 
-    <!-- rest of your code stays here -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>WEBL Lochside - The Scottish Gym</title>
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>WEBL Lochside - The Scottish Gym</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            color: #e6e6e6;
-        }
+<meta name="description" content="WEBL Lochside – The Scottish Gym. Verified all-time bare knuckle rankings, top fighters, gym rankings and history.">
+<meta name="keywords" content="WEBL, Lochside, Bare Knuckle, Scotland, Rankings, History">
+<meta name="author" content="Lochside History Team">
 
-        html, body {
-            width: 100%;
-            overflow-x: hidden;
-        }
+<title>WEBL Lochside | The Scottish Gym</title>
 
-        body {
-            background-color: #081020;
-            background-image: 
-                linear-gradient(rgba(8,15,30,0.9), rgba(8,15,30,0.95)),
-                radial-gradient(circle at top right, rgba(200,160,40,0.08), transparent 60%);
-            min-height: 100vh;
-            padding: 12px 8px;
-        }
+<style>
 
-        .container {
-            max-width: 100%;
-            width: 100%;
-            margin: 0 auto;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        .flag {
-            font-size: 18px;
-            margin-right: 6px;
-            vertical-align: middle;
-        }
+html,body{
+width:100%;
+overflow-x:hidden;
+font-family:Segoe UI,Arial,sans-serif;
+background:#081020;
+color:#e6e6e6;
+}
 
-        /* Header */
-        .page-header {
-            text-align: center;
-            padding: 16px 8px;
-            border-bottom: 1px solid rgba(212,175,55,0.25);
-        }
+body{
+background:
+linear-gradient(rgba(8,16,32,.92),rgba(8,16,32,.96)),
+radial-gradient(circle at top right,rgba(212,175,55,.08),transparent 60%);
+padding:12px;
+min-height:100vh;
+}
 
-        .brand h1 {
-            font-size: 28px;
-            color: #d4af37;
-            font-weight: 800;
-            letter-spacing: 1px;
-            margin-bottom: 4px;
-        }
+.container{
+width:100%;
+max-width:1400px;
+margin:auto;
+}
 
-        .brand h2 {
-            font-size: 16px;
-            color: #fff;
-            margin: 4px 0;
-        }
+.page-header{
+text-align:center;
+padding:20px 10px;
+border-bottom:1px solid rgba(212,175,55,.25);
+margin-bottom:15px;
+}
 
-        .brand p {
-            color: #b8a050;
-            font-size: 11px;
-            line-height: 1.4;
-            margin-top: 6px;
-        }
+.brand h1{
+font-size:2rem;
+color:#d4af37;
+margin-bottom:6px;
+}
 
-        .quick-links {
-            text-align: center;
-            padding: 10px 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 6px;
-        }
+.brand h2{
+font-size:1.2rem;
+margin-bottom:8px;
+color:#fff;
+}
 
-        .quick-links a {
-            padding: 7px 12px;
-            background: rgba(212,175,55,0.15);
-            border: 1px solid rgba(212,175,55,0.3);
-            border-radius: 4px;
-            color: #d4af37;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 12px;
-        }
+.brand p{
+font-size:.9rem;
+color:#cdb56b;
+line-height:1.5;
+}
 
-        /* Stats Grid */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            margin: 12px 0;
-        }
+.quick-links{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+margin:20px 0;
+}
 
-        .stat-card {
-            background: rgba(12,20,40,0.85);
-            border: 1px solid rgba(212,175,55,0.2);
-            border-radius: 6px;
-            padding: 12px 8px;
-            text-align: center;
-        }
+.quick-links a{
+display:inline-block;
+padding:10px 16px;
+background:#132443;
+border:1px solid #d4af37;
+border-radius:6px;
+color:#d4af37;
+text-decoration:none;
+font-weight:bold;
+transition:.25s;
+}
 
-        .stat-card .label {
-            font-size: 10px;
-            color: #aaa;
-            text-transform: uppercase;
-            margin-bottom: 3px;
-        }
+.quick-links a:hover{
+background:#d4af37;
+color:#081020;
+}
 
-        .stat-card .value {
-            font-size: 18px;
-            font-weight: 700;
-            color: #d4af37;
-            word-break: break-word;
-        }
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:12px;
+margin:20px 0;
+}
 
-        /* Regions Section */
-        .regions-section {
-            background: rgba(12,20,40,0.85);
-            border: 1px solid rgba(212,175,55,0.2);
-            border-radius: 6px;
-            padding: 12px;
-            margin: 12px 0;
-        }
+.stat-card{
+background:#10203d;
+border:1px solid rgba(212,175,55,.3);
+border-radius:8px;
+padding:15px;
+text-align:center;
+}
 
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
+.label{
+font-size:.8rem;
+color:#aaa;
+margin-bottom:5px;
+}
 
-        .section-header h3 {
-            font-size: 17px;
-            color: #d4af37;
-        }
+.value{
+font-size:1.4rem;
+font-weight:bold;
+color:#d4af37;
+}
 
-        .search-box {
-            padding: 6px 10px;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 4px;
-            width: 100%;
-            font-size: 12px;
-        }
+.regions-section{
+background:#10203d;
+border:1px solid rgba(212,175,55,.3);
+border-radius:8px;
+padding:20px;
+margin-top:20px;
+}
 
-        /* Mobile stacked table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+.section-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:15px;
+}
 
-        thead { display: none; }
+.section-header h3{
+color:#d4af37;
+}
 
-        tr {
-            display: block;
-            margin-bottom: 10px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            padding: 8px 0;
-        }
+.search-box{
+padding:10px;
+border-radius:6px;
+border:none;
+width:250px;
+max-width:100%;
+}
 
-        td {
-            display: flex;
-            justify-content: space-between;
-            padding: 4px 6px;
-            font-size: 12px;
-            border: none;
-        }
+table{
+width:100%;
+border-collapse:collapse;
+}
 
-        td::before {
-            content: attr(data-label);
-            color: #aaa;
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: 11px;
-        }
+th{
+background:#d4af37;
+color:#081020;
+padding:10px;
+}
 
-        tr.active {
-            background: rgba(212,175,55,0.1);
-            border-radius: 4px;
-            padding: 8px;
-        }
+td{
+padding:10px;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
 
-        tr.active td { color: #d4af37; font-weight: 500; }
+.rank-num{
+color:#ffd700;
+font-weight:bold;
+}
 
-        .rank-num { color: #ffd700; font-weight: 700; }
-        .win-rate { color: #22c55e; font-weight: 500; }
+.win-rate{
+color:#3ddc84;
+font-weight:bold;
+}
 
-        .btn {
-            display: block;
-            width: 100%;
-            margin: 10px 0 0;
-            padding: 10px;
-            background: linear-gradient(135deg, #2563eb, #3a7bd5);
-            border: none;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 13px;
-            text-decoration: none;
-            text-align: center;
-        }
+.flag{
+font-size:18px;
+}
 
-        /* Footer */
-        .page-footer {
-            padding: 14px 8px;
-            border-top: 1px solid rgba(212,175,55,0.25);
-            text-align: center;
-            font-size: 11px;
-            color: #999;
-            line-height: 1.4;
-            margin-top: 12px;
-        }
+.btn{
+display:inline-block;
+margin:20px 10px 0 0;
+padding:12px 20px;
+background:#1d4ed8;
+color:#fff;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+}
 
-        /* Desktop layout */
-        @media (min-width: 768px) {
-            .stats-grid { grid-template-columns: repeat(4, 1fr); }
-            thead { display: table-header-group; }
-            tr { display: table-row; margin-bottom: 0; padding: 0; }
-            td { display: table-cell; padding: 10px 8px; font-size: 13px; }
-            td::before { display: none; }
-            .btn { width: fit-content; margin: 14px auto 0; }
-            .search-box { width: auto; }
-        }
-    </style>
+.page-footer{
+text-align:center;
+padding:25px 10px;
+margin-top:30px;
+border-top:1px solid rgba(212,175,55,.25);
+font-size:.9rem;
+color:#999;
+}
+
+@media(max-width:768px){
+
+table,thead,tbody,tr,td{
+display:block;
+width:100%;
+}
+
+thead{
+display:none;
+}
+
+tr{
+margin-bottom:15px;
+padding:10px;
+border:1px solid rgba(255,255,255,.08);
+border-radius:6px;
+}
+
+td{
+display:flex;
+justify-content:space-between;
+}
+
+td::before{
+content:attr(data-label);
+font-weight:bold;
+color:#aaa;
+}
+
+.search-box{
+width:100%;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-    <div class="container">
-        <header class="page-header">
-            <div class="brand">
-                <h1>WEBL LOCHSIDE</h1>
-                <h2>THE SCOTTISH GYM</h2>
-                <p>🏴󠁧󠁢󠁳󠁣󠁴󠁿 FROM SCOTLAND FOR THE WORLD • HONOUR IN THE RING • PRIDE IN OUR HERITAGE • BUILT ON HISTORY • FOCUSED ON VICTORY</p>
-            </div>
-        </header>
 
-        <div class="quick-links">
-            <a href="fighters.html">🏆 TOP 50 FIGHTERS</a>
-            <a href="#">📊 GYM RANKINGS</a>
-            <a href="#">📜 HISTORY</a>
-        </div>
-
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="label">Total Earnings</div>
-                <div class="value">$12,004,915,230</div>
-            </div>
-            <div class="stat-card">
-                <div class="label">Total Titles</div>
-                <div class="value">2,566</div>
-            </div>
-            <div class="stat-card">
-                <div class="label">Win Rate</div>
-                <div class="value">71%</div>
-            </div>
-            <div class="stat-card">
-                <div class="label">Fight Record</div>
-                <div class="value">14959-3987-7440</div>
-            </div>
-        </div>
-
-        <div class="regions-section">
-            <div class="section-header">
-                <h3>REGIONS</h3>
-                <input type="text" class="search-box" placeholder="Search regions...">
-            </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Flag</th>
-                        <th>Region</th>
-                        <th>Titles</th>
-                        <th>Win %</th>
-                        <th>Earnings</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="active">
-                        <td data-label="Rank" class="rank-num">Rank #1</td>
-                        <td data-label="Flag"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span></td>
-                        <td data-label="Region">Bare Knuckle</td>
-                        <td data-label="Titles">2,566</td>
-                        <td data-label="Win %" class="win-rate">71%</td>
-                        <td data-label="Earnings">$12,115,318,816</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #2</td>
-                        <td data-label="Flag"><span class="flag">🌍</span></td>
-                        <td data-label="Region">Contenders</td>
-                        <td data-label="Titles">28</td>
-                        <td data-label="Win %" class="win-rate">56%</td>
-                        <td data-label="Earnings">$11,081,865,466</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #3</td>
-                        <td data-label="Flag"><span class="flag">🇬🇧</span></td>
-                        <td data-label="Region">British Commonwealth</td>
-                        <td data-label="Titles">227</td>
-                        <td data-label="Win %" class="win-rate">64%</td>
-                        <td data-label="Earnings">$2,035,676,994</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #4</td>
-                        <td data-label="Flag"><span class="flag">⚠️</span></td>
-                        <td data-label="Region">Unsanctioned</td>
-                        <td data-label="Titles">265</td>
-                        <td data-label="Win %" class="win-rate">77%</td>
-                        <td data-label="Earnings">$832,978,782</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #5</td>
-                        <td data-label="Flag"><span class="flag">🎟️</span></td>
-                        <td data-label="Region">Invitational</td>
-                        <td data-label="Titles">3</td>
-                        <td data-label="Win %" class="win-rate">52%</td>
-                        <td data-label="Earnings">$645,938,706</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #6</td>
-                        <td data-label="Flag"><span class="flag">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span></td>
-                        <td data-label="Region">Revival Region</td>
-                        <td data-label="Titles">21</td>
-                        <td data-label="Win %" class="win-rate">69%</td>
-                        <td data-label="Earnings">$429,576,674</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #7</td>
-                        <td data-label="Flag"><span class="flag">🇬🇧</span></td>
-                        <td data-label="Region">United Kingdom</td>
-                        <td data-label="Titles">43</td>
-                        <td data-label="Win %" class="win-rate">65%</td>
-                        <td data-label="Earnings">$400,353,822</td>
-                    </tr>
-                </tbody>
-            </table>
-            <a href="#" class="btn">VIEW ALL REGIONS</a>
-            <a href="fighters.html" class="btn">VIEW TOP 50 FIGHTERS</a>
-        </div>
-
-        <footer class="page-footer">
-            🏴󠁧󠁢󠁳󠁣󠁴󠁿 WEBL Lochside • The Scottish Gym • All-Time Rankings & History
-        </footer>
-    </div>
-</body>
-</html>
+<div class="container">
