@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Top 25 Gyms By Titles - WEBL Lochside</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            color: #e6e6e6;
+        }
+
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: #081020;
+            background-image: 
+                linear-gradient(rgba(8,15,30,0.9), rgba(8,15,30,0.95)),
+                radial-gradient(circle at top right, rgba(200,160,40,0.08), transparent 60%);
+            min-height: 100vh;
+            padding: 12px 8px;
+        }
+
+        .container {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .flag {
+            font-size: 18px;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .nav-link:hover { color: #fff; }
+
+        .header {
+            text-align: center;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(212,175,55,0.25);
+        }
+
+        .header h1 {
+            font-size: 26px;
+            color: #d4af37;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .header h2 {
+            font-size: 15px;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .status-key {
+            font-size: 11px;
+            color: #aaa;
+            margin-top: 6px;
+        }
+        .verified { color: #22c55e; font-weight: 500; }
+        .pending { color: #f59e0b; font-weight: 500; }
+        .unverified { color: #ef4444; font-weight: 500; }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            margin: 16px 0;
+            opacity: 0.6;
+        }
+
+        .table-wrap {
+            background: rgba(12,20,40,0.85);
+            border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 6px;
+            padding: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead { display: none; }
+
+        tr {
+            display: block;
+            margin-bottom: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 8px 0;
+        }
+
+        td {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 6px;
+            font-size: 12px;
+            border: none;
+        }
+
+        td::before {
+            content: attr(data-label);
+            color: #aaa;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+
+        .rank-num { color: #ffd700; font-weight: 700; }
+        .gym-lochside { color: #d4af37; font-weight: 600; }
+        .total-titles { color: #f59e0b; font-weight: 600; }
+        .annual { color: #60a5fa; font-weight: 500; }
+        .h2h { color: #a78bfa; font-weight: 500; }
+
+        .note-box {
+            margin-top: 16px;
+            padding: 12px;
+            background: rgba(20,30,50,0.9);
+            border: 1px solid rgba(212,175,55,0.15);
+            border-radius: 6px;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #ccc;
+        }
+
+        .page-footer {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(212,175,55,0.25);
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+        }
+
+        @media (min-width: 768px) {
+            thead { display: table-header-group; }
+            tr { display: table-row; margin-bottom: 0; padding: 0; }
+            td { display: table-cell; padding: 10px 8px; font-size: 13px; }
+            td::before { display: none; }
+
+            th {
+                padding: 10px 8px;
+                border-bottom: 1px solid rgba(212,175,55,0.25);
+                text-align: left;
+                font-size: 12px;
+                font-weight: 600;
+                color: #d4af37;
+                text-transform: uppercase;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="nav-link">← Back to Home</a>
+
+        <header class="header">
+            <h1>TOP 25 GYMS • TOTAL TITLES</h1>
+            <h2>Verified / Annual Rate / Head-to-Head Records</h2>
+            <div class="status-key">
+                <span class="verified">✓ VERIFIED</span> •
+                <span class="pending">⚠ PENDING</span> •
+                <span class="unverified">✗ UNVERIFIED</span>
+            </div>
+        </header>
+
+        <div class="divider"></div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Gym Name</th>
+                        <th>Location</th>
+                        <th>Total Titles</th>
+                        <th>Annual Avg</th>
+                        <th>H2H Record</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #1</td>
+                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> Scotland / UK</td>
+                        <td data-label="Total Titles" class="total-titles">2,566</td>
+                        <td data-label="Annual Avg" class="annual">~89</td>
+                        <td data-label="H2H Record" class="h2h">147-91-32</td>
+                        <td data-label="Status" class="verified">✓ VERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #2</td>
+                        <td data-label="Gym">Powerlille /CCCP/</td>
+                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
+                        <td data-label="Total Titles" class="total-titles">1,942</td>
+                        <td data-label="Annual Avg" class="annual">~67</td>
+                        <td data-label="H2H Record" class="h2h">88-121-27</td>
+                        <td data-label="Status" class="verified">✓ VERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #3</td>
+                        <td data-label="Gym">Rockin Rods Ring Rebels</td>
+                        <td data-label="Location"><span class="flag">🇦🇺</span> Australia</td>
+                        <td data-label="Total Titles" class="total-titles">721</td>
+                        <td data-label="Annual Avg" class="annual">~31</td>
+                        <td data-label="H2H Record" class="h2h">54-76-18</td>
+                        <td data-label="Status" class="verified">✓ VERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #4</td>
+                        <td data-label="Gym">Pain, Power and Glory</td>
+                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> United Kingdom</td>
+                        <td data-label="Total Titles" class="total-titles">342</td>
+                        <td data-label="Annual Avg" class="annual">~14</td>
+                        <td data-label="H2H Record" class="h2h">31-42-11</td>
+                        <td data-label="Status" class="verified">✓ VERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #5</td>
+                        <td data-label="Gym">Palmerston North Panthers</td>
+                        <td data-label="Location"><span class="flag">🇳🇿</span> New Zealand</td>
+                        <td data-label="Total Titles" class="total-titles">214</td>
+                        <td data-label="Annual Avg" class="annual">~9</td>
+                        <td data-label="H2H Record" class="h2h">22-35-9</td>
+                        <td data-label="Status" class="pending">⚠ PENDING</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #6</td>
+                        <td data-label="Gym">Hot Dude Boxing Club</td>
+                        <td data-label="Location"><span class="flag">🇺🇸</span> USA</td>
+                        <td data-label="Total Titles" class="total-titles">158</td>
+                        <td data-label="Annual Avg" class="annual">~7</td>
+                        <td data-label="H2H Record" class="h2h">18-29-7</td>
+                        <td data-label="Status" class="verified">✓ VERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #7</td>
+                        <td data-label="Gym">⭐ Old School Boxing</td>
+                        <td data-label="Location"><span class="flag">🇳🇿</span> New Zealand</td>
+                        <td data-label="Total Titles" class="total-titles">112</td>
+                        <td data-label="Annual Avg" class="annual">~5</td>
+                        <td data-label="H2H Record" class="h2h">12-21-5</td>
+                        <td data-label="Status" class="pending">⚠ PENDING</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #8</td>
+                        <td data-label="Gym">Pure Power</td>
+                        <td data-label="Location"><span class="flag">🇺🇸</span> United States</td>
+                        <td data-label="Total Titles" class="total-titles">97</td>
+                        <td data-label="Annual Avg" class="annual">~4</td>
+                        <td data-label="H2H Record" class="h2h">9-17-4</td>
+                        <td data-label="Status" class="unverified">✗ UNVERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #9</td>
+                        <td data-label="Gym">Vrykoulakas Retirement Home</td>
+                        <td data-label="Location"><span class="flag">🇬🇪</span> Georgia</td>
+                        <td data-label="Total Titles" class="total-titles">83</td>
+                        <td data-label="Annual Avg" class="annual">~3</td>
+                        <td data-label="H2H Record" class="h2h">7-14-3</td>
+                        <td data-label="Status" class="unverified">✗ UNVERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #10</td>
+                        <td data-label="Gym">Dr. Funk (SoS)</td>
+                        <td data-label="Location"><span class="flag">🇺🇸</span> USA</td>
+                        <td data-label="Total Titles" class="total-titles">76</td>
+                        <td data-label="Annual Avg" class="annual">~3</td>
+                        <td data-label="H2H Record" class="h2h">8-12-2</td>
+                        <td data-label="Status" class="verified">✓ VERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #11</td>
+                        <td data-label="Gym">Twisted Pugilistic Logistics</td>
+                        <td data-label="Location"><span class="flag">🇺🇸</span> USA</td>
+                        <td data-label="Total Titles" class="total-titles">71</td>
+                        <td data-label="Annual Avg" class="annual">~3</td>
+                        <td data-label="H2H Record" class="h2h">6-11-3</td>
+                        <td data-label="Status" class="unverified">✗ UNVERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #12</td>
+                        <td data-label="Gym">British Commonwealth Gyms</td>
+                        <td data-label="Location"><span class="flag">🇬🇧</span> United Kingdom</td>
+                        <td data-label="Total Titles" class="total-titles">68</td>
+                        <td data-label="Annual Avg" class="annual">~2</td>
+                        <td data-label="H2H Record" class="h2h">5-10-2</td>
+                        <td data-label="Status" class="pending">⚠ PENDING</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #13</td>
+                        <td data-label="Gym">Revival Region Collective</td>
+                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span> Revival Region</td>
+                        <td data-label="Total Titles" class="total-titles">59</td>
+                        <td data-label="Annual Avg" class="annual">~2</td>
+                        <td data-label="H2H Record" class="h2h">4-9-2</td>
+                        <td data-label="Status" class="pending">⚠ PENDING</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #14</td>
+                        <td data-label="Gym">Contenders Alliance</td>
+                        <td data-label="Location"><span class="flag">🌍</span> Global</td>
+                        <td data-label="Total Titles" class="total-titles">47</td>
+                        <td data-label="Annual Avg" class="annual">~2</td>
+                        <td data-label="H2H Record" class="h2h">3-8-1</td>
+                        <td data-label="Status" class="verified">✓ VERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #15</td>
+                        <td data-label="Gym">Unsanctioned Circuit</td>
+                        <td data-label="Location"><span class="flag">⚠️</span> Unsanctioned</td>
+                        <td data-label="Total Titles" class="total-titles">41</td>
+                        <td data-label="Annual Avg" class="annual">~2</td>
+                        <td data-label="H2H Record" class="h2h">5-6-1</td>
+                        <td data-label="Status" class="unverified">✗ UNVERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #16</td>
+                        <td data-label="Gym">Invitational Elite</td>
+                        <td data-label="Location"><span class="flag">🎟️</span> Invitational</td>
+                        <td data-label="Total Titles" class="total-titles">29</td>
+                        <td data-label="Annual Avg" class="annual">~1</td>
+                        <td data-label="H2H Record" class="h2h">2-5-1</td>
+                        <td data-label="Status" class="pending">⚠ PENDING</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #17</td>
+                        <td data-label="Gym">Mved /CCCP/</td>
+                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
+                        <td data-label="Total Titles" class="total-titles">24</td>
+                        <td data-label="Annual Avg" class="annual">~1</td>
+                        <td data-label="H2H Record" class="h2h">3-4-0</td>
+                        <td data-label="Status" class="unverified">✗ UNVERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #18</td>
+                        <td data-label="Gym">Kachalka /CCCP/</td>
+                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
+                        <td data-label="Total Titles" class="total-titles">21</td>
+                        <td data-label="Annual Avg" class="annual">~1</td>
+                        <td data-label="H2H Record" class="h2h">2-4-0</td>
+                        <td data-label="Status" class="unverified">✗ UNVERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #19</td>
+                        <td data-label="Gym">The Prodigal’s Magical Place</td>
+                        <td data-label="Location"><span class="flag">🇬🇧</span> United Kingdom</td>
+                        <td data-label="Total Titles" class="total-titles">18</td>
+                        <td data-label="Annual Avg" class="annual">~<1</td>
+                        <td data-label="H2H Record" class="h2h">1-3-1</td>
+                        <td data-label="Status" class="unverified">✗ UNVERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #20</td>
+                        <td data-label="Gym">Sonic Boom Boxing</td>
+                        <td data-label="Location"><span class="flag">🇦🇺</span> Australia</td>
+                        <td data-label="Total Titles" class="total-titles">15</td>
+                        <td data-label="Annual Avg" class="annual">~<1</td>
+                        <td data-label="H2H Record" class="h2h">1-3-0</td>
+                        <td data-label="Status" class="unverified">✗ UNVERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #21</td>
+                        <td data-label="Gym">Art of Pugilism</td>
+                        <td data-label="Location"><span class="flag">🇺🇸</span> USA</td>
+                        <td data-label="Total Titles" class="total-titles">12</td>
+                        <td data-label="Annual Avg" class="annual">~<1</td>
+                        <td data-label="H2H Record" class="h2h">1-2-0</td>
+                        <td data-label="Status" class="unverified">✗ UNVERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #22</td>
+                        <td data-label="Gym">ShinRa’s SOLDIER</td>
+                        <td data-label="Location"><span class="flag">🇯🇵</span> Japan</td>
+                        <td data-label="Total Titles" class="total-titles">9</td>
+                        <td data-label="Annual Avg" class="annual">~<1</td>
+                        <td data-label="H2H Record" class="h2h">0-2-1</td>
+                        <td data-label="Status" class="unverified">✗ UNVERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #23</td>
+                        <td data-label="Gym">Kewari & Masters</td>
+                        <td data-label="Location"><span class="flag">🇨🇦</span> Canada</td>
+                        <td data-label="Total Titles" class="total-titles">7</td>
+                        <td data-label="Annual Avg" class="annual">~<1</td>
+                        <td data-label="H2H Record" class="h2h">0-2-0</td>
+                        <td data-label="Status" class="unverified">✗ UNVERIFIED</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Rank" class="rank-num">Rank #24</td>
+                        <td data-label="Gym">Bobblehead Moonwalkers</td>
+                        <td data-label="Location"><span class="flag">🇬🇧</span> United Kingdom</td>
+                        <td data-label="Total Titles
