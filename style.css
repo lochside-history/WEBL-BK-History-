@@ -1,3 +1,2 @@
-body {
-  margin: 0;
-}
+td::before{color:#ffdf80!important;font-weight:600!important;text-shadow:0 0 3px #000!important}
+td{color:#fff8dc!important}
