@@ -188,7 +188,7 @@
 
         tr.active td { color: #d4af37; font-weight: 500; }
 
-        .legacy-rank { color: #ffd700; font-weight: 700; }
+        .rank-num { color: #ffd700; font-weight: 700; }
         .win-rate { color: #22c55e; font-weight: 500; }
 
         .btn {
@@ -224,6 +224,7 @@
             td { display: table-cell; padding: 10px 8px; font-size: 13px; }
             td::before { display: none; }
             .btn { width: fit-content; margin: 14px auto 0; }
+            .search-box { width: auto; }
         }
     </style>
 </head>
@@ -238,8 +239,8 @@
         </header>
 
         <div class="quick-links">
-            <a href="fighters.html">🏆 TOP 30 FIGHTERS</a>
-            <a href="#">📊 RANKINGS</a>
+            <a href="fighters.html">🏆 TOP 50 FIGHTERS</a>
+            <a href="#">📊 GYM RANKINGS</a>
             <a href="#">📜 HISTORY</a>
         </div>
 
@@ -247,22 +248,18 @@
             <div class="stat-card">
                 <div class="label">Total Earnings</div>
                 <div class="value">$12,004,915,230</div>
-                <div class="label">EARNINGS</div>
             </div>
             <div class="stat-card">
                 <div class="label">Total Titles</div>
                 <div class="value">2,566</div>
-                <div class="label">TITLES</div>
             </div>
             <div class="stat-card">
                 <div class="label">Win Rate</div>
                 <div class="value">71%</div>
-                <div class="label">WIN %</div>
             </div>
             <div class="stat-card">
                 <div class="label">Fight Record</div>
                 <div class="value">14959-3987-7440</div>
-                <div class="label">RECORD</div>
             </div>
         </div>
 
@@ -274,87 +271,79 @@
             <table>
                 <thead>
                     <tr>
-                        <th>#</th>
+                        <th>Rank</th>
                         <th>Flag</th>
                         <th>Region</th>
                         <th>Titles</th>
                         <th>Win %</th>
                         <th>Earnings</th>
-                        <th>Lochside Legacy Rank</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="active">
-                        <td data-label="#">1</td>
+                        <td data-label="Rank" class="rank-num">Rank #1</td>
                         <td data-label="Flag"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span></td>
                         <td data-label="Region">Bare Knuckle</td>
                         <td data-label="Titles">2,566</td>
                         <td data-label="Win %" class="win-rate">71%</td>
                         <td data-label="Earnings">$12,115,318,816</td>
-                        <td data-label="Legacy Rank" class="legacy-rank">#1 LEGEND</td>
                     </tr>
                     <tr>
-                        <td data-label="#">2</td>
+                        <td data-label="Rank" class="rank-num">Rank #2</td>
                         <td data-label="Flag"><span class="flag">🌍</span></td>
-                        <td data-label="Region">Community</td>
+                        <td data-label="Region">Contenders</td>
                         <td data-label="Titles">28</td>
                         <td data-label="Win %" class="win-rate">56%</td>
                         <td data-label="Earnings">$11,081,865,466</td>
-                        <td data-label="Legacy Rank" class="legacy-rank">#9 ESTABLISHED</td>
                     </tr>
                     <tr>
-                        <td data-label="#">3</td>
+                        <td data-label="Rank" class="rank-num">Rank #3</td>
                         <td data-label="Flag"><span class="flag">🇬🇧</span></td>
                         <td data-label="Region">British Commonwealth</td>
                         <td data-label="Titles">227</td>
                         <td data-label="Win %" class="win-rate">64%</td>
                         <td data-label="Earnings">$2,035,676,994</td>
-                        <td data-label="Legacy Rank" class="legacy-rank">#4 ELITE</td>
                     </tr>
                     <tr>
-                        <td data-label="#">4</td>
+                        <td data-label="Rank" class="rank-num">Rank #4</td>
                         <td data-label="Flag"><span class="flag">⚠️</span></td>
                         <td data-label="Region">Unsanctioned</td>
                         <td data-label="Titles">265</td>
                         <td data-label="Win %" class="win-rate">77%</td>
                         <td data-label="Earnings">$832,978,782</td>
-                        <td data-label="Legacy Rank" class="legacy-rank">#3 DANGEROUS</td>
                     </tr>
                     <tr>
-                        <td data-label="#">5</td>
+                        <td data-label="Rank" class="rank-num">Rank #5</td>
                         <td data-label="Flag"><span class="flag">🎟️</span></td>
                         <td data-label="Region">Invitational</td>
                         <td data-label="Titles">3</td>
                         <td data-label="Win %" class="win-rate">52%</td>
                         <td data-label="Earnings">$645,938,706</td>
-                        <td data-label="Legacy Rank" class="legacy-rank">#20 EMERGING</td>
                     </tr>
                     <tr>
-                        <td data-label="#">6</td>
+                        <td data-label="Rank" class="rank-num">Rank #6</td>
                         <td data-label="Flag"><span class="flag">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span></td>
-                        <td data-label="Region">Welsh Revival</td>
+                        <td data-label="Region">Revival Region</td>
                         <td data-label="Titles">21</td>
                         <td data-label="Win %" class="win-rate">69%</td>
                         <td data-label="Earnings">$429,576,674</td>
-                        <td data-label="Legacy Rank" class="legacy-rank">#12 COMPETITIVE</td>
                     </tr>
                     <tr>
-                        <td data-label="#">7</td>
+                        <td data-label="Rank" class="rank-num">Rank #7</td>
                         <td data-label="Flag"><span class="flag">🇬🇧</span></td>
                         <td data-label="Region">United Kingdom</td>
                         <td data-label="Titles">43</td>
                         <td data-label="Win %" class="win-rate">65%</td>
                         <td data-label="Earnings">$400,353,822</td>
-                        <td data-label="Legacy Rank" class="legacy-rank">#8 RESPECTED</td>
                     </tr>
                 </tbody>
             </table>
             <a href="#" class="btn">VIEW ALL REGIONS</a>
-            <a href="fighters.html" class="btn">VIEW TOP 30 FIGHTERS</a>
+            <a href="fighters.html" class="btn">VIEW TOP 50 FIGHTERS</a>
         </div>
 
         <footer class="page-footer">
-            🏴󠁧󠁢󠁳󠁣󠁴󠁿 FROM SCOTLAND FOR THE WORLD • HONOUR IN THE RING • PRIDE IN OUR HERITAGE • BUILT ON HISTORY • FOCUSED ON VICTORY
+            🏴󠁧󠁢󠁳󠁣󠁴󠁿 WEBL Lochside • The Scottish Gym • All-Time Rankings & History
         </footer>
     </div>
 </body>
