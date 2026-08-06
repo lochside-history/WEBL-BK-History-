@@ -1,2 +1,3 @@
-td::before{color:#ffdf80!important;font-weight:600!important;text-shadow:0 0 3px #000!important}
-td{color:#fff8dc!important}
+*{color:#fff8dc!important;text-shadow:0 0 2px #000!important}
+td::before{color:#ffdf80!important;font-weight:700!important}
+body,table,tr{background:#081020!important}
