@@ -1,73 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Top 30 fighters of all time in WEBL Bare Knuckle — rankings, records, titles, earnings and gyms.">
-  <title>WEBL Top 30 Fighters</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Minimal inline helpers so the page looks reasonable even if style.css is missing */
-    .skip-link {position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip-link:focus{left:8px;top:8px;width:auto;height:auto;padding:8px;background:#000;color:#fff}
-    .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
-    table{border-collapse:collapse;width:100%;min-width:700px}
-    th,td{padding:8px;border:1px solid #ccc;text-align:left}
-    caption{caption-side:top;font-weight:bold;margin-bottom:8px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Top 30 fighters of all time in WEBL Bare Knuckle — rankings, records, titles, earnings and gyms.">
+    <title>WEBL Top 30 Fighters</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            color: #e6e6e6;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            background-color: #081020;
+            background-image: 
+                linear-gradient(rgba(8,15,30,0.9), rgba(8,15,30,0.95)),
+                radial-gradient(circle at top right, rgba(200,160,40,0.08), transparent 60%);
+            min-height: 100vh;
+            padding: 16px 8px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .skip-link:focus {
+            left: 8px;
+            top: 8px;
+            width: auto;
+            height: auto;
+            padding: 8px 12px;
+            background: #000;
+            color: #fff;
+            border-radius: 4px;
+            z-index: 100;
+        }
+
+        .board {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(212,175,55,0.25);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #d4af37;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+        }
+
+        .header h2 {
+            font-size: 22px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            margin: 20px 0;
+            opacity: 0.6;
+        }
+
+        .table-wrap {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            background: rgba(12,20,40,0.85);
+            border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 6px;
+            padding: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+
+        caption {
+            caption-side: top;
+            font-weight: bold;
+            font-size: 18px;
+            color: #d4af37;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 10px 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            color: #d4af37;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+            border-bottom: 1px solid rgba(212,175,55,0.25);
+        }
+
+        tr:hover td {
+            background: rgba(212,175,55,0.08);
+        }
+
+        .gym-scotland {
+            color: #d4af37;
+            font-weight: 500;
+        }
+
+        .earnings {
+            color: #22c55e;
+            font-weight: 500;
+        }
+
+        #table-desc {
+            display: none;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 28px; }
+            .header h2 { font-size: 18px; }
+            th, td { padding: 8px 6px; font-size: 13px; }
+        }
+    </style>
 </head>
 <body>
-  <a class="skip-link" href="#fighters-table">Skip to table</a>
+    <a class="skip-link" href="#fighters-table">Skip to table</a>
 
-  <div class="board">
-    <header class="header" role="banner">
-      <h1>WEBL BARE KNUCKLE</h1>
-      <h2>TOP 30 FIGHTERS OF ALL TIME</h2>
-    </header>
+    <div class="board">
+        <header class="header" role="banner">
+            <h1>WEBL BARE KNUCKLE</h1>
+            <h2>TOP 30 FIGHTERS OF ALL TIME</h2>
+        </header>
 
-    <div class="divider" role="separator" aria-hidden="true"></div>
+        <div class="divider" role="separator" aria-hidden="true"></div>
 
-    <div class="table-wrap">
-      <table id="fighters-table" aria-describedby="table-desc">
-        <caption>WEBL Top 30 Fighters — Rankings and stats</caption>
-        <p id="table-desc" hidden>Rank, fighter, country, titles, record, earnings, rating, and gym for the top 30 WEBL fighters.</p>
-        <thead>
-          <tr>
-            <th scope="col">Rank</th>
-            <th scope="col">Fighter</th>
-            <th scope="col">Country</th>
-            <th scope="col">Titles</th>
-            <th scope="col">Record</th>
-            <th scope="col">Earnings</th>
-            <th scope="col">Rating</th>
-            <th scope="col">Gym</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Table rows: please replace these example rows with real data. -->
-          <tr>
-            <td>1</td>
-            <td>Jane Doe</td>
-            <td>USA</td>
-            <td>Champion</td>
-            <td>25–1</td>
-            <td>$250,000</td>
-            <td>9.8</td>
-            <td>Iron Gym</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>John Smith</td>
-            <td>UK</td>
-            <td>Title-holder</td>
-            <td>22–3</td>
-            <td>$180,000</td>
-            <td>9.5</td>
-            <td>Northside Boxing</td>
-          </tr>
-        </tbody>
-      </table>
+        <div class="table-wrap">
+            <table id="fighters-table" aria-describedby="table-desc">
+                <caption>WEBL Top 30 Fighters — Rankings and Stats</caption>
+                <p id="table-desc">Rank, fighter name, country, titles won, career record, total earnings, rating, and gym affiliation for the top 30 WEBL fighters of all time.</p>
+                <thead>
+                    <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col">Fighter</th>
+                        <th scope="col">Country</th>
+                        <th scope="col">Titles</th>
+                        <th scope="col">Record</th>
+                        <th scope="col">Earnings</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col">Gym</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>To be added</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td class="earnings">—</td>
+                        <td>—</td>
+                        <td class="gym-scotland">Lochside 🐉 The Scottish Gym</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>To be added</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td class="earnings">—</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                    <!-- Add your full 30 fighter rows here -->
+                </tbody>
+            </table>
+        </div>
     </div>
-  </div>
 </body>
 </html>
