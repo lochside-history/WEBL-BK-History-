@@ -2,89 +2,561 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEBL-BK-History- | 25 Years of WEBL Boxing</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>WEBL Lochside - The Scottish Gym</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            color: #e6e6e6;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            background-color: #081020;
+            background-image: 
+                linear-gradient(rgba(8,15,30,0.9), rgba(8,15,30,0.95)),
+                radial-gradient(circle at top right, rgba(200,160,40,0.08), transparent 60%);
+            min-height: 100vh;
+            padding: 12px 8px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 200px 1fr 300px;
+            gap: 16px;
+        }
+
+        /* Header */
+        .page-header {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(212,175,55,0.25);
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .brand h1 {
+            font-size: 42px;
+            color: #d4af37;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .brand h2 {
+            font-size: 20px;
+            color: #fff;
+            margin: 4px 0;
+        }
+
+        .brand p {
+            color: #b8a050;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 13px;
+        }
+
+        .quick-links {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 12px;
+            margin-bottom: 8px;
+        }
+
+        .quick-links a {
+            display: inline-block;
+            margin: 4px 8px;
+            padding: 8px 16px;
+            background: rgba(212,175,55,0.15);
+            border: 1px solid rgba(212,175,55,0.3);
+            border-radius: 4px;
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+
+        .quick-links a:hover {
+            background: rgba(212,175,55,0.25);
+            color: #fff;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: rgba(12,20,40,0.85);
+            border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 6px;
+            padding: 12px 0;
+        }
+
+        .sidebar nav a {
+            display: block;
+            padding: 10px 16px;
+            text-decoration: none;
+            font-size: 14px;
+            border-left: 3px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .sidebar nav a.active {
+            background: rgba(30,90,180,0.3);
+            border-left-color: #3a7bd5;
+            color: #fff;
+        }
+
+        .sidebar nav a:hover {
+            background: rgba(212,175,55,0.1);
+            border-left-color: #d4af37;
+        }
+
+        .sidebar-footer {
+            margin-top: 40px;
+            padding: 16px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+        }
+
+        .stat-card {
+            background: rgba(12,20,40,0.85);
+            border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 6px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .stat-card .label {
+            font-size: 12px;
+            color: #aaa;
+            text-transform: uppercase;
+        }
+
+        .stat-card .value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #d4af37;
+            margin: 4px 0;
+            word-break: break-all;
+        }
+
+        .stat-card:nth-child(3) .value { color: #a855f7; }
+        .stat-card:nth-child(4) .value { color: #f59e0b; }
+
+        /* Regions Table */
+        .regions-section {
+            background: rgba(12,20,40,0.85);
+            border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 6px;
+            padding: 16px;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .section-header h3 {
+            font-size: 20px;
+            color: #d4af37;
+        }
+
+        .search-box {
+            padding: 6px 10px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 4px;
+            width: 100%;
+            max-width: 220px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 12px;
+            min-width: 600px;
+        }
+
+        th {
+            text-align: left;
+            padding: 10px 8px;
+            color: #d4af37;
+            font-size: 12px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(212,175,55,0.2);
+        }
+
+        td {
+            padding: 10px 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            font-size: 13px;
+        }
+
+        tr.active td {
+            background: rgba(212,175,55,0.12);
+            color: #d4af37;
+            font-weight: 500;
+        }
+
+        .btn {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #2563eb, #3a7bd5);
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
+        }
+
+        /* Fighters Sidebar */
+        .fighters-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .fighter-group {
+            background: rgba(12,20,40,0.85);
+            border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 6px;
+            padding: 14px;
+        }
+
+        .group-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .group-header h4 {
+            color: #d4af37;
+            font-size: 16px;
+        }
+
+        .fighter-card {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .fighter-info h5 {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .earnings {
+            color: #22c55e;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .page-footer {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 16px 0;
+            border-top: 1px solid rgba(212,175,55,0.25);
+            margin-top: 8px;
+            font-size: 13px;
+            color: #999;
+            text-align: center;
+        }
+
+        /* Mobile Fix */
+        @media (max-width: 992px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar { order: 2; }
+            .main-content { order: 1; }
+            .fighters-sidebar { order: 3; }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>WEBL-BK-History-</h1>
-            <p>25 year history of WEBL Boxing @ Vivi.com (The Bare Knuckle Region)</p>
+        <!-- Header -->
+        <header class="page-header">
+            <div class="brand">
+                <h1>WEBL</h1>
+                <h2>LOCHSIDE • THE SCOTTISH GYM</h2>
+                <p>STRENGTH • HONOUR • LEGACY</p>
+            </div>
         </header>
 
-        <h2>Top 50 All-Time Gym Rankings</h2>
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Manager / Gym</th>
-                        <th>Location</th>
-                        <th>Titles</th>
-                        <th>Record</th>
-                        <th>+/-</th>
-                        <th>Win %</th>
-                        <th>Earnings</th>
-                        <th>EPF</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>1</td><td>Lochside 🐉 The Scottish Gym</td><td>United Kingdom</td><td>2566</td><td>14959-3987-7440</td><td>10972</td><td>71%</td><td>$12,115,318,816</td><td>$459,157</td></tr>
-                    <tr><td>2</td><td>Powerlille /CCCP/</td><td>Russia</td><td>1178</td><td>2988-1323-1799</td><td>1665</td><td>64%</td><td>$3,394,761,152</td><td>$555,607</td></tr>
-                    <tr><td>3</td><td>2Rockin Rods Ring Rebels \\\\\SoS/////</td><td>Australia</td><td>708</td><td>7745-6828-4908</td><td>917</td><td>52%</td><td>$6,226,501,144</td><td>$319,619</td></tr>
-                    <tr><td>4</td><td>Rockin Rods Ring Rebels \\\\.SoS./////</td><td>Australia</td><td>707</td><td>2424-570-825</td><td>1854</td><td>74%</td><td>$1,689,044,978</td><td>$442,274</td></tr>
-                    <tr><td>5</td><td>2 Twisted Pugilistic Linguistic Logistics Corporation (SoS)</td><td>North Carolina</td><td>500</td><td>6045-3391-2132</td><td>2654</td><td>61%</td><td>$5,944,289,652</td><td>$513,856</td></tr>
-                    <tr><td>6</td><td>Vrykoulakas (a badminton club)</td><td>Georgia</td><td>423</td><td>2101-307-396</td><td>1794</td><td>82%</td><td>$535,668,200</td><td>$191,037</td></tr>
-                    <tr><td>7</td><td>gym will (all but retired)</td><td>United Kingdom</td><td>423</td><td>2111-366-736</td><td>1745</td><td>77%</td><td>$410,020,512</td><td>$127,612</td></tr>
-                    <tr><td>8</td><td>StraightJacket &lt;SoS&gt;</td><td>Texas</td><td>282</td><td>6033-4007-1330</td><td>2026</td><td>59%</td><td>$6,082,327,408</td><td>$534,945</td></tr>
-                    <tr><td>9</td><td>HEMMINGWAYS poets and pugilists</td><td>Florida</td><td>224</td><td>5852-3187-2282</td><td>2665</td><td>62%</td><td>$1,952,709,050</td><td>$172,485</td></tr>
-                    <tr><td>10</td><td>Peggleswōrth (SALT)🧂</td><td>Finland</td><td>210</td><td>906-292-292</td><td>614</td><td>71%</td><td>$923,033,048</td><td>$619,485</td></tr>
-                    <tr><td>11</td><td>Pain, Power and Glory</td><td>United Kingdom</td><td>195</td><td>383-95-120</td><td>288</td><td>74%</td><td>$364,137,800</td><td>$608,926</td></tr>
-                    <tr><td>12</td><td>Hoosier Hammers</td><td>Indiana</td><td>191</td><td>1497-445-333</td><td>1052</td><td>73%</td><td>$694,752,032</td><td>$305,385</td></tr>
-                    <tr><td>13</td><td>The LikQid Appreciation Society &lt;Team TLAS&gt;</td><td>United Kingdom</td><td>189</td><td>2202-1475-2467</td><td>727</td><td>56%</td><td>$3,128,438,780</td><td>$509,185</td></tr>
-                    <tr><td>14</td><td>Rotmo</td><td>Norway</td><td>184</td><td>1935-1287-711</td><td>648</td><td>58%</td><td>$1,073,092,782</td><td>$272,843</td></tr>
-                    <tr><td>15</td><td>Drunken Boxing Academy (SoS)</td><td>California</td><td>173</td><td>2621-1903-597</td><td>718</td><td>57%</td><td>$1,990,779,718</td><td>$388,748</td></tr>
-                    <tr><td>16</td><td>The Warriors Haven &lt;UV&gt;</td><td>Massachusetts</td><td>167</td><td>2979-1413-811</td><td>1566</td><td>65%</td><td>$1,186,288,402</td><td>$228,000</td></tr>
-                    <tr><td>17</td><td>Hot Dude Boxing Club (Lef Jab)</td><td>Pennsylvania</td><td>144</td><td>1106-475-87</td><td>631</td><td>69%</td><td>$1,227,913,498</td><td>$736,159</td></tr>
-                    <tr><td>18</td><td>Triglavska pest &lt;Evil Empire&gt;</td><td>Slovenia</td><td>125</td><td>2763-2916-708</td><td>-153</td><td>49%</td><td>$2,090,019,420</td><td>$327,230</td></tr>
-                    <tr><td>19</td><td>TERNFIELD</td><td>Ukraine</td><td>120</td><td>414-98-8</td><td>316</td><td>80%</td><td>$318,526,314</td><td>$612,550</td></tr>
-                    <tr><td>20</td><td>Pure Power</td><td>United States</td><td>102</td><td>284-37-62</td><td>247</td><td>82%</td><td>$232,655,012</td><td>$607,454</td></tr>
-                    <tr><td>21</td><td>We Are The Fighting Irish</td><td>United Kingdom</td><td>98</td><td>10417-12479-7258</td><td>-2062</td><td>47%</td><td>$11,516,874,456</td><td>$381,935</td></tr>
-                    <tr><td>22</td><td>Disposable Heroes</td><td>Sweden</td><td>96</td><td>579-258-256</td><td>321</td><td>65%</td><td>$759,786,158</td><td>$695,138</td></tr>
-                    <tr><td>23</td><td>Peekaboo (Retired Gym #2)</td><td>British Columbia</td><td>87</td><td>139-17-19</td><td>122</td><td>85%</td><td>$5,413,130</td><td>$30,932</td></tr>
-                    <tr><td>24</td><td>House of Black n` Blues [BTP]</td><td>Michigan</td><td>78</td><td>464-153-116</td><td>311</td><td>71%</td><td>$389,944,690</td><td>$531,984</td></tr>
-                    <tr><td>25</td><td>RK Underdogs</td><td>Poland</td><td>69</td><td>707-374-271</td><td>333</td><td>62%</td><td>$291,821,748</td><td>$215,844</td></tr>
-                    <tr><td>26</td><td>Frisbie Gym (Dead for months)</td><td>Georgia</td><td>68</td><td>964-305-457</td><td>659</td><td>69%</td><td>$76,727,200</td><td>$44,453</td></tr>
-                    <tr><td>27</td><td>Golden Fox Promotions</td><td>United Kingdom</td><td>65</td><td>2725-3421-608</td><td>-696</td><td>45%</td><td>$1,976,954,122</td><td>$292,708</td></tr>
-                    <tr><td>28</td><td>Bullan`s [SOS]-(CFM)</td><td>United Kingdom</td><td>62</td><td>1378-697-482</td><td>681</td><td>63%</td><td>$232,108,956</td><td>$90,773</td></tr>
-                    <tr><td>29</td><td>The Special Sauce of Albino &lt;Evil Empire&gt;</td><td>Australia</td><td>61</td><td>5710-6456-371</td><td>-746</td><td>47%</td><td>$4,826,549,028</td><td>$384,984</td></tr>
-                    <tr><td>30</td><td>The Hand Wrap</td><td>Canada</td><td>58</td><td>7439-9864-6889</td><td>-2425</td><td>45%</td><td>$7,653,690,062</td><td>$316,372</td></tr>
-                    <tr><td>31</td><td>Pips fighting machine (WTA Inc)</td><td>United Kingdom</td><td>56</td><td>587-38-81</td><td>549</td><td>89%</td><td>$127,394,322</td><td>$180,445</td></tr>
-                    <tr><td>32</td><td>&lt;Lords of the Ring&gt; The Foxes Swamp</td><td>Australia</td><td>53</td><td>800-692-417</td><td>108</td><td>53%</td><td>$400,049,146</td><td>$209,559</td></tr>
-                    <tr><td>33</td><td>Fade 2 Black (BTP)</td><td>California</td><td>49</td><td>637-184-122</td><td>453</td><td>74%</td><td>$216,025,768</td><td>$229,083</td></tr>
-                    <tr><td>34</td><td>Pasoa`s Playground (retired)</td><td>Belgium</td><td>48</td><td>57-24-48</td><td>33</td><td>63%</td><td>$12,239,510</td><td>$94,879</td></tr>
-                    <tr><td>35</td><td>Fight Club `69</td><td>Australia</td><td>43</td><td>914-237-854</td><td>677</td><td>67%</td><td>$48,366,348</td><td>$24,122</td></tr>
-                    <tr><td>36</td><td>Genetically Gingineered Giants &lt;SoS&gt;</td><td>Texas</td><td>43</td><td>423-214-101</td><td>209</td><td>64%</td><td>$244,771,428</td><td>$331,668</td></tr>
-                    <tr><td>37</td><td>Baltic Sea Study Fighters [KoP]</td><td>Germany</td><td>39</td><td>550-259-88</td><td>291</td><td>66%</td><td>$235,349,096</td><td>$262,373</td></tr>
-                    <tr><td>38</td><td>FBI</td><td>California</td><td>39</td><td>239-61-96</td><td>178</td><td>72%</td><td>$35,242,798</td><td>$88,996</td></tr>
-                    <tr><td>39</td><td>The Boz Squad ♠ Essence Of Boxing`s 187</td><td>North Carolina</td><td>38</td><td>1811-1154-438</td><td>657</td><td>60%</td><td>$439,768,700</td><td>$129,229</td></tr>
-                    <tr><td>40</td><td>Roadkill`s Island of Misfit Toys</td><td></td><td>38</td><td>3403-4904-2344</td><td>-1501</td><td>43%</td><td>$2,797,379,756</td><td>$262,640</td></tr>
-                    <tr><td>41</td><td>Samurai (Hibernation)</td><td>Connecticut</td><td>36</td><td>132-16-11</td><td>116</td><td>86%</td><td>$85,589,030</td><td>$538,295</td></tr>
-                    <tr><td>42</td><td>Face To Face Boxing Club</td><td>Quebec</td><td>36</td><td>116-50-15</td><td>66</td><td>68%</td><td>$33,043,520</td><td>$182,560</td></tr>
-                    <tr><td>43</td><td>Panther Strikes (UK) - Caning you with KP</td><td>United Kingdom</td><td>35</td><td>76-20-57</td><td>56</td><td>68%</td><td>$46,099,370</td><td>$301,303</td></tr>
-                    <tr><td>44</td><td>L`gros Gym du Corner!! &lt;Evil Empire&gt;</td><td>Canada</td><td>34</td><td>364-227-1</td><td>137</td><td>62%</td><td>$416,026,138</td><td>$702,746</td></tr>
-                    <tr><td>45</td><td>Epitaph</td><td>United Kingdom</td><td>33</td><td>182-70-21</td><td>112</td><td>71%</td><td>$47,013,500</td><td>$172,210</td></tr>
-                    <tr><td>46</td><td>Roman Catholic Boxers</td><td>United States</td><td>31</td><td>101-26-12</td><td>75</td><td>77%</td><td>$10,449,072</td><td>$75,173</td></tr>
-                    <tr><td>47</td><td>Domination Inc.</td><td>New York</td><td>31</td><td>97-29-27</td><td>68</td><td>72%</td><td>$3,858,638</td><td>$25,219</td></tr>
-                    <tr><td>48</td><td>DTAHYAIO!</td><td>Australia</td><td>31</td><td>46-6-19</td><td>40</td><td>78%</td><td>$2,448,620</td><td>$34,487</td></tr>
-                    <tr><td>49</td><td>The Pride Of Scotland</td><td>United Kingdom</td><td>30</td><td>455-25-51</td><td>430</td><td>90%</td><td>$69,452,988</td><td>$130,796</td></tr>
-                    <tr><td>50</td><td>Hands of Vecna</td><td>Sweden</td><td>30</td><td>309-57-20</td><td>252</td><td>81%</td><td>$45,287,910</td><td>$98,320</td></tr>
-                </tbody>
-            </table>
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="fighters.html">🏆 TOP 30 FIGHTERS</a>
+            <a href="#">📊 RANKINGS</a>
+            <a href="#">📜 HISTORY</a>
         </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav>
+                <a href="#" class="active">🏠 DASHBOARD</a>
+                <div style="padding:8px 16px; font-size:12px; color:#888; text-transform:uppercase;">MAIN</div>
+                <a href="#">🌐 Regions</a>
+                <a href="#">🛡️ Your Gym</a>
+                <a href="fighters.html">👥 Fighters Rankings</a>
+                <a href="#">🏆 Hall of Records</a>
+                <a href="#">🔧 WEBL Hub & Tools</a>
+                <a href="#">⭐ Other Stuff</a>
+                <div style="padding:8px 16px; font-size:12px; color:#888; text-transform:uppercase; margin-top:20px;">WEB FUNDING</div>
+                <a href="#">💷 Web Funding</a>
+                <a href="#">🤝 Web Funding (Help)</a>
+            </nav>
+            <div class="sidebar-footer">
+                <h3>PROUD TO BE SCOTTISH</h3>
+                <p>🏴󠁧󠁢󠁳󠁣󠁴󠁿</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="label">EARNINGS</div>
+                    <div class="value">$12,004,915,230</div>
+                    <div class="label">TOTAL CAREER EARNINGS</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">TITLES</div>
+                    <div class="value">2,392</div>
+                    <div class="label">TOTAL TITLES WON</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">ELO RATING</div>
+                    <div class="value">1,720</div>
+                    <div class="label">AVERAGE ELO</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">POWER</div>
+                    <div class="value">5,329</div>
+                    <div class="label">AVERAGE POWER</div>
+                </div>
+            </div>
+
+            <div class="regions-section">
+                <div class="section-header">
+                    <h3>REGIONS</h3>
+                    <input type="text" class="search-box" placeholder="Search regions...">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>REGION</th>
+                            <th>EARNINGS</th>
+                            <th>RECORD</th>
+                            <th>TITLES</th>
+                            <th>ELO</th>
+                            <th>POWER</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="active">
+                            <td>1</td>
+                            <td>Rare Roaches</td>
+                            <td>$12,004,915,230</td>
+                            <td>14925-9970-7419</td>
+                            <td>2,202</td>
+                            <td>1,720</td>
+                            <td>5,329</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Community</td>
+                            <td>$11,081,865,466</td>
+                            <td>1009-4009-247</td>
+                            <td>28</td>
+                            <td>1,223</td>
+                            <td>1,190</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>British Commonwealth</td>
+                            <td>$2,035,676,994</td>
+                            <td>3910-3000-308</td>
+                            <td>227</td>
+                            <td>1,427</td>
+                            <td>2,896</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Dissanctioned</td>
+                            <td>$832,978,782</td>
+                            <td>2727-791-100</td>
+                            <td>265</td>
+                            <td>1,387</td>
+                            <td>5,798</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Invitational</td>
+                            <td>$645,938,706</td>
+                            <td>79-74-2</td>
+                            <td>3</td>
+                            <td>1,177</td>
+                            <td>1,093</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Welsh Revival</td>
+                            <td>$429,576,674</td>
+                            <td>1853-818-229</td>
+                            <td>21</td>
+                            <td>1,283</td>
+                            <td>3,516</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>United Kingdom</td>
+                            <td>$400,353,822</td>
+                            <td>2451-1287-160</td>
+                            <td>43</td>
+                            <td>1,513</td>
+                            <td>4,957</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>WEBL Boxing Organization (WBO)</td>
+                            <td>$394,207,134</td>
+                            <td>285-216-30</td>
+                            <td>27</td>
+                            <td>1,585</td>
+                            <td>2,533</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>WEBL Boxing Association (WBA)</td>
+                            <td>$119,763,240</td>
+                            <td>210-188-29</td>
+                            <td>14</td>
+                            <td>1,368</td>
+                            <td>2,633</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>WEBL Boxing Council (WBC)</td>
+                            <td>$81,298,486</td>
+                            <td>215-110-12</td>
+                            <td>5</td>
+                            <td>1,368</td>
+                            <td>1,977</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#" class="btn">VIEW ALL REGIONS</a>
+            </div>
+        </main>
+
+        <!-- Fighters Sidebar -->
+        <aside class="fighters-sidebar">
+            <div class="section-header">
+                <div>
+                    <h3>FIGHTERS MANAGED BY</h3>
+                    <h2 style="color:#d4af37; font-size:22px;">LOCHSIDE</h2>
+                </div>
+            </div>
+
+            <div class="fighter-group">
+                <div class="group-header">
+                    <h4>FIGHTYWEIGHTS</h4>
+                    <a href="#" style="color:#3a7bd5; font-size:13px;">VIEW ALL</a>
+                </div>
+                <div class="fighter-card">
+                    <div class="fighter-info">
+                        <h5>Barry "Big Ox" McGregor</h5>
+                        <p>18-2-2 (7 KO)</p>
+                        <p>STATUS: 28 • RANK: #11</p>
+                        <p class="earnings">$54,821,406</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fighter-group">
+                <div class="group-header">
+                    <h4>CRUISERWEIGHTS</h4>
+                    <a href="#" style="color:#3a7bd5; font-size:13px;">VIEW ALL</a>
+                </div>
+                <div class="fighter-card">
+                    <div class="fighter-info">
+                        <h5>Angus "The Highlander" MacLeod</h5>
+                        <p>25-14-3 (11 KO)</p>
+                        <p>STATUS: 18 • RANK: #26</p>
+                        <p class="earnings">$33,596,620</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fighter-group">
+                <div class="group-header">
+                    <h4>LIGHT HEAVYWEIGHTS</h4>
+                    <a href="#" style="color:#3a7bd5; font-size:13px;">VIEW ALL</a>
+                </div>
+                <div class="fighter-card">
+                    <div class="fighter-info">
+                        <h5>Jamie "Lochside Lethal" Fraser</h5>
+                        <p>12-9-3 (9 KO)</p>
+                        <p>STATUS: 18 • RANK: #11</p>
+                        <p class="earnings">$2,070,996</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="fighters.html" class="btn">VIEW ALL TOP 30 FIGHTERS</a>
+        </aside>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div>🏴󠁧󠁢󠁳󠁣󠁴󠁿 FROM SCOTLAND FOR THE WORLD</div>
+            <div>🥊 HONOUR IN THE RING • PRIDE IN OUR HERITAGE</div>
+            <div>🏗️ BUILT ON HISTORY • FOCUSED ON VICTORY</div>
+        </footer>
     </div>
 </body>
 </html>
-
-                                                                                                                       
