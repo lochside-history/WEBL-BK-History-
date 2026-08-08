@@ -1,98 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEBL Top 50 All-Time Fighters</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
-        body {
-            background: #081020;
-            background-image: linear-gradient(rgba(8,16,32,0.9), rgba(8,16,32,0.95)),
-                              radial-gradient(circle at top right, rgba(200,160,40,0.08), transparent 70%);
-            color: #ffd700; /* GOLD TEXT DEFAULT */
-            padding: 15px 12px;
-            min-height: 100vh;
-        }
-        .container { max-width: 750px; margin: 0 auto; }
-        .back-link { color: #ffd700; text-decoration: none; font-weight: 600; display: inline-block; margin-bottom: 15px; }
-        header { text-align: center; margin-bottom: 20px; border-bottom: 1px solid rgba(255,215,0,0.3); padding-bottom: 12px; }
-        h1 { color: #ffd700; font-size: 22px; font-weight: 900; margin-bottom: 4px; }
-        h2 { color: #fff; font-size: 15px; font-weight: 500; }
-        .fighter-card {
-            background: rgba(15,30,60,0.9);
-            border: 1px solid rgba(255,215,0,0.3);
-            border-radius: 6px;
-            padding: 14px;
-            margin-bottom: 12px;
-        }
-        .card-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 5px 0;
-            font-size: 14px;
-            border-bottom: 1px solid rgba(255,215,0,0.1);
-        }
-        .card-row:last-child { border-bottom: none; }
-        .card-row strong { color: #fff; font-weight: 600; text-transform: uppercase; font-size: 12px; }
-        .card-row span { color: #ffd700; font-weight: 500; text-align: right; }
-        .flag { font-size: 20px; margin: 0 8px; vertical-align: middle; }
-        .rank-badge { color: #ffd700; font-weight: 800; font-size: 16px; }
-        .win { color: #22c55e; }
-        .loss { color: #ef4444; }
-        @media (max-width: 500px) {
-            .card-row { font-size: 13px; }
-            h1 { font-size: 19px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEBL Top 50 Fighters</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#081020;color:#ffd700;padding:15px 10px;}
+.container{max-width:720px;margin:0 auto;}
+.back{color:#ffd700;text-decoration:none;font-weight:bold;margin-bottom:12px;display:inline-block;}
+header{text-align:center;margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid rgba(255,215,0,0.3);}
+h1{font-size:22px;color:#ffd700;margin-bottom:4px;}
+h2{font-size:15px;color:#fff;}
+.card{background:rgba(15,30,60,0.9);border:1px solid rgba(255,215,0,0.3);border-radius:6px;padding:12px;margin-bottom:10px;}
+.row{display:flex;justify-content:space-between;padding:4px 0;font-size:14px;border-bottom:1px solid rgba(255,215,0,0.1);}
+.row:last-child{border-bottom:none;}
+.row strong{color:#fff;font-size:12px;text-transform:uppercase;}
+</style>
 </head>
 <body>
 <div class="container">
-    <a href="index.html" class="back-link">← Back to Home</a>
+<a href="index.html" class="back">← Back to Home</a>
 
-    <header>
-        <h1>WEBL BARE KNUCKLE</h1>
-        <h2>OFFICIAL TOP 50 ALL-TIME RANKINGS</h2>
-    </header>
 <header>
-    <h1>WEBL BARE KNUCKLE</h1>
-    <h2>OFFICIAL TOP 50 ALL-TIME RANKINGS</h2>
+<h1>WEBL BARE KNUCKLE</h1>
+<h2>OFFICIAL TOP 50 ALL-TIME RANKINGS</h2>
 </header>
 
-<!-- PASTE YOUR FIGHTER CARDS HERE, RIGHT AFTER </header> -->
-<div class="fighter-card">
-    ... your content here ...
+<div class="card">
+<div class="row"><strong>Rank #1</strong><span>Zamitza II 🇷🇺 Russia</span></div>
+<div class="row"><strong>Titles</strong><span>116</span></div>
+<div class="row"><strong>Earnings</strong><span>$148,267,022</span></div>
+<div class="row"><strong>Record</strong><span>24-10-114 (13/7)</span></div>
+<div class="row"><strong>Rating</strong><span>16 (18)</span></div>
+<div class="row"><strong>Gym</strong><span>Powerlille /CCCP/</span></div>
 </div>
-    
-    <!-- Rank 1 -->
-    <div class="fighter-card">
-        <div class="card-row"><span class="rank-badge">Rank #1</span><span>Zamitza II 🇷🇺 Russia</span></div>
-        <div class="card-row"><strong>TITLES</strong><span>116</span></div>
-        <div class="card-row"><strong>EARNINGS</strong><span>$148,267,022</span></div>
-        <div class="card-row"><strong>RECORD</strong><span class="win">24</span>-<span class="loss">10</span>-<span>114 (13/7)</span></div>
-        <div class="card-row"><strong>RATING</strong><span>16 (18)</span></div>
-        <div class="card-row"><strong>GYM</strong><span>Powerlille /CCCP/</span></div>
-    </div>
 
-    <!-- Rank 2 -->
-    <div class="fighter-card">
-        <div class="card-row"><span class="rank-badge">Rank #2</span><span>Beyonce BK Wilder 🏴󠁧󠁢󠁳󠁣󠁴󠁿 United Kingdom</span></div>
-        <div class="card-row"><strong>TITLES</strong><span>107</span></div>
-        <div class="card-row"><strong>EARNINGS</strong><span>$207,336,198</span></div>
-        <div class="card-row"><strong>RECORD</strong><span class="win">89</span>-<span class="loss">45</span>-<span>60 (5/5)</span></div>
-        <div class="card-row"><strong>RATING</strong><span>18 (18)</span></div>
-        <div class="card-row"><strong>GYM</strong><span>Lochside 🐉 The Scottish Gym</span></div>
-    </div>
+<div class="card">
+<div class="row"><strong>Rank #2</strong><span>Beyonce BK Wilder 🏴󠁧󠁢󠁳󠁣󠁴󠁿 UK</span></div>
+<div class="row"><strong>Titles</strong><span>107</span></div>
+<div class="row"><strong>Earnings</strong><span>$207,336,198</span></div>
+<div class="row"><strong>Record</strong><span>89-45-60 (5/5)</span></div>
+<div class="row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
 
-    <!-- Rank 3 -->
-    <div class="fighter-card">
-        <div class="card-row"><span class="rank-badge">Rank #3</span><span>BK` Spartacus` 🏴󠁧󠁢󠁳󠁣󠁴󠁿 United Kingdom</span></div>
-        <div class="card-row"><strong>TITLES</strong><span>89</span></div>
-        <div class="card-row"><strong>EARNINGS</strong><span>$125,646,582</span></div>
-        <div class="card-row"><strong>RECORD</strong><span class="win">106</span>-<span class="loss">21</span>-<span>19 (83/10)</span></div>
-        <div class="card-row"><strong>RATING</strong><span>16 (18)</span></div>
-        <div class="card-row"><strong>GYM</strong><span>Lochside 🐉 The Scottish Gym</span></div>
-    </div>
+<div class="card">
+<div class="row"><strong>Rank #3</strong><span>BK Spartacus 🏴󠁧󠁢󠁳󠁣󠁴󠁿 UK</span></div>
+<div class="row"><strong>Titles</strong><span>89</span></div>
+<div class="row"><strong>Earnings</strong><span>$125,646,582</span></div>
+<div class="row"><strong>Record</strong><span>106-21-19 (83/10)</span></div>
+<div class="row"><strong>Rating</strong><span>16 (18)</span></div>
+<div class="row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
 </div>
 </body>
 </html>
