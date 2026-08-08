@@ -1,117 +1,624 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEBL LOCHSIDE • THE SCOTTISH GYM</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
-        body {
-            background: #081020;
-            background-image: linear-gradient(rgba(8,16,32,0.9), rgba(8,16,32,0.95)),
-                              radial-gradient(circle at top right, rgba(200,160,40,0.08), transparent 70%);
-            color: #fff;
-            padding: 15px 12px;
-            min-height: 100vh;
-        }
-        .container { max-width: 750px; margin: 0 auto; }
-        header { text-align: center; margin-bottom: 25px; border-bottom: 1px solid rgba(255,215,0,0.3); padding-bottom: 15px; }
-        h1 { color: #ffd700; font-size: 28px; font-weight: 900; margin-bottom: 8px; }
-        .tagline { color: #ffd700; font-size: 14px; line-height: 1.5; }
-        .nav-buttons { text-align: center; margin: 20px 0; }
-        .nav-buttons a {
-            display: inline-block;
-            padding: 10px 22px;
-            margin: 5px;
-            background: #ffd700;
-            color: #081020;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 15px;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-        .stat-box {
-            background: rgba(15,30,60,0.9);
-            border: 1px solid rgba(255,215,0,0.2);
-            border-radius: 6px;
-            padding: 15px;
-            text-align: center;
-        }
-        .stat-label { font-size: 12px; color: #ccc; text-transform: uppercase; margin-bottom: 4px; }
-        .stat-value { font-size: 20px; font-weight: 700; color: #ffd700; }
-        .regions {
-            background: rgba(15,30,60,0.9);
-            border: 1px solid rgba(255,215,0,0.2);
-            border-radius: 6px;
-            padding: 15px;
-        }
-        .regions h3 { color: #ffd700; margin-bottom: 12px; text-align: center; }
-        table { width: 100%; border-collapse: collapse; font-size: 13px; }
-        th, td { padding: 8px 5px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); }
-        th { color: #ffd700; font-weight: 600; }
-        .flag { font-size: 16px; margin-right: 6px; vertical-align: middle; }
-        @media (max-width: 500px) {
-            .stats-grid { grid-template-columns: 1fr; }
-            h1 { font-size: 22px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEBL Bare Knuckle Top 50 All-Time Gym Rankings</title>
+<meta name="description" content="Official WEBL Bare Knuckle Boxing Top 50 all-time gym rankings. Full stats including titles, records, win percentage, earnings and EPF.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Roboto,sans-serif;}
+body{
+    background:#081020;
+    background-image:linear-gradient(rgba(8,16,32,0.9),rgba(8,16,32,0.95)),
+    radial-gradient(circle at top right,rgba(200,160,40,0.08),transparent 70%);
+    color:#ffd700;
+    padding:15px 10px;
+    min-height:100vh;
+}
+.container{max-width:900px;margin:0 auto;}
+.back-link{color:#ffd700;text-decoration:none;font-weight:600;display:inline-block;margin-bottom:15px;}
+header{text-align:center;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(255,215,0,0.3);}
+h1{color:#ffd700;font-size:22px;font-weight:900;margin-bottom:4px;}
+h2{color:#fff;font-size:15px;font-weight:500;}
+table{width:100%;border-collapse:separate;border-spacing:0;border-radius:6px;overflow:hidden;}
+th,td{
+    padding:10px 6px;
+    text-align:left;
+    font-size:12px;
+    border-bottom:1px solid rgba(255,215,0,0.1);
+}
+th{
+    background:rgba(15,30,60,0.95);
+    color:#fff;
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:11px;
+}
+tr:nth-child(even){background:rgba(25,45,80,0.4);}
+tr:hover{background:rgba(40,70,120,0.5);}
+.flag{font-size:18px;line-height:1;}
+.plus{color:#22c55e;}
+.minus{color:#ef4444;}
+</style>
 </head>
 <body>
 <div class="container">
-    <header>
-        <h1>WEBL LOCHSIDE</h1>
-        <h2>THE SCOTTISH GYM</h2>
-        <div class="tagline">
-            🏴󠁧󠁢󠁳󠁣󠁴󠁿 FROM SCOTLAND FOR THE WORLD • HONOUR IN THE RING • PRIDE IN OUR HERITAGE<br>
-            BUILT ON HISTORY • FOCUSED ON VICTORY
-        </div>
-    </header>
+<a href="index.html" class="back-link">← Back to Home</a>
 
-    <div class="nav-buttons">
-        <a href="fighters.html">🏆 TOP 50 FIGHTERS</a>
-        <a href="gym-rankings.html">📊 GYM RANKINGS</a>
-        <a href="#">📜 HISTORY</a>
-    </div>
+<header>
+<h1>WEBL BARE KNUCKLE</h1>
+<h2>OFFICIAL TOP 50 ALL-TIME GYM RANKINGS</h2>
+</header>
 
-    <div class="stats-grid">
-        <div class="stat-box">
-            <div class="stat-label">Total Earnings</div>
-            <div class="stat-value">$12.115B</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-label">Total Titles</div>
-            <div class="stat-value">2,566</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-label">Win Rate</div>
-            <div class="stat-value">71%</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-label">Fight Record</div>
-            <div class="stat-value">14959-3987-7440</div>
-        </div>
-    </div>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Gym / Manager</th>
+<th>🏳️</th>
+<th>Titles</th>
+<th>Record</th>
+<th>+/-</th>
+<th>Win %</th>
+<th>Earnings</th>
+<th>EPF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lochside 🐉 The Scottish Gym</td>
+<td class="flag">🏴󠁧󠁢󠁳󠁣󠁧󠁿</td>
+<td>2566</td>
+<td>14968-3993-7450</td>
+<td class="plus">+10975</td>
+<td>71%</td>
+<td>$12.12B</td>
+<td>$458,975</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Rockin Rods Ring Rebels (Combined)</td>
+<td class="flag">🇦🇺</td>
+<td>1415</td>
+<td>10169-7398-5733</td>
+<td class="plus">+2771</td>
+<td>58%</td>
+<td>$7.92B</td>
+<td>$380,946</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Powerlille /CCCP/</td>
+<td class="flag">🇷🇺</td>
+<td>1178</td>
+<td>2988-1323-1799</td>
+<td class="plus">+1665</td>
+<td>64%</td>
+<td>$3.39B</td>
+<td>$555,607</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2 Twisted Pugilistic Logistics Corp</td>
+<td class="flag">🇺🇸</td>
+<td>500</td>
+<td>6045-3392-2132</td>
+<td class="plus">+2653</td>
+<td>61%</td>
+<td>$5.94B</td>
+<td>$513,811</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Vrykoulakas (badminton club)</td>
+<td class="flag">🇬🇪</td>
+<td>423</td>
+<td>2101-307-396</td>
+<td class="plus">+1794</td>
+<td>82%</td>
+<td>$535.67M</td>
+<td>$191,037</td>
+</tr>
+<tr>
+<td>6</td>
+<td>gym will (all but retired)</td>
+<td class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td>423</td>
+<td>2111-366-736</td>
+<td class="plus">+1745</td>
+<td>77%</td>
+<td>$410.02M</td>
+<td>$127,612</td>
+</tr>
+<tr>
+<td>7</td>
+<td>StraightJacket &lt;SoS&gt;</td>
+<td class="flag">🇺🇸</td>
+<td>282</td>
+<td>6033-4007-1330</td>
+<td class="plus">+2026</td>
+<td>59%</td>
+<td>$6.08B</td>
+<td>$534,945</td>
+</tr>
+<tr>
+<td>8</td>
+<td>HEMMINGWAYS Poets & Pugilists</td>
+<td class="flag">🇺🇸</td>
+<td>224</td>
+<td>5852-3187-2282</td>
+<td class="plus">+2665</td>
+<td>62%</td>
+<td>$1.95B</td>
+<td>$172,485</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Peggleswōrth (SALT)🧂</td>
+<td class="flag">🇫🇮</td>
+<td>211</td>
+<td>906-292-293</td>
+<td class="plus">+614</td>
+<td>71%</td>
+<td>$924.08M</td>
+<td>$619,773</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Pain, Power and Glory</td>
+<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td>195</td>
+<td>383-95-120</td>
+<td class="plus">+288</td>
+<td>74%</td>
+<td>$364.14M</td>
+<td>$608,926</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Hoosier Hammers</td>
+<td class="flag">🇺🇸</td>
+<td>191</td>
+<td>1497-445-333</td>
+<td class="plus">+1052</td>
+<td>73%</td>
+<td>$694.75M</td>
+<td>$305,385</td>
+</tr>
+<tr>
+<td>12</td>
+<td>LikQid Appreciation Society</td>
+<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td>189</td>
+<td>2206-1475-2470</td>
+<td class="plus">+731</td>
+<td>56%</td>
+<td>$3.14B</td>
+<td>$509,852</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Rotmo</td>
+<td class="flag">🇳🇴</td>
+<td>185</td>
+<td>1938-1287-714</td>
+<td class="plus">+651</td>
+<td>58%</td>
+<td>$1.08B</td>
+<td>$273,295</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Drunken Boxing Academy (SoS)</td>
+<td class="flag">🇺🇸</td>
+<td>173</td>
+<td>2621-1904-597</td>
+<td class="plus">+717</td>
+<td>57%</td>
+<td>$1.99B</td>
+<td>$388,672</td>
+</tr>
+<tr>
+<td>15</td>
+<td>The Warriors Haven &lt;UV&gt;</td>
+<td class="flag">🇺🇸</td>
+<td>167</td>
+<td>2979-1413-811</td>
+<td class="plus">+1566</td>
+<td>65%</td>
+<td>$1.19B</td>
+<td>$228,000</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Hot Dude Boxing Club (Lef Jab)</td>
+<td class="flag">🇺🇸</td>
+<td>144</td>
+<td>1106-475-87</td>
+<td class="plus">+631</td>
+<td>69%</td>
+<td>$1.23B</td>
+<td>$736,159</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Triglavska pest &lt;Evil Empire&gt;</td>
+<td class="flag">🇸🇮</td>
+<td>125</td>
+<td>2763-2916-708</td>
+<td class="minus">-153</td>
+<td>49%</td>
+<td>$2.09B</td>
+<td>$327,230</td>
+</tr>
+<tr>
+<td>18</td>
+<td>TERNFIELD</td>
+<td class="flag">🇺🇦</td>
+<td>120</td>
+<td>414-98-8</td>
+<td class="plus">+316</td>
+<td>80%</td>
+<td>$318.53M</td>
+<td>$612,550</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Pure Power</td>
+<td class="flag">🇺🇸</td>
+<td>102</td>
+<td>284-37-62</td>
+<td class="plus">+247</td>
+<td>82%</td>
+<td>$232.66M</td>
+<td>$607,454</td>
+</tr>
+<tr>
+<td>20</td>
+<td>We Are The Fighting Irish</td>
+<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td>99</td>
+<td>10426-12486-7262</td>
+<td class="minus">-2060</td>
+<td>47%</td>
+<td>$11.53B</td>
+<td>$382,105</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Disposable Heroes</td>
+<td class="flag">🇸🇪</td>
+<td>97</td>
+<td>581-259-257</td>
+<td class="plus">+322</td>
+<td>65%</td>
+<td>$764.37M</td>
+<td>$696,784</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Peekaboo (Retired #2)</td>
+<td class="flag">🇨🇦</td>
+<td>87</td>
+<td>139-17-19</td>
+<td class="plus">+122</td>
+<td>85%</td>
+<td>$5.41M</td>
+<td>$30,932</td>
+</tr>
+<tr>
+<td>23</td>
+<td>House of Black n` Blues [BTP]</td>
+<td class="flag">🇺🇸</td>
+<td>78</td>
+<td>464-153-116</td>
+<td class="plus">+311</td>
+<td>71%</td>
+<td>$389.94M</td>
+<td>$531,984</td>
+</tr>
+<tr>
+<td>24</td>
+<td>RK Underdogs</td>
+<td class="flag">🇵🇱</td>
+<td>69</td>
+<td>707-374-271</td>
+<td class="plus">+333</td>
+<td>62%</td>
+<td>$291.82M</td>
+<td>$215,844</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Frisbie Gym (Dead months)</td>
+<td class="flag">🇬🇪</td>
+<td>68</td>
+<td>964-305-457</td>
+<td class="plus">+659</td>
+<td>69%</td>
+<td>$76.73M</td>
+<td>$44,453</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Golden Fox Promotions</td>
+<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td>65</td>
+<td>2725-3421-608</td>
+<td class="minus">-696</td>
+<td>45%</td>
+<td>$1.98B</td>
+<td>$292,708</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Bullan`s [SOS]-(CFM)</td>
+<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td>62</td>
+<td>1378-697-482</td>
+<td class="plus">+681</td>
+<td>63%</td>
+<td>$232.11M</td>
+<td>$90,773</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Special Sauce of Albino</td>
+<td class="flag">🇦🇺</td>
+<td>61</td>
+<td>5720-6465-371</td>
+<td class="minus">-745</td>
+<td>47%</td>
+<td>$4.83B</td>
+<td>$384,928</td>
+</tr>
+<tr>
+<td>29</td>
+<td>The Hand Wrap</td>
+<td class="flag">🇨🇦</td>
+<td>58</td>
+<td>7442-9875-6898</td>
+<td class="minus">-2433</td>
+<td>45%</td>
+<td>$7.66B</td>
+<td>$316,214</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Pips Fighting Machine (WTA)</td>
+<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td>56</td>
+<td>587-38-81</td>
+<td class="plus">+549</td>
+<td>89%</td>
+<td>$127.39M</td>
+<td>$180,445</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Lords of the Ring: Foxes Swamp</td>
+<td class="flag">🇦🇺</td>
+<td>53</td>
+<td>800-692-417</td>
+<td class="plus">+108</td>
+<td>53%</td>
+<td>$400.05M</td>
+<td>$209,559</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Fade 2 Black (BTP)</td>
+<td class="flag">🇺🇸</td>
+<td>49</td>
+<td>637-184-122</td>
+<td class="plus">+453</td>
+<td>74%</td>
+<td>$216.03M</td>
+<td>$229,083</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Pasoa`s Playground (retired)</td>
+<td class="flag">🇧🇪</td>
+<td>48</td>
+<td>57-24-48</td>
+<td class="plus">+33</td>
+<td>63%</td>
+<td>$12.24M</td>
+<td>$94,879</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Fight Club `69</td>
+<td class="flag">🇦🇺</td>
+<td>43</td>
+<td>914-237-854</td>
+<td class="plus">+677</td>
+<td>67%</td>
+<td>$48.37M</td>
+<td>$24,122</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Genetically Gingineered Giants</td>
+<td class="flag">🇺🇸</td>
+<td>43</td>
+<td>424-214-102</td>
+<td class="plus">+210</td>
+<td>64%</td>
+<td>$244.77M</td>
+<td>$330,772</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Baltic Sea Study Fighters [KoP]</td>
+<td class="flag">🇩🇪</td>
+<td>39</td>
+<td>550-259-88</td>
+<td class="plus">+291</td>
+<td>66%</td>
+<td>$235.35M</td>
+<td>$262,373</td>
+</tr>
+<tr>
+<td>37</td>
+<td>FBI</td>
+<td class="flag">🇺🇸</td>
+<td>39</td>
+<td>239-61-96</td>
+<td class="plus">+178</td>
+<td>72%</td>
+<td>$35.24M</td>
+<td>$88,996</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Boz Squad ♠ Essence Of Boxing</td>
+<td class="flag">🇺🇸</td>
+<td>38</td>
+<td>1813-1154-439</td>
+<td class="plus">+659</td>
+<td>60%</td>
+<td>$443.56M</td>
+<td>$130,228</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Roadkill`s Island of Misfit Toys</td>
+<td class="flag">🌐</td>
+<td>38</td>
+<td>3405-4911-2344</td>
+<td class="minus">-1506</td>
+<td>43%</td>
+<td>$2.80B</td>
+<td>$262,659</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Samurai (Hibernation)</td>
+<td class="flag">🇺🇸</td>
+<td>36</td>
+<td>132-16-11</td>
+<td class="plus">+116</td>
+<td>86%</td>
+<td>$85.59M</td>
+<td>$538,295</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Face To Face Boxing Club</td>
+<td class="flag">🇨🇦</td>
+<td>36</td>
+<td>116-51-15</td>
+<td class="plus">+65</td>
+<td>68%</td>
+<td>$33.04M</td>
+<td>$181,557</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Panther Strikes (UK)</td>
+<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td>35</td>
+<td>76-20-57</td>
+<td class="plus">+56</td>
+<td>68%</td>
+<td>$46.10M</td>
+<td>$301,303</td>
+</tr>
+<tr>
+<td>43</td>
+<td>L`gros Gym du Corner!!</td>
+<td class="flag">🇨🇦</td>
+<td>34</td>
+<td>364-227-1</td>
+<td class="plus">+137</td>
+<td>62%</td>
+<td>$416.03M</td>
+<td>$702,746</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Epitaph</td>
+<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td>33</td>
+<td>182-70-21</td>
+<td class="plus">+112</td>
+<td>71%</td>
+<td>$47.01M</td>
+<td>$172,210</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Roman Catholic Boxers</td>
+<td class="flag">🇺🇸</td>
+<td>31</td>
+<td>101-26-12</td>
+<td class="plus">+75</td>
+<td>77%</td>
+<td>$10.45M</td>
+<td>$75,173</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Domination Inc.</td>
+<td class="flag">🇺🇸</td>
+<td>31</td>
+<td>97-29-27</td>
+<td class="plus">+68</td>
+<td>72%</td>
+<td>$3.86M</td>
+<td>$25,219</td>
+</tr>
+<tr>
+<td>47</td>
+<td>DTAHYAIO!</td>
+<td class="flag">🇦🇺</td>
+<td>31</td>
+<td>46-6-19</td>
+<td class="plus">+40</td>
+<td>78%</td>
+<td>$2.45M</td>
+<td>$34,487</td>
+</tr>
+<tr>
+<td>48</td>
+<td>The Pride Of Scotland</td>
+<td class="flag">🏴󠁧󠁢󠁳󠁣󠁧󠁿</td>
+<td>30</td>
+<td>455-25-51</td>
+<td class="plus">+430</td>
+<td>90%</td>
+<td>$69.45M</td>
+<td>$130,796</td>
+</tr>
+<tr>
+<td>49</td>
+<td>Hands of Vecna</td>
+<td class="flag">🇸🇪</td>
+<td>30</td>
+<td>309-57-20</td>
+<td class="plus">+252</td>
+<td>83%</td>
+<td>$100.20M</td>
+<td>$259,588</td>
+</tr>
+<tr>
+<td>50</td>
+<td>⭐ Old School Boxing</td>
+<td class="flag">🇳🇿</td>
+<td>45</td>
+<td>26-3-39</td>
+<td class="plus">+10</td>
+<td>72%</td>
+<td>$71.18M</td>
+<td>$0</td>
+</tr>
+</tbody>
+</table>
 
-    <div class="regions">
-        <h3>REGIONS</h3>
-        <table>
-            <tr><th>Rank</th><th>Flag</th><th>Region</th><th>Titles</th><th>Win %</th><th>Earnings</th></tr>
-            <tr><td>1</td><td class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</td><td>Bare Knuckle</td><td>2,566</td><td>71%</td><td>$12,115,318,816</td></tr>
-            <tr><td>2</td><td class="flag">🌍</td><td>Contenders</td><td>28</td><td>56%</td><td>$11,081,865,466</td></tr>
-            <tr><td>3</td><td class="flag">🇬🇧</td><td>British Commonwealth</td><td>227</td><td>64%</td><td>$2,035,676,994</td></tr>
-            <tr><td>4</td><td class="flag">⚠️</td><td>Unsanctioned</td><td>265</td><td>77%</td><td>$832,978,782</td></tr>
-            <tr><td>5</td><td class="flag">🎟️</td><td>Invitational</td><td>3</td><td>52%</td><td>$645,938,706</td></tr>
-            <tr><td>6</td><td class="flag">🏴</td><td>Revival Region</td><td>21</td><td>69%</td><td>$429,576,674</td></tr>
-            <tr><td>7</td><td class="flag">🇬🇧</td><td>United Kingdom</td><td>43</td><td>65%</td><td>$400,353,822</td></tr>
-        </table>
-    </div>
 </div>
 </body>
-                       </html>
-                                                                      
+    </html>
+    
