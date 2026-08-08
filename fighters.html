@@ -1,427 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="description" content="WEBL Lochside – The Scottish Gym. Verified all-time bare knuckle rankings, top 50 fighters, gym stats and history.">
+<meta name="keywords" content="WEBL, Lochside, bare knuckle, top fighters, gym rankings, Scotland, bare knuckle history, verified records">
+<meta name="author" content="Lochside History Team">
+<title>WEBL Top 50 All-Time Fighters</title>
 
-    <head>
-    <meta name="description" content="WEBL Lochside – The Scottish Gym. Verified all-time bare knuckle rankings, top 50 fighters, gym stats and history.">
-    <meta name="keywords" content="WEBL, Lochside, bare knuckle, top fighters, gym rankings, Scotland, bare knuckle history, verified records">
-    <meta name="author" content="Lochside History Team">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Roboto,sans-serif;color:#e6e6e6}
+html,body{width:100%;overflow-x:hidden}
+body{
+ background:#081020;
+ background-image:linear-gradient(rgba(8,15,30,.9),rgba(8,15,30,.95)),
+ radial-gradient(circle at top right,rgba(200,160,40,.08),transparent 60%);
+ min-height:100vh;padding:12px 8px
+}
+.container{max-width:100%;width:100%;margin:auto}
+.flag{font-size:18px;margin-right:6px;vertical-align:middle}
+.nav-link{
+ display:inline-block;margin-bottom:12px;color:#d4af37;
+ text-decoration:none;font-weight:500
+}
+.nav-link:hover{color:#fff}
+.header{
+ text-align:center;margin-bottom:16px;padding-bottom:12px;
+ border-bottom:1px solid rgba(212,175,55,.25)
+}
+.header h1{
+ font-size:28px;color:#d4af37;font-weight:800;margin-bottom:4px
+}
+.header h2{font-size:16px;color:#fff;margin-bottom:4px}
+.divider{
+ height:2px;background:linear-gradient(90deg,transparent,#d4af37,transparent);
+ margin:16px 0;opacity:.6
+}
+.table-wrap{
+ background:rgba(12,20,40,.85);
+ border:1px solid rgba(212,175,55,.2);
+ border-radius:6px;padding:12px
+}
+table{width:100%;border-collapse:collapse}
+thead{display:none}
+tr{
+ display:block;margin-bottom:12px;
+ border-bottom:1px solid rgba(255,255,255,.08);
+ padding:8px 0
+}
+td{
+ display:flex;justify-content:space-between;
+ padding:4px 6px;font-size:12px;border:none
+}
+td::before{
+ content:attr(data-label);color:#aaa;font-weight:500;
+ text-transform:uppercase;font-size:11px
+}
 
-    <!-- rest of your code stays here -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>WEBL Lochside - The Scottish Gym</title>
-    <style>
+/* GOLD FIGHTER NAMES */
+td[data-label="Fighter"]{
+ color:#e7c35b;
+ font-weight:700
+}
 
-    <meta name="description" content="WEBL Lochside – The Scottish Gym. Verified all-time bare knuckle rankings, top 50 fighters, gym stats and history.">
-    <meta name="keywords" content="WEBL, Lochside, bare knuckle, top fighters, gym rankings, Scotland, bare knuckle history, verified records">
-    <meta name="author" content="Lochside History Team">
+.rank-num{color:#ffd700;font-weight:700}
+.gym-lochside{color:#d4af37;font-weight:500}
+.earnings{color:#22c55e;font-weight:500;white-space:nowrap}
+.titles{color:#f59e0b;font-weight:600}
+.rating{color:#a78bfa;font-weight:500}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>WEBL Top 50 All-Time Fighters</title>
-    <style>
+.page-footer{
+ margin-top:20px;padding-top:16px;
+ border-top:1px solid rgba(212,175,55,.25);
+ text-align:center;font-size:11px;color:#999
+}
 
-    <meta name="description" content="WEBL Lochside – The Scottish Gym. Verified all-time bare knuckle rankings, top 50 fighters, gym stats and history.">
-    <meta name="keywords" content="WEBL, Lochside, bare knuckle, top fighters, gym rankings, Scotland, bare knuckle history, verified records">
-    <meta name="author" content="Lochside History Team">
-
-    <!-- rest of your code stays here -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>WEBL Lochside - The Scottish Gym</title>
-    <style>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>WEBL Top 50 All-Time Fighters</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            color: #e6e6e6;
-        }
-
-        html, body {
-            width: 100%;
-            overflow-x: hidden;
-        }
-
-        body {
-            background-color: #081020;
-            background-image: 
-                linear-gradient(rgba(8,15,30,0.9), rgba(8,15,30,0.95)),
-                radial-gradient(circle at top right, rgba(200,160,40,0.08), transparent 60%);
-            min-height: 100vh;
-            padding: 12px 8px;
-        }
-
-        .container {
-            max-width: 100%;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .flag {
-            font-size: 18px;
-            margin-right: 6px;
-            vertical-align: middle;
-        }
-
-        .nav-link {
-            display: inline-block;
-            margin-bottom: 12px;
-            color: #d4af37;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .nav-link:hover {
-            color: #fff;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid rgba(212,175,55,0.25);
-        }
-
-        .header h1 {
-            font-size: 28px;
-            color: #d4af37;
-            font-weight: 800;
-            margin-bottom: 4px;
-        }
-
-        .header h2 {
-            font-size: 16px;
-            color: #fff;
-            margin-bottom: 4px;
-        }
-
-        .divider {
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #d4af37, transparent);
-            margin: 16px 0;
-            opacity: 0.6;
-        }
-
-        .table-wrap {
-            background: rgba(12,20,40,0.85);
-            border: 1px solid rgba(212,175,55,0.2);
-            border-radius: 6px;
-            padding: 12px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        thead { display: none; }
-
-        tr {
-            display: block;
-            margin-bottom: 12px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            padding: 8px 0;
-        }
-
-        td {
-            display: flex;
-            justify-content: space-between;
-            padding: 4px 6px;
-            font-size: 12px;
-            border: none;
-        }
-
-        td::before {
-            content: attr(data-label);
-            color: #aaa;
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: 11px;
-        }
-
-        .rank-num { color: #ffd700; font-weight: 700; }
-        .gym-lochside { color: #d4af37; font-weight: 500; }
-        .earnings { color: #22c55e; font-weight: 500; white-space: nowrap; }
-        .titles { color: #f59e0b; font-weight: 600; }
-        .rating { color: #a78bfa; font-weight: 500; }
-
-        .page-footer {
-            margin-top: 20px;
-            padding-top: 16px;
-            border-top: 1px solid rgba(212,175,55,0.25);
-            text-align: center;
-            font-size: 11px;
-            color: #999;
-        }
-
-        @media (min-width: 768px) {
-            thead { display: table-header-group; }
-            tr { display: table-row; margin-bottom: 0; padding: 0; }
-            td { display: table-cell; padding: 10px 8px; font-size: 13px; }
-            td::before { display: none; }
-
-            th {
-                padding: 10px 8px;
-                border-bottom: 1px solid rgba(212,175,55,0.25);
-                text-align: left;
-                font-size: 12px;
-                font-weight: 600;
-                color: #d4af37;
-                text-transform: uppercase;
-            }
-        }
-    </style>
+@media(min-width:768px){
+ thead{display:table-header-group}
+ tr{display:table-row;margin-bottom:0;padding:0}
+ td{display:table-cell;padding:10px 8px;font-size:13px}
+ td::before{display:none}
+ th{
+  padding:10px 8px;
+  border-bottom:1px solid rgba(212,175,55,.25);
+  text-align:left;font-size:12px;font-weight:600;
+  color:#d4af37;text-transform:uppercase
+ }
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <a href="index.html" class="nav-link">← Back to Home</a>
+<div class="container">
 
-        <header class="header">
-            <h1>WEBL BARE KNUCKLE</h1>
-            <h2>OFFICIAL TOP 50 ALL-TIME RANKINGS</h2>
-        </header>
+<a href="index.html" class="nav-link">← Back to Home</a>
 
-        <div class="divider"></div>
+<header class="header">
+<h1>WEBL BARE KNUCKLE</h1>
+<h2>OFFICIAL TOP 50 ALL-TIME RANKINGS</h2>
+</header>
 
-        <div class="table-wrap">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Fighter</th>
-                        <th>Location</th>
-                        <th>Titles</th>
-                        <th>Earnings</th>
-                        <th>Record</th>
-                        <th>Rating (Status)</th>
-                        <th>Manager / Gym</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #1</td>
-                        <td data-label="Fighter">Zarnitza II</td>
-                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
-                        <td data-label="Titles" class="titles">116</td>
-                        <td data-label="Earnings" class="earnings">$148,267,022</td>
-                        <td data-label="Record">24-10-114 (13/7)</td>
-                        <td data-label="Rating" class="rating">16 (18)</td>
-                        <td data-label="Gym">Powerlille /CCCP/</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #2</td>
-                        <td data-label="Fighter">Beyonce BK Wilder</td>
-                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> United Kingdom</td>
-                        <td data-label="Titles" class="titles">107</td>
-                        <td data-label="Earnings" class="earnings">$207,336,198</td>
-                        <td data-label="Record">89-9-45 (60/5)</td>
-                        <td data-label="Rating" class="rating">18 (18)</td>
-                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #3</td>
-                        <td data-label="Fighter">BK `Spartacus`</td>
-                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> United Kingdom</td>
-                        <td data-label="Titles" class="titles">89</td>
-                        <td data-label="Earnings" class="earnings">$125,646,582</td>
-                        <td data-label="Record">106-21-19 (83/10)</td>
-                        <td data-label="Rating" class="rating">16 (18)</td>
-                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #4</td>
-                        <td data-label="Fighter">BK `Tom Cribb`</td>
-                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> United Kingdom</td>
-                        <td data-label="Titles" class="titles">83</td>
-                        <td data-label="Earnings" class="earnings">$134,857,534</td>
-                        <td data-label="Record">51-2-52 (27/2)</td>
-                        <td data-label="Rating" class="rating">18 (18)</td>
-                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #5</td>
-                        <td data-label="Fighter">Yuri "Point Snatcher" Gorbikov</td>
-                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> United Kingdom</td>
-                        <td data-label="Titles" class="titles">83</td>
-                        <td data-label="Earnings" class="earnings">$119,763,832</td>
-                        <td data-label="Record">52-7-58 (43/6)</td>
-                        <td data-label="Rating" class="rating">15 (18)</td>
-                        <td data-label="Gym">Pain, Power and Glory</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #6</td>
-                        <td data-label="Fighter">Vasiliy Zabolotniy</td>
-                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
-                        <td data-label="Titles" class="titles">74</td>
-                        <td data-label="Earnings" class="earnings">$103,608,306</td>
-                        <td data-label="Record">30-8-71 (12/6)</td>
-                        <td data-label="Rating" class="rating">14 (18)</td>
-                        <td data-label="Gym">Powerlille /CCCP/</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #7</td>
-                        <td data-label="Fighter">John MacAckin</td>
-                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
-                        <td data-label="Titles" class="titles">71</td>
-                        <td data-label="Earnings" class="earnings">$155,922,238</td>
-                        <td data-label="Record">69-7-20 (60/6)</td>
-                        <td data-label="Rating" class="rating">16 (18)</td>
-                        <td data-label="Gym">Powerlille /CCCP/</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #8</td>
-                        <td data-label="Fighter">Farukh El Jabar</td>
-                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
-                        <td data-label="Titles" class="titles">70</td>
-                        <td data-label="Earnings" class="earnings">$126,392,836</td>
-                        <td data-label="Record">51-1-34 (35/0)</td>
-                        <td data-label="Rating" class="rating">18 (18)</td>
-                        <td data-label="Gym">Powerlille /CCCP/</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #9</td>
-                        <td data-label="Fighter">So Very Stupid Eimall</td>
-                        <td data-label="Location"><span class="flag">🇦🇺</span> Australia</td>
-                        <td data-label="Titles" class="titles">70</td>
-                        <td data-label="Earnings" class="earnings">$107,090,666</td>
-                        <td data-label="Record">75-2-14 (71/1)</td>
-                        <td data-label="Rating" class="rating">18 (18)</td>
-                        <td data-label="Gym">Rockin Rods Ring Rebels \\\\\.SoS./////</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #10</td>
-                        <td data-label="Fighter">Tuolla Edisni</td>
-                        <td data-label="Location"><span class="flag">🇦🇺</span> Australia</td>
-                        <td data-label="Titles" class="titles">69</td>
-                        <td data-label="Earnings" class="earnings">$189,496,450</td>
-                        <td data-label="Record">95-14-0 (95/14)</td>
-                        <td data-label="Rating" class="rating">18 (18)</td>
-                        <td data-label="Gym">Rockin Rods Ring Rebels \\\\\SoS/////</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #11</td>
-                        <td data-label="Fighter">Anthony `I Lost My Mojo` Ogogo</td>
-                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> United Kingdom</td>
-                        <td data-label="Titles" class="titles">67</td>
-                        <td data-label="Earnings" class="earnings">$145,809,406</td>
-                        <td data-label="Record">68-6-17 (60/4)</td>
-                        <td data-label="Rating" class="rating">18 (18)</td>
-                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #12</td>
-                        <td data-label="Fighter">Willey Three Willey</td>
-                        <td data-label="Location"><span class="flag">🇦🇺</span> Australia</td>
-                        <td data-label="Titles" class="titles">63</td>
-                        <td data-label="Earnings" class="earnings">$167,282,830</td>
-                        <td data-label="Record">84-9-1 (84/9)</td>
-                        <td data-label="Rating" class="rating">18 (18)</td>
-                        <td data-label="Gym">Rockin Rods Ring Rebels \\\\\SoS/////</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #13</td>
-                        <td data-label="Fighter">BK New Wave 13</td>
-                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> United Kingdom</td>
-                        <td data-label="Titles" class="titles">63</td>
-                        <td data-label="Earnings" class="earnings">$135,091,692</td>
-                        <td data-label="Record">83-15-1 (72/15)</td>
-                        <td data-label="Rating" class="rating">14 (18)</td>
-                        <td data-label="Gym">Pain, Power and Glory</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #14</td>
-                        <td data-label="Fighter">Lenny `BK Guv'nor` McLean</td>
-                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> United Kingdom</td>
-                        <td data-label="Titles" class="titles">59</td>
-                        <td data-label="Earnings" class="earnings">$151,510,294</td>
-                        <td data-label="Record">83-11-6 (37/4)</td>
-                        <td data-label="Rating" class="rating">18 (18)</td>
-                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #15</td>
-                        <td data-label="Fighter">Bare Knuckles `Lock Out` Week 1129</td>
-                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
-                        <td data-label="Titles" class="titles">59</td>
-                        <td data-label="Earnings" class="earnings">$90,415,676</td>
-                        <td data-label="Record">31-1-40 (25/0)</td>
-                        <td data-label="Rating" class="rating">17 (18)</td>
-                        <td data-label="Gym">Powerlille /CCCP/</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #16</td>
-                        <td data-label="Fighter">Pugnit Ubit Muerto 3</td>
-                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> United Kingdom</td>
-                        <td data-label="Titles" class="titles">58</td>
-                        <td data-label="Earnings" class="earnings">$87,501,270</td>
-                        <td data-label="Record">24-3-55 (11/1)</td>
-                        <td data-label="Rating" class="rating">18 (18)</td>
-                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #17</td>
-                        <td data-label="Fighter">Arthur BK Brown</td>
-                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> United Kingdom</td>
-                        <td data-label="Titles" class="titles">55</td>
-                        <td data-label="Earnings" class="earnings">$96,588,352</td>
-                        <td data-label="Record">53-7-23 (23/2)</td>
-                        <td data-label="Rating" class="rating">18 (18)</td>
-                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #18</td>
-                        <td data-label="Fighter">Sam Street</td>
-                        <td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> United Kingdom</td>
-                        <td data-label="Titles" class="titles">52</td>
-                        <td data-label="Earnings" class="earnings">$102,616,670</td>
-                        <td data-label="Record">50-3-16 (37/1)</td>
-                        <td data-label="Rating" class="rating">18 (18)</td>
-                        <td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #19</td>
-                        <td data-label="Fighter">Vincent Van Poere</td>
-                        <td data-label="Location"><span class="flag">🇺🇸</span> Pennsylvania</td>
-                        <td data-label="Titles" class="titles">46</td>
-                        <td data-label="Earnings" class="earnings">$197,693,210</td>
-                        <td data-label="Record">102-28-0 (102/28)</td>
-                        <td data-label="Rating" class="rating">17 (18)</td>
-                        <td data-label="Gym">Hot Dude Boxing Club (Lef Jab)</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #20</td>
-                        <td data-label="Fighter">Steven MacAckin</td>
-                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
-                        <td data-label="Titles" class="titles">45</td>
-                        <td data-label="Earnings" class="earnings">$80,748,378</td>
-                        <td data-label="Record">34-5-25 (21/3)</td>
-                        <td data-label="Rating" class="rating">17 (18)</td>
-                        <td data-label="Gym">Powerlille /CCCP/</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #21</td>
-                        <td data-label="Fighter">Domnall Craig Cinaed Duncan</td>
-                        <td data-label="Location"><span class="flag">🇳🇿</span> New Zealand</td>
-                        <td data-label="Titles" class="titles">45</td>
-                        <td data-label="Earnings" class="earnings">$71,180,498</td>
-                        <td data-label="Record">26-3-39 (10/2)</td>
-                        <td data-label="Rating" class="rating">17 (18)</td>
-                        <td data-label="Gym">⭐ Old School Boxing</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #22</td>
-                        <td data-label="Fighter">Cubinez</td>
-                        <td data-label="Location"><span class="flag">🇷🇺</span> Russia</td>
-                        <td data-label="Titles" class="titles">44</td>
-                        <td data-label="Earnings" class="earnings">$83,203,534</td>
-                        <td data-label="Record">41-0-16 (31/0)</td>
-                        <td data-label="Rating" class="rating">18 (18)</td>
-                        <td data-label="Gym">Powerlille /CCCP/</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Rank" class="rank-num">Rank #23</td
+<div class="divider"></div>
+
+<div class="table-wrap">
+<table>
+
+<thead>
+<tr>
+<th>Rank</th>
+<th>Fighter</th>
+<th>Location</th>
+<th>Titles</th>
+<th>Earnings</th>
+<th>Record</th>
+<th>Rating (Status)</th>
+<th>Manager / Gym</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #1</td>
+<td data-label="Fighter">Zarnitza II</td>
+<td data-label="Location"><span class="flag">🇷🇺</span>Russia</td>
+<td data-label="Titles" class="titles">116</td>
+<td data-label="Earnings" class="earnings">$148,267,022</td>
+<td data-label="Record">24-10-114 (13/7)</td>
+<td data-label="Rating" class="rating">16 (18)</td>
+<td data-label="Gym">Powerlille /CCCP/</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #2</td>
+<td data-label="Fighter">Beyonce BK Wilder</td>
+<td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>United Kingdom</td>
+<td data-label="Titles" class="titles">107</td>
+<td data-label="Earnings" class="earnings">$207,336,198</td>
+<td data-label="Record">89-9-45 (60/5)</td>
+<td data-label="Rating" class="rating">18 (18)</td>
+<td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #3</td>
+<td data-label="Fighter">BK `Spartacus`</td>
+<td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>United Kingdom</td>
+<td data-label="Titles" class="titles">89</td>
+<td data-label="Earnings" class="earnings">$125,646,582</td>
+<td data-label="Record">106-21-19 (83/10)</td>
+<td data-label="Rating" class="rating">16 (18)</td>
+<td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #4</td>
+<td data-label="Fighter">BK `Tom Cribb`</td>
+<td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>United Kingdom</td>
+<td data-label="Titles" class="titles">83</td>
+<td data-label="Earnings" class="earnings">$134,857,534</td>
+<td data-label="Record">51-2-52 (27/2)</td>
+<td data-label="Rating" class="rating">18 (18)</td>
+<td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #5</td>
+<td data-label="Fighter">Yuri "Point Snatcher" Gorbikov</td>
+<td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>United Kingdom</td>
+<td data-label="Titles" class="titles">83</td>
+<td data-label="Earnings" class="earnings">$119,763,832</td>
+<td data-label="Record">52-7-58 (43/6)</td>
+<td data-label="Rating" class="rating">15 (18)</td>
+<td data-label="Gym">Pain, Power and Glory</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #6</td>
+<td data-label="Fighter">Vasiliy Zabolotniy</td>
+<td data-label="Location"><span class="flag">🇷🇺</span>Russia</td>
+<td data-label="Titles" class="titles">74</td>
+<td data-label="Earnings" class="earnings">$103,608,306</td>
+<td data-label="Record">30-8-71 (12/6)</td>
+<td data-label="Rating" class="rating">14 (18)</td>
+<td data-label="Gym">Powerlille /CCCP/</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #7</td>
+<td data-label="Fighter">John MacAckin</td>
+<td data-label="Location"><span class="flag">🇷🇺</span>Russia</td>
+<td data-label="Titles" class="titles">71</td>
+<td data-label="Earnings" class="earnings">$155,922,238</td>
+<td data-label="Record">69-7-20 (60/6)</td>
+<td data-label="Rating" class="rating">16 (18)</td>
+<td data-label="Gym">Powerlille /CCCP/</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #8</td>
+<td data-label="Fighter">Farukh El Jabar</td>
+<td data-label="Location"><span class="flag">🇷🇺</span>Russia</td>
+<td data-label="Titles" class="titles">70</td>
+<td data-label="Earnings" class="earnings">$126,392,836</td>
+<td data-label="Record">51-1-34 (35/0)</td>
+<td data-label="Rating" class="rating">18 (18)</td>
+<td data-label="Gym">Powerlille /CCCP/</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #9</td>
+<td data-label="Fighter">So Very Stupid Eimall</td>
+<td data-label="Location"><span class="flag">🇦🇺</span>Australia</td>
+<td data-label="Titles" class="titles">70</td>
+<td data-label="Earnings" class="earnings">$107,090,666</td>
+<td data-label="Record">75-2-14 (71/1)</td>
+<td data-label="Rating" class="rating">18 (18)</td>
+<td data-label="Gym">Rockin Rods Ring Rebels \\\\\.SoS./////</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #10</td>
+<td data-label="Fighter">Tuolla Edisni</td>
+<td data-label="Location"><span class="flag">🇦🇺</span>Australia</td>
+<td data-label="Titles" class="titles">69</td>
+<td data-label="Earnings" class="earnings">$189,496,450</td>
+<td data-label="Record">95-14-0 (95/14)</td>
+<td data-label="Rating" class="rating">18 (18)</td>
+<td data-label="Gym">Rockin Rods Ring Rebels \\\\\SoS/////</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #11</td>
+<td data-label="Fighter">Anthony `I Lost My Mojo` Ogogo</td>
+<td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>United Kingdom</td>
+<td data-label="Titles" class="titles">67</td>
+<td data-label="Earnings" class="earnings">$145,809,406</td>
+<td data-label="Record">68-6-17 (60/4)</td>
+<td data-label="Rating" class="rating">18 (18)</td>
+<td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #12</td>
+<td data-label="Fighter">Willey Three Willey</td>
+<td data-label="Location"><span class="flag">🇦🇺</span>Australia</td>
+<td data-label="Titles" class="titles">63</td>
+<td data-label="Earnings" class="earnings">$167,282,830</td>
+<td data-label="Record">84-9-1 (84/9)</td>
+<td data-label="Rating" class="rating">18 (18)</td>
+<td data-label="Gym">Rockin Rods Ring Rebels \\\\\SoS/////</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #13</td>
+<td data-label="Fighter">BK New Wave 13</td>
+<td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>United Kingdom</td>
+<td data-label="Titles" class="titles">63</td>
+<td data-label="Earnings" class="earnings">$135,091,692</td>
+<td data-label="Record">83-15-1 (72/15)</td>
+<td data-label="Rating" class="rating">14 (18)</td>
+<td data-label="Gym">Pain, Power and Glory</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #14</td>
+<td data-label="Fighter">Lenny `BK Guv'nor` McLean</td>
+<td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>United Kingdom</td>
+<td data-label="Titles" class="titles">59</td>
+<td data-label="Earnings" class="earnings">$151,510,294</td>
+<td data-label="Record">83-11-6 (37/4)</td>
+<td data-label="Rating" class="rating">18 (18)</td>
+<td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #15</td>
+<td data-label="Fighter">Bare Knuckles `Lock Out` Week 1129</td>
+<td data-label="Location"><span class="flag">🇷🇺</span>Russia</td>
+<td data-label="Titles" class="titles">59</td>
+<td data-label="Earnings" class="earnings">$90,415,676</td>
+<td data-label="Record">31-1-40 (25/0)</td>
+<td data-label="Rating" class="rating">17 (18)</td>
+<td data-label="Gym">Powerlille /CCCP/</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #16</td>
+<td data-label="Fighter">Pugnit Ubit Muerto 3</td>
+<td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>United Kingdom</td>
+<td data-label="Titles" class="titles">58</td>
+<td data-label="Earnings" class="earnings">$87,501,270</td>
+<td data-label="Record">24-3-55 (11/1)</td>
+<td data-label="Rating" class="rating">18 (18)</td>
+<td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #17</td>
+<td data-label="Fighter">Arthur BK Brown</td>
+<td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>United Kingdom</td>
+<td data-label="Titles" class="titles">55</td>
+<td data-label="Earnings" class="earnings">$96,588,352</td>
+<td data-label="Record">53-7-23 (23/2)</td>
+<td data-label="Rating" class="rating">18 (18)</td>
+<td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #18</td>
+<td data-label="Fighter">Sam Street</td>
+<td data-label="Location"><span class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>United Kingdom</td>
+<td data-label="Titles" class="titles">52</td>
+<td data-label="Earnings" class="earnings">$102,616,670</td>
+<td data-label="Record">50-3-16 (37/1)</td>
+<td data-label="Rating" class="rating">18 (18)</td>
+<td data-label="Gym" class="gym-lochside">Lochside 🐉 The Scottish Gym</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #19</td>
+<td data-label="Fighter">Vincent Van Poere</td>
+<td data-label="Location"><span class="flag">🇺🇸</span>Pennsylvania</td>
+<td data-label="Titles" class="titles">46</td>
+<td data-label="Earnings" class="earnings">$197,693,210</td>
+<td data-label="Record">102-28-0 (102/28)</td>
+<td data-label="Rating" class="rating">17 (18)</td>
+<td data-label="Gym">Hot Dude Boxing Club (Lef Jab)</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #20</td>
+<td data-label="Fighter">Steven MacAckin</td>
+<td data-label="Location"><span class="flag">🇷🇺</span>Russia</td>
+<td data-label="Titles" class="titles">45</td>
+<td data-label="Earnings" class="earnings">$80,748,378</td>
+<td data-label="Record">34-5-25 (21/3)</td>
+<td data-label="Rating" class="rating">17 (18)</td>
+<td data-label="Gym">Powerlille /CCCP/</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #21</td>
+<td data-label="Fighter">Domnall Craig Cinaed Duncan</td>
+<td data-label="Location"><span class="flag">🇳🇿</span>New Zealand</td>
+<td data-label="Titles" class="titles">45</td>
+<td data-label="Earnings" class="earnings">$71,180,498</td>
+<td data-label="Record">26-3-39 (10/2)</td>
+<td data-label="Rating" class="rating">17 (18)</td>
+<td data-label="Gym">⭐ Old School Boxing</td>
+</tr>
+
+<tr>
+<td data-label="Rank" class="rank-num">Rank #22</td>
+<td data-label="Fighter">Cubinez</td>
+<td data-label="Location"><span class="flag">🇷🇺</span>Russia</td>
+<td data-label="Titles" class="titles">44</td>
+<td data-label="Earnings" class="earnings">$83,203,534</td>
+<td data-label="Record">41-0-16 (31/0)</td>
+<td data-label="Rating" class="rating">18 (18)</td>
+<td data-label="Gym">Powerlille /CCCP/</td>
+</tr>
+
+<!-- ADD YOUR EXISTING RANK #23–#50 ROWS HERE -->
+
+</tbody>
+</table>
+</div>
+
+<div class="page-footer">
+WEBL BARE KNUCKLE • LOCHSIDE 🐉 THE SCOTTISH GYM
+</div>
+
+</div>
+</body>
+</html>
