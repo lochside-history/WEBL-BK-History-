@@ -3,55 +3,551 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WEBL Top 50 Fighters</title>
+<title>WEBL Top 50 All-Time Fighters</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
-body{background:#081020;color:#ffd700;padding:15px 10px;}
-.container{max-width:720px;margin:0 auto;}
-.back{color:#ffd700;text-decoration:none;font-weight:bold;margin-bottom:12px;display:inline-block;}
-header{text-align:center;margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid rgba(255,215,0,0.3);}
-h1{font-size:22px;color:#ffd700;margin-bottom:4px;}
-h2{font-size:15px;color:#fff;}
-.card{background:rgba(15,30,60,0.9);border:1px solid rgba(255,215,0,0.3);border-radius:6px;padding:12px;margin-bottom:10px;}
-.row{display:flex;justify-content:space-between;padding:4px 0;font-size:14px;border-bottom:1px solid rgba(255,215,0,0.1);}
-.row:last-child{border-bottom:none;}
-.row strong{color:#fff;font-size:12px;text-transform:uppercase;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Roboto,sans-serif;}
+body{
+    background:#081020;
+    background-image:linear-gradient(rgba(8,16,32,0.9),rgba(8,16,32,0.95)),
+    radial-gradient(circle at top right,rgba(200,160,40,0.08),transparent 70%);
+    color:#ffd700;
+    padding:15px 12px;
+    min-height:100vh;
+}
+.container{max-width:750px;margin:0 auto;}
+.back-link{color:#ffd700;text-decoration:none;font-weight:600;display:inline-block;margin-bottom:15px;}
+header{text-align:center;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(255,215,0,0.3);}
+h1{color:#ffd700;font-size:22px;font-weight:900;margin-bottom:4px;}
+h2{color:#fff;font-size:15px;font-weight:500;}
+.fighter-card{
+    background:rgba(15,30,60,0.9);
+    border:1px solid rgba(255,215,0,0.3);
+    border-radius:6px;
+    padding:14px;
+    margin-bottom:12px;
+}
+.card-row{
+    display:flex;
+    justify-content:space-between;
+    padding:5px 0;
+    font-size:14px;
+    border-bottom:1px solid rgba(255,215,0,0.1);
+    gap:8px;
+}
+.card-row:last-child{border-bottom:none;}
+.card-row strong{color:#fff;font-weight:600;text-transform:uppercase;font-size:12px;min-width:110px;}
+.card-row span{text-align:right;flex:1;}
+.win{color:#22c55e;}
+.loss{color:#ef4444;}
 </style>
 </head>
 <body>
 <div class="container">
-<a href="index.html" class="back">← Back to Home</a>
+<a href="index.html" class="back-link">← Back to Home</a>
 
 <header>
 <h1>WEBL BARE KNUCKLE</h1>
-<h2>OFFICIAL TOP 50 ALL-TIME RANKINGS</h2>
+<h2>OFFICIAL TOP 50 ALL-TIME RANKINGS • Rockin Rods Combined</h2>
 </header>
 
-<div class="card">
-<div class="row"><strong>Rank #1</strong><span>Zamitza II 🇷🇺 Russia</span></div>
-<div class="row"><strong>Titles</strong><span>116</span></div>
-<div class="row"><strong>Earnings</strong><span>$148,267,022</span></div>
-<div class="row"><strong>Record</strong><span>24-10-114 (13/7)</span></div>
-<div class="row"><strong>Rating</strong><span>16 (18)</span></div>
-<div class="row"><strong>Gym</strong><span>Powerlille /CCCP/</span></div>
+<!-- 1 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 1</strong><span>Zarnitza II • Russia</span></div>
+<div class="card-row"><strong>Titles</strong><span>116</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$148,267,022</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">24</span>-<span class="loss">10</span>-114 (13/7)</span></div>
+<div class="card-row"><strong>Rating</strong><span>16 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Powerlille /CCCP/</span></div>
 </div>
 
-<div class="card">
-<div class="row"><strong>Rank #2</strong><span>Beyonce BK Wilder 🏴󠁧󠁢󠁳󠁣󠁴󠁿 UK</span></div>
-<div class="row"><strong>Titles</strong><span>107</span></div>
-<div class="row"><strong>Earnings</strong><span>$207,336,198</span></div>
-<div class="row"><strong>Record</strong><span>89-45-60 (5/5)</span></div>
-<div class="row"><strong>Rating</strong><span>18 (18)</span></div>
-<div class="row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+<!-- 2 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 2</strong><span>Beyonce BK Wilder • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>107</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$207,336,198</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">89</span>-<span class="loss">9</span>-45 (60/5)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
 </div>
 
-<div class="card">
-<div class="row"><strong>Rank #3</strong><span>BK Spartacus 🏴󠁧󠁢󠁳󠁣󠁴󠁿 UK</span></div>
-<div class="row"><strong>Titles</strong><span>89</span></div>
-<div class="row"><strong>Earnings</strong><span>$125,646,582</span></div>
-<div class="row"><strong>Record</strong><span>106-21-19 (83/10)</span></div>
-<div class="row"><strong>Rating</strong><span>16 (18)</span></div>
-<div class="row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+<!-- 3 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 3</strong><span>BK `Spartacus` • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>89</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$125,646,582</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">106</span>-<span class="loss">21</span>-19 (83/10)</span></div>
+<div class="card-row"><strong>Rating</strong><span>16 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 4 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 4</strong><span>BK `Tom Cribb` • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>83</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$134,857,534</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">51</span>-<span class="loss">2</span>-52 (27/2)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 5 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 5</strong><span>Yuri "Point Snatcher" Gorbikov • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>83</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$119,763,832</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">52</span>-<span class="loss">7</span>-58 (43/6)</span></div>
+<div class="card-row"><strong>Rating</strong><span>15 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Pain, Power and Glory</span></div>
+</div>
+
+<!-- 6 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 6</strong><span>Vasiliy Zabolotniy • Russia</span></div>
+<div class="card-row"><strong>Titles</strong><span>74</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$103,608,306</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">30</span>-<span class="loss">8</span>-71 (12/6)</span></div>
+<div class="card-row"><strong>Rating</strong><span>14 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Powerlille /CCCP/</span></div>
+</div>
+
+<!-- 7 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 7</strong><span>John MacAckin • Russia</span></div>
+<div class="card-row"><strong>Titles</strong><span>71</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$155,922,238</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">69</span>-<span class="loss">7</span>-20 (60/6)</span></div>
+<div class="card-row"><strong>Rating</strong><span>16 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Powerlille /CCCP/</span></div>
+</div>
+
+<!-- 8 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 8</strong><span>Farukh El Jabar • Russia</span></div>
+<div class="card-row"><strong>Titles</strong><span>70</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$126,392,836</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">51</span>-<span class="loss">1</span>-34 (35/0)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Powerlille /CCCP/</span></div>
+</div>
+
+<!-- 9 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 9</strong><span>So Very Stupid Eimall • Australia</span></div>
+<div class="card-row"><strong>Titles</strong><span>70</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$107,090,666</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">75</span>-<span class="loss">2</span>-14 (71/1)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Rockin Rods Ring Rebels (Combined)</span></div>
+</div>
+
+<!-- 10 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 10</strong><span>Tuolla Edisni • Australia</span></div>
+<div class="card-row"><strong>Titles</strong><span>69</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$189,496,450</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">95</span>-<span class="loss">14</span>-0 (95/14)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Rockin Rods Ring Rebels (Combined)</span></div>
+</div>
+
+<!-- 11 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 11</strong><span>Anthony `I Lost My Mojo` Ogogo • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>67</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$145,809,406</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">68</span>-<span class="loss">6</span>-17 (60/4)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 12 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 12</strong><span>Willey Three Willey • Australia</span></div>
+<div class="card-row"><strong>Titles</strong><span>63</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$167,282,830</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">84</span>-<span class="loss">9</span>-1 (84/9)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Rockin Rods Ring Rebels (Combined)</span></div>
+</div>
+
+<!-- 13 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 13</strong><span>BK New Wave 13 • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>63</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$135,091,692</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">83</span>-<span class="loss">15</span>-1 (72/15)</span></div>
+<div class="card-row"><strong>Rating</strong><span>14 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Pain, Power and Glory</span></div>
+</div>
+
+<!-- 14 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 14</strong><span>Lenny `BK Guv'nor` McLean • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>59</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$151,510,294</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">83</span>-<span class="loss">11</span>-6 (37/4)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 15 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 15</strong><span>Bare Knuckles `Lock Out` Week 1129 • Russia</span></div>
+<div class="card-row"><strong>Titles</strong><span>59</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$90,415,676</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">31</span>-<span class="loss">1</span>-40 (25/0)</span></div>
+<div class="card-row"><strong>Rating</strong><span>17 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Powerlille /CCCP/</span></div>
+</div>
+
+<!-- 16 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 16</strong><span>Pugnit Ubit Muerto 3 • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>58</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$87,501,270</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">24</span>-<span class="loss">3</span>-55 (11/1)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 17 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 17</strong><span>Arthur BK Brown • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>55</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$96,588,352</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">53</span>-<span class="loss">7</span>-23 (23/2)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 18 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 18</strong><span>Sam Street • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>52</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$102,616,670</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">50</span>-<span class="loss">3</span>-16 (37/1)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 19 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 19</strong><span>Vincent Van Poere • Pennsylvania</span></div>
+<div class="card-row"><strong>Titles</strong><span>46</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$197,693,210</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">102</span>-<span class="loss">28</span>-0 (102/28)</span></div>
+<div class="card-row"><strong>Rating</strong><span>17 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Hot Dude Boxing Club (Lef Jab)</span></div>
+</div>
+
+<!-- 20 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 20</strong><span>Steven MacAckin • Russia</span></div>
+<div class="card-row"><strong>Titles</strong><span>45</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$80,748,378</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">34</span>-<span class="loss">5</span>-25 (21/3)</span></div>
+<div class="card-row"><strong>Rating</strong><span>17 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Powerlille /CCCP/</span></div>
+</div>
+
+<!-- 21 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 21</strong><span>Domnall Craig Cinaed Duncan • New Zealand</span></div>
+<div class="card-row"><strong>Titles</strong><span>45</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$71,180,498</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">26</span>-<span class="loss">3</span>-39 (10/2)</span></div>
+<div class="card-row"><strong>Rating</strong><span>17 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>⭐ Old School Boxing</span></div>
+</div>
+
+<!-- 22 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 22</strong><span>Cubinez • Russia</span></div>
+<div class="card-row"><strong>Titles</strong><span>44</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$83,203,534</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">41</span>-<span class="loss">0</span>-16 (31/0)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Powerlille /CCCP/</span></div>
+</div>
+
+<!-- 23 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 23</strong><span>BK New Wave 6 • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>43</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$88,898,064</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">61</span>-<span class="loss">21</span>-6 (51/19)</span></div>
+<div class="card-row"><strong>Rating</strong><span>9 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Pain, Power and Glory</span></div>
+</div>
+
+<!-- 24 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 24</strong><span>The Willey • Australia</span></div>
+<div class="card-row"><strong>Titles</strong><span>43</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$47,182,078</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">41</span>-<span class="loss">3</span>-33 (26/1)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Rockin Rods Ring Rebels (Combined)</span></div>
+</div>
+
+<!-- 25 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 25</strong><span>BK `Jon Doe` Region Filling Bum • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>42</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$97,060,272</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">52</span>-<span class="loss">2</span>-6 (46/2)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 26 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 26</strong><span>`Lockside` BK 3 • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>41</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$80,742,144</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">43</span>-<span class="loss">13</span>-25 (26/9)</span></div>
+<div class="card-row"><strong>Rating</strong><span>16 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 27 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 27</strong><span>Ashes To BK Ashes • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>41</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$76,769,612</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">48</span>-<span class="loss">6</span>-16 (28/0)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 28 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 28</strong><span>Vomitron • Australia</span></div>
+<div class="card-row"><strong>Titles</strong><span>41</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$70,985,056</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">37</span>-<span class="loss">9</span>-30 (29/3)</span></div>
+<div class="card-row"><strong>Rating</strong><span>15 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Rockin Rods Ring Rebels (Combined)</span></div>
+</div>
+
+<!-- 29 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 29</strong><span>New Kind of Efficiency • Tennessee</span></div>
+<div class="card-row"><strong>Titles</strong><span>41</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$7,595,956</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">17</span>-<span class="loss">5</span>-43 (15/4)</span></div>
+<div class="card-row"><strong>Rating</strong><span>12 (13)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Dr. Funk (SoS)</span></div>
+</div>
+
+<!-- 30 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 30</strong><span>XXHenry ArmstrongXX • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>40</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$118,591,306</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">64</span>-<span class="loss">9</span>-16 (54/6)</span></div>
+<div class="card-row"><strong>Rating</strong><span>17 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 31 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 31</strong><span>BK Commodus • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>39</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$97,656,764</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">54</span>-<span class="loss">12</span>-27 (31/7)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 32 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 32</strong><span>Ronda `The BK Bitch` Rousey • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>39</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$91,095,366</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">50</span>-<span class="loss">4</span>-3 (40/3)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 33 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 33</strong><span>Filas Falcidio • Russia</span></div>
+<div class="card-row"><strong>Titles</strong><span>39</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$89,584,154</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">46</span>-<span class="loss">5</span>-6 (40/5)</span></div>
+<div class="card-row"><strong>Rating</strong><span>16 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Powerlille /CCCP/</span></div>
+</div>
+
+<!-- 34 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 34</strong><span>Phat Phil `The Pepsi Cola Kid` • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>39</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$81,509,434</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">43</span>-<span class="loss">3</span>-8 (15/1)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 35 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 35</strong><span>Willey Why Not • Australia</span></div>
+<div class="card-row"><strong>Titles</strong><span>38</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$147,414,366</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">81</span>-<span class="loss">24</span>-0 (81/24)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Rockin Rods Ring Rebels (Combined)</span></div>
+</div>
+
+<!-- 36 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 36</strong><span>Parker BKRTT 12 • Australia</span></div>
+<div class="card-row"><strong>Titles</strong><span>38</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$97,576,116</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">53</span>-<span class="loss">8</span>-0 (53/8)</span></div>
+<div class="card-row"><strong>Rating</strong><span>17 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Rockin Rods Ring Rebels (Combined)</span></div>
+</div>
+
+<!-- 37 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 37</strong><span>Fergie Fionntan Fraser Tasgall • New Zealand</span></div>
+<div class="card-row"><strong>Titles</strong><span>35</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$66,889,280</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">31</span>-<span class="loss">7</span>-20 (21/3)</span></div>
+<div class="card-row"><strong>Rating</strong><span>17 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Palmerston North Panthers 🙉 The Maori Warrior</span></div>
+</div>
+
+<!-- 38 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 38</strong><span>Bob Willey • Australia</span></div>
+<div class="card-row"><strong>Titles</strong><span>35</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$45,915,292</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">25</span>-<span class="loss">5</span>-34 (19/3)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Rockin Rods Ring Rebels (Combined)</span></div>
+</div>
+
+<!-- 39 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 39</strong><span>Grabs Water Bottles & Rests On Stools • North Carolina</span></div>
+<div class="card-row"><strong>Titles</strong><span>34</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$99,480,304</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">52</span>-<span class="loss">5</span>-24 (44/3)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>2 Twisted Pugilistic Linguistic Logistics Corporation (SoS)</span></div>
+</div>
+
+<!-- 40 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 40</strong><span>BK `Locky Graziano` • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>34</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$74,572,158</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">38</span>-<span class="loss">2</span>-20 (25/1)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 41 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 41</strong><span>Jamil "Luhan" Abdurahmanov • Russia</span></div>
+<div class="card-row"><strong>Titles</strong><span>34</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$63,822,182</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">52</span>-<span class="loss">10</span>-10 (43/9)</span></div>
+<div class="card-row"><strong>Rating</strong><span>17 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Powerlille /CCCP/</span></div>
+</div>
+
+<!-- 42 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 42</strong><span>Locky `BK Balboa` • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>34</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$51,873,234</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">28</span>-<span class="loss">3</span>-29 (18/2)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 43 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 43</strong><span>Zarnitza III • New Zealand</span></div>
+<div class="card-row"><strong>Titles</strong><span>33</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$215,093,112</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">41</span>-<span class="loss">23</span>-156 (16/10)</span></div>
+<div class="card-row"><strong>Rating</strong><span>14 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Palmerston North Panthers 🙉 The Maori Warrior</span></div>
+</div>
+
+<!-- 44 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 44</strong><span>Kery Knucklensmitz • Pennsylvania</span></div>
+<div class="card-row"><strong>Titles</strong><span>33</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$93,209,548</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">50</span>-<span class="loss">4</span>-0 (49/4)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Hot Dude Boxing Club (Lef Jab)</span></div>
+</div>
+
+<!-- 45 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 45</strong><span>Dr. Orloff`s Invisible Monster • Georgia</span></div>
+<div class="card-row"><strong>Titles</strong><span>33</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$76,906,500</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">50</span>-<span class="loss">0</span>-7 (47/0)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Vrykoulakas Retirement Home</span></div>
+</div>
+
+<!-- 46 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 46</strong><span>Urukhay I • New Zealand</span></div>
+<div class="card-row"><strong>Titles</strong><span>33</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$53,790,074</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">18</span>-<span class="loss">28</span>-49 (9/4)</span></div>
+<div class="card-row"><strong>Rating</strong><span>11 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Palmerston North Panthers 🙉 The Maori Warrior</span></div>
+</div>
+
+<!-- 47 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 47</strong><span>BK Pablo "Fighting Sausage Rolls" Trolls • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>32</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$112,220,056</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">53</span>-<span class="loss">10</span>-17 (43/7)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
+</div>
+
+<!-- 48 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 48</strong><span>Bill Gates` "Super Lawyer" 3 • United States</span></div>
+<div class="card-row"><strong>Titles</strong><span>32</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$77,032,624</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">51</span>-<span class="loss">5</span>-4 (46/3)</span></div>
+<div class="card-row"><strong>Rating</strong><span>17 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Pure Power</span></div>
+</div>
+
+<!-- 49 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 49</strong><span>Urukhay V • Russia</span></div>
+<div class="card-row"><strong>Titles</strong><span>32</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$72,168,834</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">33</span>-<span class="loss">5</span>-22 (27/2)</span></div>
+<div class="card-row"><strong>Rating</strong><span>17 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Powerlille /CCCP/</span></div>
+</div>
+
+<!-- 50 -->
+<div class="fighter-card">
+<div class="card-row"><strong>Rank 50</strong><span>I Come To Fight But I Like To Draw To 1 • United Kingdom</span></div>
+<div class="card-row"><strong>Titles</strong><span>32</span></div>
+<div class="card-row"><strong>Earnings</strong><span>$48,378,100</span></div>
+<div class="card-row"><strong>Record</strong><span><span class="win">17</span>-<span class="loss">10</span>-48 (7/2)</span></div>
+<div class="card-row"><strong>Rating</strong><span>18 (18)</span></div>
+<div class="card-row"><strong>Gym</strong><span>Lochside 🐉 The Scottish Gym</span></div>
 </div>
 
 </div>
