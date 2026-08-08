@@ -1,5 +1,117 @@
-<div style="text-align:center; margin:20px 0;">
-<a href="fighters.html" style="display:inline-block; padding:10px 20px; background:#ffd700; color:#081020; font-weight:bold; border-radius:4px; margin:4px; text-decoration:none;">🏆 TOP 50 FIGHTERS</a>
-<a href="gym-rankings.html" style="display:inline-block; padding:10px 20px; background:#ffd700; color:#081020; font-weight:bold; border-radius:4px; margin:4px; text-decoration:none;">📊 GYM RANKINGS</a>
-<a href="#" style="display:inline-block; padding:10px 20px; background:#ffd700; color:#081020; font-weight:bold; border-radius:4px; margin:4px; text-decoration:none;">📜 HISTORY</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBL LOCHSIDE • THE SCOTTISH GYM</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        body {
+            background: #081020;
+            background-image: linear-gradient(rgba(8,16,32,0.9), rgba(8,16,32,0.95)),
+                              radial-gradient(circle at top right, rgba(200,160,40,0.08), transparent 70%);
+            color: #fff;
+            padding: 15px 12px;
+            min-height: 100vh;
+        }
+        .container { max-width: 750px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 25px; border-bottom: 1px solid rgba(255,215,0,0.3); padding-bottom: 15px; }
+        h1 { color: #ffd700; font-size: 28px; font-weight: 900; margin-bottom: 8px; }
+        .tagline { color: #ffd700; font-size: 14px; line-height: 1.5; }
+        .nav-buttons { text-align: center; margin: 20px 0; }
+        .nav-buttons a {
+            display: inline-block;
+            padding: 10px 22px;
+            margin: 5px;
+            background: #ffd700;
+            color: #081020;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .stat-box {
+            background: rgba(15,30,60,0.9);
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+        }
+        .stat-label { font-size: 12px; color: #ccc; text-transform: uppercase; margin-bottom: 4px; }
+        .stat-value { font-size: 20px; font-weight: 700; color: #ffd700; }
+        .regions {
+            background: rgba(15,30,60,0.9);
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 6px;
+            padding: 15px;
+        }
+        .regions h3 { color: #ffd700; margin-bottom: 12px; text-align: center; }
+        table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        th, td { padding: 8px 5px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        th { color: #ffd700; font-weight: 600; }
+        .flag { font-size: 16px; margin-right: 6px; vertical-align: middle; }
+        @media (max-width: 500px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>WEBL LOCHSIDE</h1>
+        <h2>THE SCOTTISH GYM</h2>
+        <div class="tagline">
+            🏴󠁧󠁢󠁳󠁣󠁴󠁿 FROM SCOTLAND FOR THE WORLD • HONOUR IN THE RING • PRIDE IN OUR HERITAGE<br>
+            BUILT ON HISTORY • FOCUSED ON VICTORY
+        </div>
+    </header>
+
+    <div class="nav-buttons">
+        <a href="fighters.html">🏆 TOP 50 FIGHTERS</a>
+        <a href="gym-rankings.html">📊 GYM RANKINGS</a>
+        <a href="#">📜 HISTORY</a>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-label">Total Earnings</div>
+            <div class="stat-value">$12.115B</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-label">Total Titles</div>
+            <div class="stat-value">2,566</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-label">Win Rate</div>
+            <div class="stat-value">71%</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-label">Fight Record</div>
+            <div class="stat-value">14959-3987-7440</div>
+        </div>
+    </div>
+
+    <div class="regions">
+        <h3>REGIONS</h3>
+        <table>
+            <tr><th>Rank</th><th>Flag</th><th>Region</th><th>Titles</th><th>Win %</th><th>Earnings</th></tr>
+            <tr><td>1</td><td class="flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</td><td>Bare Knuckle</td><td>2,566</td><td>71%</td><td>$12,115,318,816</td></tr>
+            <tr><td>2</td><td class="flag">🌍</td><td>Contenders</td><td>28</td><td>56%</td><td>$11,081,865,466</td></tr>
+            <tr><td>3</td><td class="flag">🇬🇧</td><td>British Commonwealth</td><td>227</td><td>64%</td><td>$2,035,676,994</td></tr>
+            <tr><td>4</td><td class="flag">⚠️</td><td>Unsanctioned</td><td>265</td><td>77%</td><td>$832,978,782</td></tr>
+            <tr><td>5</td><td class="flag">🎟️</td><td>Invitational</td><td>3</td><td>52%</td><td>$645,938,706</td></tr>
+            <tr><td>6</td><td class="flag">🏴</td><td>Revival Region</td><td>21</td><td>69%</td><td>$429,576,674</td></tr>
+            <tr><td>7</td><td class="flag">🇬🇧</td><td>United Kingdom</td><td>43</td><td>65%</td><td>$400,353,822</td></tr>
+        </table>
+    </div>
 </div>
+</body>
+                       </html>
+                                                                      
