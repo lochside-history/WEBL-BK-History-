@@ -58,6 +58,19 @@ border:1px solid #555;
 *{
     box-sizing:border-box;
 }
+.home-btn{
+  display:inline-block;
+  margin:15px;
+  padding:10px 16px;
+  background:#d4af37;
+  color:#06152d;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:6px;
+}
+.home-btn:hover{
+  background:#fff;
+}
 
 html,body{
     width:100%;
