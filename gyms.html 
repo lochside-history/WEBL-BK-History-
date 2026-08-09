@@ -3,46 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WEBL Top 50 All-Time Gym Rankings</title>
+<meta name="description" content="Top 50 All-Time WEBL Bare Knuckle Gym Rankings – verified records, titles, win rates and earnings.">
+<title>Top 50 All-Time Gym Rankings | Lochside 🐉</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Roboto,sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
 body{
-    background:#081020;
-    background-image:linear-gradient(rgba(8,16,32,0.9),rgba(8,16,32,0.95)),
-    radial-gradient(circle at top right,rgba(200,160,40,0.08),transparent 70%);
+    background:#06152d;
+    background-image:linear-gradient(rgba(6,21,45,0.92),rgba(6,21,45,0.96)),
+    radial-gradient(circle at top right,rgba(212,175,55,0.07),transparent 70%);
     color:#ffd700;
     padding:15px 10px;
     min-height:100vh;
 }
 .container{max-width:900px;margin:0 auto;}
 .back-link{color:#ffd700;text-decoration:none;font-weight:600;display:inline-block;margin-bottom:15px;}
+.back-link:hover{color:#fff;}
 header{text-align:center;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(255,215,0,0.3);}
 h1{color:#ffd700;font-size:22px;font-weight:900;margin-bottom:4px;}
-h2{color:#fff;font-size:15px;font-weight:500;}
+h2{color:#ffdf80;font-size:15px;font-weight:500;}
 table{width:100%;border-collapse:separate;border-spacing:0;border-radius:6px;overflow:hidden;}
 th,td{
-    padding:10px 6px;
+    padding:9px 5px;
     text-align:left;
-    font-size:12px;
+    font-size:11.5px;
     border-bottom:1px solid rgba(255,215,0,0.1);
 }
 th{
-    background:rgba(15,30,60,0.95);
+    background:rgba(10,30,58,0.95);
     color:#fff;
     font-weight:700;
     text-transform:uppercase;
-    font-size:11px;
+    font-size:10.5px;
 }
-tr:nth-child(even){background:rgba(25,45,80,0.4);}
-tr:hover{background:rgba(40,70,120,0.5);}
-.flag{font-size:18px;line-height:1;}
+tr:nth-child(even){background:rgba(20,40,75,0.4);}
+tr:hover{background:rgba(35,65,115,0.5);}
+.flag{font-size:17px;line-height:1;}
 .plus{color:#22c55e;}
 .minus{color:#ef4444;}
 </style>
 </head>
 <body>
 <div class="container">
-<a href="index.html" class="back-link">← Back to Home</a>
+<a href="index.html" class="back-link">← Back to Lochside Home</a>
 
 <header>
 <h1>WEBL BARE KNUCKLE</h1>
@@ -166,7 +168,7 @@ tr:hover{background:rgba(40,70,120,0.5);}
 <tr>
 <td>10</td>
 <td>Pain, Power and Glory</td>
-<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</td>
 <td>195</td>
 <td>383-95-120</td>
 <td class="plus">+288</td>
@@ -188,7 +190,7 @@ tr:hover{background:rgba(40,70,120,0.5);}
 <tr>
 <td>12</td>
 <td>LikQid Appreciation Society</td>
-<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</td>
 <td>189</td>
 <td>2206-1475-2470</td>
 <td class="plus">+731</td>
@@ -276,7 +278,7 @@ tr:hover{background:rgba(40,70,120,0.5);}
 <tr>
 <td>20</td>
 <td>We Are The Fighting Irish</td>
-<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</td>
 <td>99</td>
 <td>10426-12486-7262</td>
 <td class="minus">-2060</td>
@@ -342,7 +344,7 @@ tr:hover{background:rgba(40,70,120,0.5);}
 <tr>
 <td>26</td>
 <td>Golden Fox Promotions</td>
-<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</td>
 <td>65</td>
 <td>2725-3421-608</td>
 <td class="minus">-696</td>
@@ -353,7 +355,7 @@ tr:hover{background:rgba(40,70,120,0.5);}
 <tr>
 <td>27</td>
 <td>Bullan`s [SOS]-(CFM)</td>
-<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</td>
 <td>62</td>
 <td>1378-697-482</td>
 <td class="plus">+681</td>
@@ -386,7 +388,7 @@ tr:hover{background:rgba(40,70,120,0.5);}
 <tr>
 <td>30</td>
 <td>Pips Fighting Machine (WTA)</td>
-<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</td>
 <td>56</td>
 <td>587-38-81</td>
 <td class="plus">+549</td>
@@ -518,7 +520,7 @@ tr:hover{background:rgba(40,70,120,0.5);}
 <tr>
 <td>42</td>
 <td>Panther Strikes (UK)</td>
-<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</td>
 <td>35</td>
 <td>76-20-57</td>
 <td class="plus">+56</td>
@@ -540,7 +542,7 @@ tr:hover{background:rgba(40,70,120,0.5);}
 <tr>
 <td>44</td>
 <td>Epitaph</td>
-<td class="flag">🏴󠁧󠁢󠁧󠁢󠁥󠁮󠁧󠁿</td>
+<td class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</td>
 <td>33</td>
 <td>182-70-21</td>
 <td class="plus">+112</td>
@@ -619,5 +621,4 @@ tr:hover{background:rgba(40,70,120,0.5);}
 
 </div>
 </body>
-    </html>
-    
+</html>
