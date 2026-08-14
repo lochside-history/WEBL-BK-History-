@@ -1,5 +1,10 @@
-<!DOCTYPE html>
+just<!DOCTYPE html>
 <html lang="en">
+<!-- ⌂ HOME BUTTON -->
+<p style="text-align:center; margin-top:30px; padding-top:15px; border-top:1px solid #ffd70022;">
+<a href="index.html" style="display:inline-block; padding:8px 20px; background:#123b3266; color:#ffd700; border:1px solid #ffd70044; border-radius:4px; font-weight:bold; text-decoration:none;">⌂ HOME</a>
+</p>
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
