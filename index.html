@@ -15,14 +15,37 @@ body{background:#06152d;color:#eee;font-family:Arial,sans-serif;padding:15px}
 .crest img{max-width:380px;width:90%;border:3px solid #d4af37;border-radius:8px}
 h1{text-align:center;color:#d4af37;font-size:32px;margin:10px 0;letter-spacing:2px}
 .tagline{text-align:center;color:#ffdf80;font-size:15px;margin-bottom:30px}
+
 .nav-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px;margin-bottom:30px}
-.nav-card{background:#081b32;border:2px solid #c9a227;border-radius:12px;padding:20px;text-align:center;text-decoration:none;transition:0.2s}
-.nav-card:hover{background:#0b2342;transform:translateY(-3px);box-shadow:0 5px 15px #0006}
-.nav-card h3{color:#d4af37;font-size:18px;margin-bottom:8px}
-.nav-card p{color:#ccc;font-size:13px}
+.nav-card, .featured-link, .bottom-card{
+  background:#081b32;
+  border:2px solid #c9a227;
+  border-radius:12px;
+  padding:18px 20px;
+  text-align:center;
+  text-decoration:none;
+  transition:0.2s;
+  display:block;
+  color:inherit;
+}
+.nav-card:hover, .featured-link:hover, .bottom-card:hover{
+  background:#0b2342;
+  transform:translateY(-3px);
+  box-shadow:0 5px 15px #0006;
+}
+.nav-card h3, .bottom-card strong{color:#d4af37;font-size:17px;margin-bottom:6px}
+.nav-card p, .featured-link span{color:#ccc;font-size:13px}
+
 .stats-bar{background:#081b32;border:2px solid #c9a227;border-radius:10px;padding:18px;text-align:center;margin-bottom:25px}
 .stats-bar b{color:#ffd700;font-size:17px;margin:0 8px}
-.footer{text-align:center;padding:20px;color:#d4af37;border-top:1px solid #8f7418;margin-top:20px}
+.featured-link{background:#0f1a30;color:#ffd700;font-size:18px;font-weight:bold;line-height:1.5}
+.featured-link span{display:block;margin-top:4px;color:#e6c868}
+
+/* Bottom Section */
+.bottom-wrap{margin-top:10px;text-align:center}
+.notice{color:#ff6b6b;font-weight:bold;font-size:13px;margin:0 0 12px 0}
+
+.footer{text-align:center;padding:20px;color:#d4af37;border-top:1px solid #8f7418;margin-top:25px}
 .footer em{display:block;color:#aaa;margin-top:5px;font-size:12px}
 
 @media(max-width:600px){
@@ -35,74 +58,59 @@ h1{text-align:center;color:#d4af37;font-size:32px;margin:10px 0;letter-spacing:2
 <body>
 <div class="page">
 
-<div class="crest">
-  <img src="https://i.supaimg.com/827bda42-e154-4aae-9add-75199249e42b/0d8d070b-12ca-4353-83e4-12901753521a.png" alt="Lochside The Scottish Gym">
-</div>
+  <div class="crest">
+    <img src="https://i.supaimg.com/827bda42-e154-4aae-9add-75199249e42b/0d8d070b-12ca-4353-83e4-12901753521a.png" alt="Lochside The Scottish Gym">
+  </div>
 
-<h1>LOCHSIDE 🐉 THE SCOTTISH GYM</h1>
+  <h1>LOCHSIDE 🐉 THE SCOTTISH GYM</h1>
+  <p class="tagline">Official WEBL Bare Knuckle All-Time History & Rankings</p>
 
-<p class="tagline">
-Official WEBL Bare Knuckle All-Time History & Rankings
-</p>
+  <div class="stats-bar">
+    🏆 <b>2566</b> Total Titles |
+    📊 <b>71%</b> Win Rate |
+    💰 <b>$12.12B</b> Total Earnings
+  </div>
 
-<div class="stats-bar">
-  🏆 <b>2566</b> Total Titles |
-  📊 <b>71%</b> Win Rate |
-  💰 <b>$12.12B</b> Total Earnings
-</div>
+  <div class="nav-grid">
+    <a href="gyms.html" class="nav-card">
+      <h3>🏅 Top 50 All-Time Gyms</h3>
+      <p>Full verified rankings by titles, record & earnings</p>
+    </a>
 
-<div class="nav-grid">
+    <a href="fighters.html" class="nav-card">
+      <h3>🥊 Top All-Time Fighters</h3>
+      <p>Greatest bare knuckle fighters in WEBL history</p>
+    </a>
 
-  <a href="gyms.html" class="nav-card">
-    <h3>🏅 Top 50 All-Time Gyms</h3>
-    <p>Full verified rankings by titles, record & earnings</p>
-  </a>
+    <a href="h2h-title-records.html" class="featured-link">
+      🏆 H2H Title Fight Records
+      <span>Top 3 Gyms • 17 Weight Classes</span>
+    </a>
 
-  <a href="fighters.html" class="nav-card">
-    <h3>🥊 Top All-Time Fighters</h3>
-    <p>Greatest bare knuckle fighters in WEBL history</p>
-  </a>
+    <a href="bk-spartacus.html" class="nav-card">
+      <h3>BK Spartacus</h3>
+      <p>Lochside Light Heavyweight Legend</p>
+    </a>
 
-  <a href="h2h-title-records.html" style="display:block;margin:12px 0;padding:18px;background:#0f1a30;border:2px solid #d4af37;border-radius:8px;text-align:center;text-decoration:none;color:#ffd700;font-size:18px;font-weight:bold;">
-🏆 H2H Title Fight Records<br>
-<span style="font-size:13px;color:#e6c868;font-weight:normal;">Top 3 Gyms • 17 Weight Classes</span>
-  </a>
-  
+    <a href="beyonce-bk-wilder.html" class="nav-card">
+      <h3>Beyonce BK Wilder</h3>
+      <p>Greatest Heavyweight of All Time</p>
+    </a>
+  </div>
 
-  <a href="bk-spartacus.html" class="nav-card">
-    <h3>BK Spartacus</h3>
-    <p>Lochside Light Heavyweight Legend</p>
-  </a>
+  <!-- ✅ FIXED BOTTOM - No duplicates, button matches perfectly -->
+  <div class="bottom-wrap">
+    <p class="notice">⚠️ NO — Verified stats only. No estimates.</p>
+    <a href="webl-top3-full-stats.html" class="bottom-card">
+      <strong>🏆 Top 3 Gyms — Full Verified Stats</strong>
+    </a>
+  </div>
 
-  <a href="beyonce-bk-wilder.html" class="nav-card">
-    <h3>Beyonce BK Wilder</h3>
-    <p>Greatest Heavyweight of All Time</p>
-  </a>
-
-</div>
-
-<div class="footer">
-  🐉 LOCHSIDE • FIGHTING OUT OF THE SCOTTISH HIGHLANDS
-  <em>Verified historical records • 2026</em>
-</div>
+  <div class="footer">
+    🐉 LOCHSIDE • FIGHTING OUT OF THE SCOTTISH HIGHLANDS
+    <em>Verified historical records • 2026</em>
+  </div>
 
 </div>
 </body>
 </html>
-
-<!-- ⚠️ Verified Only Notice -->
-<p style="text-align:center; color:#ff6b6b; font-weight:bold; font-size:13px; margin:10px 0 5px 0;">
-⚠️ NO — Verified stats only. No estimates.
-</p>
-
-<!-- 🏆 Top 3 Stats Link -->
-<a href="webl-top3-full-stats.html" style="display:block; text-align:center; padding:10px 15px; background:#123b3266; color:#ffd700; border:1px solid #ffd70044; border-radius:4px; font-size:16px; font-weight:bold; text-decoration:none; margin:15px auto; max-width:300px;">
-🏆 Top 3 Gyms — Full Verified Stats
-</a>
-<!-- 🏆 TOP 3 STATS LINK + ⚠️ NOTICE -->
-<div style="text-align:center; margin:25px 0;">
-<p style="color:#ff6b6b; font-weight:bold; font-size:13px; margin:0 0 10px 0;">⚠️ .</p>
-<a href="webl-top3-full-stats.html" style="display:inline-block; padding:10px 20px; background:#123b3266; color:#ffd700; border:1px solid #ffd70044; border-radius:4px; font-size:16px; font-weight:bold; text-decoration:none;">🏆 Top 3 Gyms — Full Verified Stats</a>
-</div>
-
-
