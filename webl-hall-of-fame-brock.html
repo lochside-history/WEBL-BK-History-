@@ -367,3 +367,13 @@ th{background:rgba(255,215,0,.15);color:var(--gold-border)}
 </div>
 </body>
 </html>
+
+<div class="visit-counter">👁️ Page Visits: <span id="visitCount">0</span></div>
+<script>
+// Persistent visit counter
+let count = localStorage.getItem('pageVisits') || 0;
+count = parseInt(count) + 1;
+localStorage.setItem('pageVisits', count);
+document.getElementById('visitCount').textContent = count;
+</script>
+8
