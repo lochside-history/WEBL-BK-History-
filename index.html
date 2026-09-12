@@ -2,144 +2,83 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Lochside 🐉 The Scottish Gym – Official WEBL Bare Knuckle History & Rankings. All-time records, top fighters, top 50 gyms and legacy stats.">
-<meta name="keywords" content="Lochside, The Scottish Gym, WEBL, Bare Knuckle, rankings, top fighters, gym history, Scotland">
-<title>Lochside 🐉 The Scottish Gym | WEBL Bare Knuckle History</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Lochside 🐉 The Scottish Gym | WEBL</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#06152d;color:#eee;font-family:Arial,sans-serif;padding:15px}
-.page{max-width:900px;margin:auto}
-.crest{text-align:center;margin:20px 0}
-.crest img{max-width:380px;width:90%;border:3px solid #d4af37;border-radius:8px}
-h1{text-align:center;color:#d4af37;font-size:32px;margin:10px 0;letter-spacing:2px}
-.tagline{text-align:center;color:#ffdf80;font-size:15px;margin-bottom:30px}
-
-.nav-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px;margin-bottom:30px}
-.nav-card, .featured-link, .bottom-card{
-  background:#081b32;
-  border:2px solid #c9a227;
-  border-radius:12px;
-  padding:18px 20px;
+body{
+  background:#0b1a33;
+  color:#ffd700;
+  font:16px Arial,sans-serif;
+  padding:12px;
+  max-width:480px;
+  margin:0 auto;
+  min-height:100vh;
+}
+.box{
+  background:#102444;
+  border:2px solid #ffd700;
+  border-radius:8px;
+  padding:14px 16px;
+  margin-bottom:14px;
   text-align:center;
   text-decoration:none;
-  transition:0.2s;
   display:block;
-  color:inherit;
+  color:#ffd700;
 }
-.nav-card:hover, .featured-link:hover, .bottom-card:hover{
-  background:#0b2342;
-  transform:translateY(-3px);
-  box-shadow:0 5px 15px #0006;
-}
-.nav-card h3, .bottom-card strong{color:#d4af37;font-size:17px;margin-bottom:6px}
-.nav-card p, .featured-link span{color:#ccc;font-size:13px}
-
-.stats-bar{background:#081b32;border:2px solid #c9a227;border-radius:10px;padding:18px;text-align:center;margin-bottom:25px}
-.stats-bar b{color:#ffd700;font-size:17px;margin:0 8px}
-.featured-link{background:#0f1a30;color:#ffd700;font-size:18px;font-weight:bold;line-height:1.5}
-.featured-link span{display:block;margin-top:4px;color:#e6c868}
-
-/* Bottom Section */
-.bottom-wrap{margin-top:10px;text-align:center}
-.notice{color:#ff6b6b;font-weight:bold;font-size:13px;margin:0 0 12px 0}
-
-.footer{text-align:center;padding:20px;color:#d4af37;border-top:1px solid #8f7418;margin-top:25px}
-.footer em{display:block;color:#aaa;margin-top:5px;font-size:12px}
-
-@media(max-width:600px){
-  h1{font-size:24px}
-  .nav-grid{grid-template-columns:1fr}
+.box:hover{background:#152c52}
+h1{font-size:17px;margin-bottom:4px;color:#ffd700}
+.sub{font-size:14px;color:#ccc}
+.footer{
+  text-align:center;
+  color:#ffd700;
+  font-size:14px;
+  margin-top:20px;
+  padding-top:15px;
 }
 </style>
 </head>
-
 <body>
-<div class="page">
 
-  <div class="crest">
-    <img src="https://i.supaimg.com/827bda42-e154-4aae-9add-75199249e42b/0d8d070b-12ca-4353-83e4-12901753521a.png" alt="Lochside The Scottish Gym">
-  </div>
-
-  <h1>LOCHSIDE 🐉 THE SCOTTISH GYM</h1>
-  <p class="tagline">Official WEBL Bare Knuckle All-Time History & Rankings</p>
-
-  <div class="stats-bar">
-    🏆 <b>2566</b> Total Titles |
-    📊 <b>71%</b> Win Rate |
-    💰 <b>$12.12B</b> Total Earnings
-  </div>
-
-  <div class="nav-grid">
-    <a href="gyms.html" class="nav-card">
-      <h3>🏅 Top 50 All-Time Gyms</h3>
-      <p>Full verified rankings by titles, record & earnings</p>
-    </a>
-
-    <a href="fighters.html" class="nav-card">
-      <h3>🥊 Top All-Time Fighters</h3>
-      <p>Greatest bare knuckle fighters in WEBL history</p>
-    </a>
-
-    <a href="h2h-title-records.html" class="featured-link">
-      🏆 H2H Title Fight Records
-      <span>Top 3 Gyms • 17 Weight Classes</span>
-    </a>
-
-    <a href="bk-spartacus.html" class="nav-card">
-      <h3>BK Spartacus</h3>
-      <p>Lochside Light Heavyweight Legend</p>
-    </a>
-
-    <a href="beyonce-bk-wilder.html" class="nav-card">
-      <h3>Beyonce BK Wilder</h3>
-      <p>Greatest Heavyweight of All Time</p>
-    </a>
-  </div>
-
-  <!-- ✅ FIXED BOTTOM - No duplicates, button matches perfectly -->
-  <div class="bottom-wrap">
-    <p class="notice"></p>
-    <a href="webl-top3-full-stats.html" class="bottom-card">
-      <strong>🏆 Top 3 Gyms — Full Verified Stats</strong>
-    </a>
-  </div>
-  <a href="webl-hall-of-fame-brock.html">
-  <div class="nav-card">
-    <strong>🏆 WEBL Hall of Fame — Brock (LCN)</strong>
-  </div>
+<a href="top-gyms.html" class="box">
+  <h1>🏆 Top 50 All-Time Gyms</h1>
+  <div class="sub">Full verified rankings by titles, record & earnings</div>
 </a>
 
-</div>
+<a href="top-fighters.html" class="box">
+  <h1>🩸 Top All-Time Fighters</h1>
+  <div class="sub">Greatest bare knuckle fighters in WEBL history</div>
+</a>
+
+<a href="h2h-records.html" class="box">
+  <h1>🏅 H2H Title Fight Records</h1>
+  <div class="sub">Top 3 Gyms • 17 Weight Classes</div>
+</a>
+
+<a href="bk-spartacus.html" class="box">
+  <h1>BK Spartacus</h1>
+  <div class="sub">Lochside Light Heavyweight Legend</div>
+</a>
+
+<a href="bk-wilder.html" class="box">
+  <h1>Beyonce BK Wilder</h1>
+  <div class="sub">Greatest Heavyweight of All Time</div>
+</a>
+
+<a href="top3-stats.html" class="box">
+  <h1>🏆 Top 3 Gyms – Full Verified Stats</h1>
+</a>
+
+<a href="hall-of-fame.html" class="box">
+  <h1>🏆 WEBL Hall of Fame – Brock (LCN)</h1>
+</a>
+
+<!-- ✅ NEW: Contenders Rankings Button -->
+<a href="contenders.html" class="box">
+  <h1>🏆 WEBL Contenders Rankings</h1>
+</a>
+
+<div class="footer">🐉 LOCHSIDE • FIGHTING OUT OF THE SCOTTISH HIGHLANDS</div>
+
 </body>
 </html>
-<a href="webl-contenders-full-rankings.html" style="color:#ffd700; font-weight:bold; display:block; padding:8px 0; text-align:center; background:rgba(20,50,100,.6); border:1px solid rgba(255,215,0,.25); border-radius:6px; text-decoration:none;">🏆 WEBL Contenders Rankings</a>
-  
-
-
-  <div class="footer">
-    🐉 LOCHSIDE • FIGHTING OUT OF THE SCOTTISH HIGHLANDS
-    <em>Verified historical records • 2026</em>
-  </div>
-<!-- Visitor Comments (Super Simple) -->
-<div style="max-width:900px; margin:50px auto 30px; padding:20px; border-top:1px solid #ffd700;">
-  <h3 style="color:#ffd700; font-size:18px; margin-bottom:15px;">💬 Leave a Comment / Feedback</h3>
-  <p style="color:#ccc; font-size:14px; margin-bottom:10px;">
-    Email me directly:<br>
-    <a href="mailto:your-stevelocky37@gmail.com?subject=Lochside%20WEBL%20Site%20Feedback" 
-       style="color:#ffd700; text-decoration:underline; font-size:16px;">
-      your-stevelocky37@gmail.com
-    </a>
-  </p>
-  <p style="color:#999; font-size:12px;">
-    Messages are private — only you see them.<br>
-    No one can edit or post publicly.
-  </p>
-</div>
-
-</div>
-</body>
-</html>
-
-
